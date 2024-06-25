@@ -24,6 +24,9 @@ const Navbar = () => {
           <Link href="/economics" className="hover:text-gray-400 transition-colors duration-300">
             Economics
           </Link>
+          <Link href="/characters" className="hover:text-gray-400 transition-colors duration-300">
+            Characters
+          </Link>
         </div>
         <div className="md:hidden">
           <button
@@ -53,7 +56,7 @@ const Navbar = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-800 animate-fade-in-down">
+        <div className="md:hidden bg-transparent animate-fade-in-down">
           <Link
             href="/locations"
             className="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-300"
@@ -74,6 +77,13 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Economics
+          </Link>
+          <Link
+            href="/characters"
+            className="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-300"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Characters
           </Link>
         </div>
       )}
