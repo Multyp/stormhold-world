@@ -1,0 +1,111 @@
+{
+    "world_building": {
+        "world_name": "STORMHOLD",
+        "geography": {
+            "general_description": [
+                "STORMHOLD is a vast continent divided into united kingdoms,",
+                "featuring diverse terrains including mountains, forests, and",
+                "various kingdoms."
+            ],
+                "major_locations": {
+                "GOLDENHALL": {
+                    "description": [
+                        "The capital city, located centrally and acting as",
+                        "the political hub of the continent."
+                    ]
+                },
+                "DAWNFALL": {
+                    "description": [
+                        "A dwarven kingdom located in the northwest, built",
+                        "atop THE GREAT MINES which are the primary source of",
+                        "stones and metals for the kingdom."
+                    ]
+                },
+                "LARIOM": {
+                    "description": [
+                        "The human kingdom situated in the southwest of the",
+                        "continent, known for its strategic military",
+                        "positions and rich cultural history."
+                    ]
+                },
+                "MIRLUN": {
+                    "description": [
+                        "An independent elven kingdom known for its ancient",
+                        "forests and mystical heritage. Although it operates",
+                        "under its own local governance, it respects the laws",
+                        "set by THE GREAT ELDERS, as a member state in a",
+                        "larger political entity."
+                    ]
+                },
+                "Goblin_forests": {
+                    "description": [
+                        "Dense forests in the northeast, populated mostly by",
+                        "goblins and wolves, recognized as an independent",
+                        "region under goblin control."
+                    ]
+                }
+            }
+        },
+        "economics": {
+            "interdependencies": {
+                "DAWNFALL": {
+                    "exports": [
+                        "ores such as iron, copper, and precious metals"
+                    ],
+                    "imports": [
+                        "processed food products like cheese and bread,",
+                        "medical supplies"
+                    ]
+                },
+                "LARIOM": {
+                    "exports": [
+                        "processed agricultural products and medicinal goods"
+                    ],
+                    "imports": [
+                        "various ores for tool and weapon manufacturing"
+                    ]
+                },
+                "MIRLUN": {
+                    "exports": [
+                        "all kind of clothes, elven crafts, and non-processed",
+                        "herbal medicines"
+                    ],
+                    "imports": [
+                        "technological goods and processed foods from other",
+                        "kingdoms"
+                    ]
+                }
+            }
+        },
+        "politics": {
+            "description": [
+                "The continent's politics are overseen by an alliance called",
+                "THE GREAT ELDERS, consisting of three humans and three",
+                "dwarfs."
+            ],
+            "elections": {
+                "description": [
+                    "Elections are held every four years, and every citizen",
+                    "can vote, provided they can prove they have resided in",
+                    "the capital city for at least two years."
+                ]
+            },
+            "governance": {
+                "GOLDENHALL": [
+                    "The political decisions and alliances are formed here,",
+                    "serving as the central point for diplomatic and",
+                    "governance activities."
+                ],
+                "Goblin_forests": [
+                    "Granted independence but required to stay out of",
+                    "GOLDENHALL politics and refrain from attacking the borders."
+                ],
+                "MIRLUN": [
+                    "While it has its own governance, MIRLUN complies with the",
+                    "broader laws set by THE GREAT ELDERS but maintains",
+                    "autonomy in local matters like justice for example."
+                ]
+            }
+        }
+    }
+}
