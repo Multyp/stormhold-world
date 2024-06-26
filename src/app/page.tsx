@@ -51,7 +51,7 @@ export default function Home() {
                   <ul className="list-disc list-inside text-lg text-gray-600">
                     {Object.keys(economics.interdependencies).map((kingdom, index) => (
                       <li key={index}>
-                        <strong>{kingdom}</strong>: Exports {economics.interdependencies[kingdom].exports.join(', ')}, imports {economics.interdependencies[kingdom].imports.join(', ')}.
+                        <strong>{kingdom}</strong>: Exports {economics.interdependencies[kingdom as keyof typeof economics.interdependencies].exports.join(', ')}, imports {economics.interdependencies[kingdom as keyof typeof economics.interdependencies].imports.join(', ')}.
                       </li>
                     ))}
                   </ul>
@@ -63,7 +63,7 @@ export default function Home() {
                   <ul className="list-disc list-inside text-lg text-gray-600">
                     {Object.keys(geography.major_locations).map((location, index) => (
                       <li key={index}>
-                        <strong>{location}</strong>: {geography.major_locations[location].description.join(' ')}
+                        <strong>{location}</strong>: {geography.major_locations[location as keyof typeof geography.major_locations].description.join(' ')}
                       </li>
                     ))}
                   </ul>
