@@ -8,6 +8,7 @@ import MIRLUN from '@/assets/MIRLUN.webp';
 import GOBLIN_FOREST from '@/assets/GOBLIN_FORESTS.webp';
 import UNKNOWN from '@/assets/UNKNOWN.jpg';
 import worldData from '@/data/world_data.json';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const { world_name, geography, economics, politics } = worldData.world_building;
@@ -118,9 +119,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="py-4 bg-gray-900 text-center">
-        <p className="text-sm text-gray-200">&copy; 2024 Stormhold. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

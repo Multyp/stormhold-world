@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Navbar from '@/components/Navbar';
 import DAWNFALL from '@/assets/DAWNFALL.webp';
+import Footer from '@/components/Footer';
 
 const Dawnfall = () => {
   return (
@@ -46,6 +47,7 @@ const Dawnfall = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }

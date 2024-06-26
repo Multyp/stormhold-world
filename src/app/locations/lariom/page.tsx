@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Navbar from '@/components/Navbar';
 import LARIOM from '@/assets/LARIOM.jpeg';
+import Footer from '@/components/Footer';
 
 const Lariom = () => {
   return (
@@ -53,6 +54,7 @@ const Lariom = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Navbar from '@/components/Navbar';
 import MIRLUN from '@/assets/MIRLUN.webp';
+import Footer from '@/components/Footer';
 
 const Mirlun = () => {
   return (
@@ -46,6 +47,7 @@ const Mirlun = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
