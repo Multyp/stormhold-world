@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     basePath: '/stormhold-world',
-    assetPrefix: '/stormhold-world',
+    assetPrefix: '/stormhold-world/',
     output: "export",
 };
 
