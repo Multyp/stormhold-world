@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-black bg-opacity-75 z-10 fixed w-full text-white shadow-lg">
+    <nav className="bg-black bg-opacity-75 z-50 fixed w-full text-white shadow-lg">
       <div className="container mx-auto p-4 flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/" className="text-2xl font-bold hover:text-gray-400 transition-colors duration-300">
@@ -56,7 +56,7 @@ const Navbar = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-transparent animate-fade-in-down">
+        <div className="md:hidden bg-transparent animate-fade-in-down z-10">
           <Link
             href="/locations"
             className="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-300"

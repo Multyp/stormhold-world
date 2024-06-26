@@ -21,10 +21,10 @@ export default function Home() {
         <Header />
         <section className="py-10">
           <h1 className="text-4xl font-bold my-5 text-center">A magical journey</h1>
-          <p className="text-lg text-gray-600 mt-4 text-center">
+          <p className="text-lg text-gray-600 mt-4 text-center pb-8">
             Start your journey by exploring the various locations, understanding the political landscape, and delving into the economic intricacies of Stormhold.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1 mt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1 mt-8 relative z-0">
             <Link href="/locations/lariom" className="group relative bg-cover bg-center h-64" style={{ backgroundImage: `url(${LARIOM.src})` }}>
               <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-75 transition-opacity"></div>
               <div className="relative z-10 flex items-center justify-center h-full text-white text-center">
