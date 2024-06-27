@@ -10,21 +10,36 @@ const Navbar = () => {
     <nav className="bg-black bg-opacity-75 z-50 fixed w-full text-white shadow-lg">
       <div className="container mx-auto p-4 flex justify-between items-center">
         <div className="flex items-center">
-          <Link href="/" className="text-2xl font-bold hover:text-gray-400 transition-colors duration-300">
+          <Link
+            href="/"
+            className="text-2xl font-bold hover:text-gray-400 transition-colors duration-300"
+          >
             Stormhold
           </Link>
         </div>
         <div className="hidden md:flex space-x-4">
-          <Link href="/locations" className="hover:text-gray-400 transition-colors duration-300">
+          <Link
+            href="/locations"
+            className="hover:text-gray-400 transition-colors duration-300"
+          >
             Locations
           </Link>
-          <Link href="/politics" className="hover:text-gray-400 transition-colors duration-300">
+          <Link
+            href="/politics"
+            className="hover:text-gray-400 transition-colors duration-300"
+          >
             Politics
           </Link>
-          <Link href="/economics" className="hover:text-gray-400 transition-colors duration-300">
+          <Link
+            href="/economics"
+            className="hover:text-gray-400 transition-colors duration-300"
+          >
             Economics
           </Link>
-          <Link href="/characters" className="hover:text-gray-400 transition-colors duration-300">
+          <Link
+            href="/characters"
+            className="hover:text-gray-400 transition-colors duration-300"
+          >
             Characters
           </Link>
         </div>
