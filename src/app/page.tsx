@@ -6,7 +6,7 @@ import LARIOM from "@/assets/LARIOM.jpeg";
 import DAWNFALL from "@/assets/DAWNFALL.webp";
 import MIRLUN from "@/assets/MIRLUN.webp";
 import GOBLIN_FOREST from "@/assets/GOBLIN_FORESTS.webp";
-import UNKNOWN from "@/assets/UNKNOWN.jpg";
+import SHUBORE from "@/assets/SHUBORE.webp";
 import worldData from "@/data/world_data.json";
 import Footer from "@/components/Footer";
 
@@ -117,7 +117,7 @@ export default function Home() {
                 className="group relative bg-cover bg-center h-64"
                 style={{ backgroundImage: `url(${LARIOM.src})` }}
               >
-                <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                <div className="absolute inset-0 bg-black opacity-25 group-hover:opacity-75 transition-opacity"></div>
                 <div className="relative z-10 flex items-center justify-center h-full text-white text-center">
                   <span className="text-lg font-bold">LARIOM</span>
                   <span className="ml-2">➔</span>
@@ -128,7 +128,7 @@ export default function Home() {
                 className="group relative bg-cover bg-center h-64"
                 style={{ backgroundImage: `url(${DAWNFALL.src})` }}
               >
-                <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                <div className="absolute inset-0 bg-black opacity-25 group-hover:opacity-75 transition-opacity"></div>
                 <div className="relative z-10 flex items-center justify-center h-full text-white text-center">
                   <span className="text-lg font-bold">DAWNFALL</span>
                   <span className="ml-2">➔</span>
@@ -139,31 +139,31 @@ export default function Home() {
                 className="group relative bg-cover bg-center h-64"
                 style={{ backgroundImage: `url(${MIRLUN.src})` }}
               >
-                <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                <div className="absolute inset-0 bg-black opacity-25 group-hover:opacity-75 transition-opacity"></div>
                 <div className="relative z-10 flex items-center justify-center h-full text-white text-center">
                   <span className="text-lg font-bold">MIRLUN</span>
                   <span className="ml-2">➔</span>
                 </div>
               </Link>
               <Link
-                href="/locations/goblin-forest"
+                href="/locations/shubore"
                 className="group relative bg-cover bg-center h-64"
-                style={{ backgroundImage: `url(${GOBLIN_FOREST.src})` }}
+                style={{ backgroundImage: `url(${SHUBORE.src})` }}
               >
-                <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                <div className="absolute inset-0 bg-black opacity-25 group-hover:opacity-75 transition-opacity"></div>
                 <div className="relative z-10 flex items-center justify-center h-full text-white text-center">
-                  <span className="text-lg font-bold">Goblin Forest</span>
+                  <span className="text-lg font-bold">SHUBORE</span>
                   <span className="ml-2">➔</span>
                 </div>
               </Link>
               <Link
-                href="/locations/unknown"
+                href="/locations/goblin_forests"
                 className="group relative bg-cover bg-center h-64"
-                style={{ backgroundImage: `url(${UNKNOWN.src})` }}
+                style={{ backgroundImage: `url(${GOBLIN_FOREST.src})` }}
               >
-                <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                <div className="absolute inset-0 bg-black opacity-25 group-hover:opacity-75 transition-opacity"></div>
                 <div className="relative z-10 flex items-center justify-center h-full text-white text-center">
-                  <span className="text-lg font-bold">UNKNOWN</span>
+                  <span className="text-lg font-bold">Goblin Forests</span>
                   <span className="ml-2">➔</span>
                 </div>
               </Link>
