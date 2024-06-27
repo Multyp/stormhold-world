@@ -40,7 +40,7 @@ const Mirlun = () => {
             <img
               src={MIRLUN.src}
               alt="Mirlun"
-              className="rounded-lg shadow-lg max-w-screen-lg h-1/2"
+              className="rounded-lg shadow-lg max-w-screen-lg w-[90dvw] h-1/2"
             />
           </div>
           <div className="flex items-center justify-center flex-col">
