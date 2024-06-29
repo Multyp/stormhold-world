@@ -1,14 +1,10 @@
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
-import Link from "next/link";
-import LARIOM from "@/assets/LARIOM.jpeg";
-import DAWNFALL from "@/assets/DAWNFALL.webp";
-import MIRLUN from "@/assets/MIRLUN.webp";
-import GOBLIN_FOREST from "@/assets/GOBLIN_FORESTS.webp";
-import SHUBORE from "@/assets/SHUBORE.webp";
+import LocationLink from "@/components/LocationLink";
 import worldData from "@/data/world_data.json";
 import Footer from "@/components/Footer";
+import imageUrls from "@/constants/imageUrls";
 
 export default function Home() {
   const { world_name, geography, economics, politics } =
@@ -112,61 +108,31 @@ export default function Home() {
               economic intricacies of {world_name}.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              <Link
+              <LocationLink
                 href="/locations/lariom"
-                className="group relative bg-cover bg-center h-64"
-                style={{ backgroundImage: `url(${LARIOM.src})` }}
-              >
-                <div className="absolute inset-0 bg-black opacity-25 group-hover:opacity-75 transition-opacity"></div>
-                <div className="relative z-10 flex items-center justify-center h-full text-white text-center">
-                  <span className="text-lg font-bold">LARIOM</span>
-                  <span className="ml-2">➔</span>
-                </div>
-              </Link>
-              <Link
+                backgroundImage={imageUrls.lariom}
+                title="LARIOM"
+              />
+              <LocationLink
                 href="/locations/dawnfall"
-                className="group relative bg-cover bg-center h-64"
-                style={{ backgroundImage: `url(${DAWNFALL.src})` }}
-              >
-                <div className="absolute inset-0 bg-black opacity-25 group-hover:opacity-75 transition-opacity"></div>
-                <div className="relative z-10 flex items-center justify-center h-full text-white text-center">
-                  <span className="text-lg font-bold">DAWNFALL</span>
-                  <span className="ml-2">➔</span>
-                </div>
-              </Link>
-              <Link
+                backgroundImage={imageUrls.dawnfall}
+                title="DAWNFALL"
+              />
+              <LocationLink
                 href="/locations/mirlun"
-                className="group relative bg-cover bg-center h-64"
-                style={{ backgroundImage: `url(${MIRLUN.src})` }}
-              >
-                <div className="absolute inset-0 bg-black opacity-25 group-hover:opacity-75 transition-opacity"></div>
-                <div className="relative z-10 flex items-center justify-center h-full text-white text-center">
-                  <span className="text-lg font-bold">MIRLUN</span>
-                  <span className="ml-2">➔</span>
-                </div>
-              </Link>
-              <Link
+                backgroundImage={imageUrls.mirlun}
+                title="MIRLUN"
+              />
+              <LocationLink
                 href="/locations/shubore"
-                className="group relative bg-cover bg-center h-64"
-                style={{ backgroundImage: `url(${SHUBORE.src})` }}
-              >
-                <div className="absolute inset-0 bg-black opacity-25 group-hover:opacity-75 transition-opacity"></div>
-                <div className="relative z-10 flex items-center justify-center h-full text-white text-center">
-                  <span className="text-lg font-bold">SHUBORE</span>
-                  <span className="ml-2">➔</span>
-                </div>
-              </Link>
-              <Link
+                backgroundImage={imageUrls.shubore}
+                title="SHUBORE"
+              />
+              <LocationLink
                 href="/locations/goblin_forests"
-                className="group relative bg-cover bg-center h-64"
-                style={{ backgroundImage: `url(${GOBLIN_FOREST.src})` }}
-              >
-                <div className="absolute inset-0 bg-black opacity-25 group-hover:opacity-75 transition-opacity"></div>
-                <div className="relative z-10 flex items-center justify-center h-full text-white text-center">
-                  <span className="text-lg font-bold">Goblin Forests</span>
-                  <span className="ml-2">➔</span>
-                </div>
-              </Link>
+                backgroundImage={imageUrls.goblinForests}
+                title="GOBLIN FORESTS"
+              />
             </div>
           </div>
         </section>

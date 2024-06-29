@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
-import LARIOM from "@/assets/LARIOM.jpeg";
 import Footer from "@/components/Footer";
+import imageUrls from "@/constants/imageUrls";
 
 const Lariom = () => {
   return (
@@ -13,7 +13,10 @@ const Lariom = () => {
         <Navbar />
         <header
           className="relative bg-cover bg-center parallax"
-          style={{ backgroundImage: `url(${LARIOM.src})`, height: "65vh" }}
+          style={{
+            backgroundImage: `url(${imageUrls.lariom})`,
+            height: "65vh",
+          }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
@@ -37,7 +40,7 @@ const Lariom = () => {
           </div>
           <div className="mt-8 flex justify-center">
             <img
-              src={LARIOM.src}
+              src={imageUrls.lariom}
               alt="Lariom"
               className="rounded-lg shadow-lg max-w-full h-1/2"
             />

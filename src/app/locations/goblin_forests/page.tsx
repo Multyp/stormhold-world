@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
-import GOBLIN_FORESTS from "@/assets/GOBLIN_FORESTS.webp";
 import Footer from "@/components/Footer";
+import imageUrls from "@/constants/imageUrls";
 
 const GoblinForests = () => {
   return (
@@ -14,7 +14,7 @@ const GoblinForests = () => {
         <header
           className="relative bg-cover bg-center parallax"
           style={{
-            backgroundImage: `url(${GOBLIN_FORESTS.src})`,
+            backgroundImage: `url(${imageUrls.goblinForests})`,
             height: "65vh",
           }}
         >
@@ -40,7 +40,7 @@ const GoblinForests = () => {
           </div>
           <div className="mt-8 flex justify-center">
             <img
-              src={GOBLIN_FORESTS.src}
+              src={imageUrls.goblinForests}
               alt="Goblin Forests"
               className="rounded-lg shadow-lg max-w-screen-lg w-[90dvw] h-1/2"
             />
