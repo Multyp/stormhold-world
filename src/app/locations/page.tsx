@@ -42,7 +42,7 @@ const Locations = () => {
         <header
           className="relative bg-cover bg-center parallax"
           style={{
-            backgroundImage: `url(/assets/UNKNOWN.jpg)`,
+            backgroundImage: `url(/stormhold-world/assets/UNKNOWN.jpg)`,
             height: "65vh",
           }}
         ></header>
