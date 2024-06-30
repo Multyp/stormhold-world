@@ -41,35 +41,51 @@
               "name": "Typhania Melith",
               "title": "Princess of MIRLUN",
               "background": [
-                "Born into the royal family of MIRLUN, Typhania is the heir to the elven throne.",
-                "Her family has ruled MIRLUN for centuries, known for their wisdom, magical prowess, and deep connection to the ancient forests."
+                "Born into the royal family of MIRLUN, Typhania is the heir",
+                "to the elven throne.Her family has ruled MIRLUN for",
+                "centuries, known for their wisdom, magical prowess, and deep",
+                "connection to the ancient forests."
               ],
               "upbringing": [
-                "Typhania's upbringing was steeped in the traditions of MIRLUN.",
-                "She received rigorous training in enchantment from the kingdom's most esteemed magical scholars and practical lessons from the ancient beings of the forest."
+                "Typhania's upbringing was steeped in the traditions of",
+                "MIRLUN. She received rigorous training in enchantment from",
+                "the kingdom's most esteemed magical scholars and practical",
+                "lessons from the ancient beings of the forest."
               ],
               "physical_appearance": [
-                "Typhania has long, flowing green hair and vibrant emerald eyes that reflect her deep connection with nature.",
-                "Her pointed ears and ethereal beauty mark her as a true elven princess."
+                "Typhania has long, flowing green hair and vibrant emerald",
+                "eyes that reflect her deep connection with nature. Her",
+                "pointed ears and ethereal beauty mark her as a true elven",
+                "princess."
               ],
               "attire": [
-                "She wears regal, flowing robes that signify her royal status, often adorned with natural elements like leaves and flowers.",
-                "Her attire includes enchanted jewelry that enhances her magical abilities, such as a necklace with a luminescent gemstone and a crown interwoven with magical runes."
+                "She wears regal, flowing robes that signify her royal",
+                "status, often adorned with natural elements like leaves and",
+                "flowers. Her attire includes enchanted jewelry that enhances",
+                "her magical abilities, such as a necklace with a luminescent",
+                "gemstone and a crown interwoven with magical runes."
               ],
               "personality": [
                 "Typhania has an innate love and respect for nature.",
-                "She is known for her kind and empathetic nature, always willing to help those in need.",
-                "Her deep knowledge of magic and nature makes her a wise and insightful leader."
+                "She is known for her kind and empathetic nature, always",
+                "willing to help those in need. Her deep knowledge of magic",
+                "and nature makes her a wise and insightful leader."
               ],
               "magical_abilities": [
-                "Typhania is a powerful enchantress, specializing in spells that enhance, protect, and heal.",
-                "Her connection to the natural world allows her to manipulate plants, communicate with animals, and heal the land.",
-                "Despite her lack of physical strength, Typhania can control elements such as water and earth, making her a formidable opponent."
+                "Typhania is a powerful enchantress, specializing in spells",
+                "that enhance, protect, and heal. Her connection to the",
+                "natural world allows her to manipulate plants, communicate",
+                "with animals, and heal the land. Despite her lack of",
+                "physical strength, Typhania can control elements such as",
+                "water and earth, making her a formidable opponent."
               ],
               "role_in_mirlun": [
-                "As the princess, Typhania plays a crucial role in the governance of MIRLUN.",
-                "She represents her people in diplomatic matters and ensures the kingdom's traditions and values are upheld.",
-                "She is also the foremost guardian of MIRLUN's ancient forests, using her magic to protect the land from threats."
+                "As the princess, Typhania plays a crucial role in the",
+                "governance of MIRLUN. She represents her people in",
+                "diplomatic matters and ensures the kingdom's traditions and",
+                "values are upheld. She is also the foremost guardian of",
+                "MIRLUN's ancient forests, using her magic to protect the",
+                "land from threats."
               ]
             }
           }
@@ -89,14 +105,24 @@
           },
           "politics": {
             "governance": [
-              "Governed by a royal family and influential maritime guilds and brotherhoods."
+              "Governed by a royal family and influential maritime guilds and",
+              "brotherhoods."
             ],
             "relations": [
-              "Maintains alliances with neighboring kingdoms for defense and trade."
+              "Maintains alliances with neighboring kingdoms for defense and",
+              "trade."
             ]
-          }
+          },
+          "genetics": [
+            "Shuborians have developed distinct genetic traits to adapt to",
+            "their harsh, icy environment. They have a higher resistance to",
+            "cold, with denser muscle growth and a more robust cardiovascular",
+            "system to endure the frigid temperatures. Shuborians are known",
+            "for their exceptional physical strength and endurance, making",
+            "them formidable warriors and expert seafarers."
+          ]
         },
-        "Goblin_forests": {
+        "GOBLIN FORESTS": {
           "description": [
             "Dense forests in the southeastern part of the continent,",
             "populated mostly by goblins and wolves, recognized as",
@@ -124,7 +150,7 @@
         },
         "MIRLUN": {
           "exports": [
-            "all kind of clothes, elven crafts, and non-processed",
+            "all kinds of clothes, elven crafts, and non-processed",
             "herbal medicines"
           ],
           "imports": [
@@ -145,14 +171,14 @@
     "politics": {
       "description": [
         "The continent's politics are overseen by an alliance called",
-        "THE GREAT ELDERS, consisting of three humans and three",
-        "dwarfs."
+        "THE ELDER'S SENATE, consisting of representatives from",
+        "LARIOM, DAWNFALL, MIRLUN, and SHUBORE."
       ],
       "elections": {
         "description": [
-          "Elections are held every four years, and every citizen",
+          "Elections are held every five years, and every citizen",
           "can vote, provided they can prove they have resided in",
-          "the capital city for at least two years."
+          "their respective regions for at least two years."
         ]
       },
       "governance": {
@@ -161,20 +187,143 @@
           "serving as the central point for diplomatic and",
           "governance activities."
         ],
-        "Goblin_forests": [
+        "GOBLIN FORESTS": [
           "Granted independence but required to stay out of",
           "GOLDENHALL politics and refrain from attacking the borders."
         ],
         "MIRLUN": [
-          "While it has its own governance, MIRLUN complies with the",
-          "broader laws set by THE GREAT ELDERS but maintains",
-          "autonomy in local matters like justice for example."
+          "Governed by a royal family, MIRLUN complies with the",
+          "broader laws set by THE ELDER'S SENATE but maintains",
+          "autonomy in local matters like justice."
         ],
         "SHUBORE": [
-          "Governed by a royal family and influential maritime guilds and brotherhoods.",
-          "Maintains alliances with neighboring kingdoms for defense and trade."
+          "Governed by a royal family and influential maritime guilds and",
+          "brotherhoods. Maintains alliances with neighboring kingdoms for",
+          "defense and trade."
+        ],
+        "LARIOM": [
+          "Governed by a council led by a high elected official,",
+          "maintains strong military and trade alliances with other kingdoms."
+        ],
+        "DAWNFALL": [
+          "Governed by a king and a council of miners and craftsmen,",
+          "focuses on mining and trade alliances with neighboring kingdoms."
         ]
       }
+    },
+    "history": {
+      "war_of_shadows": {
+        "name": "The War of Shadows",
+        "description": [
+          "The War of Shadows was ignited by a power struggle among the",
+          "kingdoms of STORMHOLD. It began with a minor territorial dispute",
+          "between the dwarves of DAWNFALL and the humans of LARIOM. This",
+          "small spark quickly escalated into a full-scale war, drawing in",
+          "the elves of MIRLUN and the maritime forces of SHUBORE."
+        ],
+        "duration": "Twenty years",
+        "end": [
+          "The signing of the Peace of Goldenhall marked the end of the War",
+          "of Shadows and the beginning of Year 0 AR."
+        ]
+      },
+      "high_council": {
+        "name": "The High Council",
+        "founding": [
+          "To ensure that such a devastating conflict would never occur",
+          "again, the four leaders established the High Council, a governing",
+          "body representing the major kingdoms of STORMHOLD."
+        ],
+        "members": {
+          "human_leader": {
+            "name": "Lady Aveline Stormguard",
+            "kingdom": "LARIOM",
+            "description": [
+              "A wise and charismatic human leader who recognized the",
+              "futility of prolonged conflict."
+            ]
+          },
+          "dwarven_leader": {
+            "name": "King Thrain Stonehammer",
+            "kingdom": "DAWNFALL",
+            "description": [
+              "A steadfast and honorable dwarf king who sought to protect his",
+              "people and their ancient mines."
+            ]
+          },
+          "elven_leader": {
+            "name": "Elder Alaric Melith",
+            "kingdom": "MIRLUN",
+            "description": [
+              "A powerful elven enchantress with deep connections to the",
+              "natural world and a desire for harmony. He is the ancestor of",
+              "Princess Typhania Melith."
+            ]
+          },
+          "maritime_leader": {
+            "name": "Admiral Isolde Frostwind",
+            "kingdom": "SHUBORE",
+            "description": [
+              "A skilled and strategic naval commander who understood the",
+              "importance of unity for maritime prosperity."
+            ]
+          }
+        }
+      },
+      "elders_senate": {
+        "name": "The Elder's Senate",
+        "transformation": [
+          "By Year 60 AR, as the kingdoms grew and the need for more",
+          "inclusive governance became apparent, the High Council was",
+          "expanded and renamed to the Elder's Senate."
+        ],
+        "composition": {
+          "total_members": 12,
+          "distribution": {
+            "humans": 3,
+            "dwarves": 3,
+            "elves": 3,
+            "maritime_kingdom": 3
+          },
+          "members": [
+            "Three larionians (two from LARIOM, one from another kingdom)",
+            "Three dwarves (two from DAWNFALL, one from another dwarven settlement)",
+            "Three elves (two from MIRLUN, one from another elven settlement)",
+            "Three shuborians (two from shubore, one one from another kingdom"
+          ]
+        },
+        "function": [
+          "The Senate convenes in GOLDENHALL, where they deliberate on",
+          "matters of governance, diplomacy, and law. Elections are held",
+          "every five years, ensuring that each community has a voice in",
+          "the decision-making process."
+        ]
+      }
+    },
+    "calendar": {
+      "name": "The Reckoning",
+      "year_structure": [
+        "STORMHOLD’s calendar is based on the planet's unique celestial",
+        "cycles, influenced by its two moons, Lunara and Elune. The",
+        "planet's orbit around its sun and the interplay of its moons create",
+        "a year slightly longer than Earth's, divided into 9 months. Each",
+        "month has 43 days, resulting in a year of 387 days."
+      ],
+      "months": [
+        "Frostveil",
+        "Tempestwind",
+        "Emberblaze",
+        "Thawrise",
+        "Blossomburst",
+        "Sunpeak",
+        "Harvestgale",
+        "Leafwhisper",
+        "Snowfall"
+      ],
+      "daily_timekeeping": [
+        "The day in STORMHOLD is divided into 26 hours, each hour having 60",
+        "minutes, and each minute having 60 seconds."
+      ]
     }
   }
 }
