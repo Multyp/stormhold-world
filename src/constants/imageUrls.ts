@@ -1,19 +1,20 @@
 const imageUrls = {
-  default: "assets/UNKNOWN.jpg",
+  default: "/stormhold-world/assets/UNKNOWN.jpg",
   /*
     LOCATIONS
   */
-  lariom: "/assets/LARIOM.webp",
-  dawnfall: "/assets/DAWNFALL.webp",
-  mirlun: "/assets/MIRLUN.webp",
-  shubore: "/assets/SHUBORE.webp",
-  stormhold: "/assets/STORMHOLD.webp",
-  goblinForests: "/assets/GOBLIN_FORESTS.webp",
+  lariom: "/stormhold-world/assets/LARIOM.webp",
+  dawnfall: "/stormhold-world/assets/DAWNFALL.webp",
+  mirlun: "/stormhold-world/assets/MIRLUN.webp",
+  shubore: "/stormhold-world/assets/SHUBORE.webp",
+  stormhold: "/stormhold-world/assets/STORMHOLD.webp",
+  goblinForests: "/stormhold-world/assets/GOBLIN_FORESTS.webp",
 
   /*
     CHARACTERS
   */
-  typhaniaMelith: "/assets/characters/Mirlun/typhania_melith.jpg",
+  typhaniaMelith:
+    "/stormhold-world/assets/characters/Mirlun/typhania_melith.jpg",
 };
 
 export default imageUrls;
