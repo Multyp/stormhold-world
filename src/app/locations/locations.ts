@@ -3,7 +3,7 @@ const locations = [
     name: "LARIOM",
     description:
       "The human kingdom situated in the southwest of the continent, known for its strategic military positions and rich cultural history.",
-    imageSrc: "/stormhold-world/assets/LARIOM.jpeg",
+    imageSrc: "/stormhold-world/assets/LARIOM.webp",
     link: "/locations/lariom",
   },
   {
