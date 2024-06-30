@@ -6,6 +6,11 @@ const locations = [
     imageSrc: imageUrls.typhaniaMelith,
     link: "/characters/typhania_melith",
   },
+  {
+    name: "Eliana SHONER",
+    imageSrc: imageUrls.elianaShoner,
+    link: "/characters/eliana_shoner",
+  },
 ];
 
 export default locations;
