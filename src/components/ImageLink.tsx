@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
 
-interface LocationLinkProps {
+interface ImageLinkProps {
   href: string;
   backgroundImage: string;
   title: string;
 }
 
-const LocationLink: React.FC<LocationLinkProps> = ({
+const ImageLink: React.FC<ImageLinkProps> = ({
   href,
   backgroundImage,
   title,
@@ -27,4 +27,4 @@ const LocationLink: React.FC<LocationLinkProps> = ({
   );
 };
 
-export default LocationLink;
+export default ImageLink;

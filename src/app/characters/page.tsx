@@ -5,16 +5,15 @@ import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LocationLink from "@/components/ImageLink";
-import locations from "./locations";
-import Header from "@/components/Header";
+import characters from "@/app/characters/characters";
 
-const Locations = () => {
+const Characters = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
 
-  const sortedLocations = locations
-    .filter(location =>
-      location.name.toLowerCase().includes(searchTerm.toLowerCase()),
+  const sortedCharacters = characters
+    .filter(characters =>
+      characters.name.toLowerCase().includes(searchTerm.toLowerCase()),
     )
     .sort((a, b) => {
       if (sortOrder === "asc") {
@@ -35,7 +34,7 @@ const Locations = () => {
   return (
     <div>
       <Head>
-        <title>Locations - Discover the World</title>
+        <title>Characters - Discover the People</title>
       </Head>
       <main className="min-h-screen">
         <Navbar />
@@ -49,7 +48,7 @@ const Locations = () => {
         <section className="bg-gray-100 py-12">
           <div className="container mx-auto px-4">
             <div className="flex justify-between items-center mb-8">
-              <h2 className="text-3xl font-bold">Explore Locations</h2>
+              <h2 className="text-3xl font-bold">Explore the Characters</h2>
               <div className="flex items-center space-x-4">
                 <input
                   type="text"
@@ -67,13 +66,12 @@ const Locations = () => {
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-              {sortedLocations.map((location, index) => (
+              {sortedCharacters.map((character, index) => (
                 <LocationLink
                   key={index}
-                  href={location.link}
-                  backgroundImage={location.imageSrc}
-                  title={location.name}
-                  // description={location.description}
+                  href={character.link}
+                  backgroundImage={character.imageSrc}
+                  title={character.name}
                 />
               ))}
             </div>
@@ -85,4 +83,4 @@ const Locations = () => {
   );
 };
 
-export default Locations;
+export default Characters;
