@@ -1,7 +1,9 @@
 import Head from "next/head";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import MIRLUN from "@/assets/MIRLUN.webp";
 import Footer from "@/components/Footer";
+import imageUrls from "@/constants/imageUrls";
+import ImageLink from "@/components/ImageLink";
 
 const Mirlun = () => {
   return (
@@ -13,7 +15,10 @@ const Mirlun = () => {
         <Navbar />
         <header
           className="relative bg-cover bg-center parallax"
-          style={{ backgroundImage: `url(${MIRLUN.src})`, height: "65vh" }}
+          style={{
+            backgroundImage: `url(${imageUrls.mirlun})`,
+            height: "65vh",
+          }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
@@ -37,10 +42,13 @@ const Mirlun = () => {
             </p>
           </div>
           <div className="mt-8 flex justify-center">
-            <img
-              src={MIRLUN.src}
+            <Image
+              src={imageUrls.mirlun}
               alt="Mirlun"
+              objectFit="cover"
               className="rounded-lg shadow-lg max-w-screen-lg w-[90dvw] h-1/2"
+              height={0}
+              width={0}
             />
           </div>
           <div className="flex items-center justify-center flex-col">
@@ -66,6 +74,29 @@ const Mirlun = () => {
               preserving its natural beauty and historical legacy makes it a
               captivating destination within STORMHOLD.
             </p>
+            <h3 className="text-3xl font-bold my-5">The Royal Family</h3>
+            <p className="text-lg text-gray-600 mt-4 text-left max-w-screen-lg">
+              The royal family of Mirlun is deeply respected for their wisdom,
+              magical prowess, and dedication to the well-being of the kingdom.
+              Learn more about the members of the royal family:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 max-w-screen-lg w-full">
+              <ImageLink
+                title="Elion MELITH"
+                href="/characters/elion_melith"
+                backgroundImage={imageUrls.default}
+              />
+              <ImageLink
+                title="Aryndel MELITH"
+                href="/characters/aryndel_melith"
+                backgroundImage={imageUrls.default}
+              />
+              <ImageLink
+                title="Typhania MELITH"
+                href="/characters/typhania_melith"
+                backgroundImage={imageUrls.typhaniaMelith}
+              />
+            </div>
           </div>
         </section>
       </main>
