@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import imageUrls from "@/constants/imageUrls";
@@ -39,10 +40,13 @@ const GoblinForests = () => {
             </p>
           </div>
           <div className="mt-8 flex justify-center">
-            <img
+            <Image
               src={imageUrls.goblinForests}
               alt="Goblin Forests"
+              objectFit="cover"
               className="rounded-lg shadow-lg max-w-screen-lg w-[90dvw] h-1/2"
+              height={0}
+              width={0}
             />
           </div>
           <div className="flex items-center justify-center flex-col">

@@ -3,7 +3,7 @@ const imageUrls = {
   /*
     LOCATIONS
   */
-  lariom: "/assets/LARIOM.jpeg",
+  lariom: "/assets/LARIOM.webp",
   dawnfall: "/assets/DAWNFALL.webp",
   mirlun: "/assets/MIRLUN.webp",
   shubore: "/assets/SHUBORE.webp",
