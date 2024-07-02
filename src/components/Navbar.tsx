@@ -31,10 +31,10 @@ const Navbar = () => {
             Politics
           </Link>
           <Link
-            href="/economics"
+            href="/history"
             className="hover:text-gray-400 transition-colors duration-300"
           >
-            Economics
+            History
           </Link>
           <Link
             href="/characters"
@@ -87,11 +87,11 @@ const Navbar = () => {
             Politics
           </Link>
           <Link
-            href="/economics"
+            href="/history"
             className="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-300"
             onClick={() => setIsMenuOpen(false)}
           >
-            Economics
+            History
           </Link>
           <Link
             href="/characters"
