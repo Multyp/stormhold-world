@@ -88,13 +88,13 @@ const TyphaniaMelith = () => {
               nature magic from a young age.
             </p>
           </div>
-          <div className="mt-8 flex">
-            <div className="relative rounded-lg shadow-lg max-w-screen-lg w-[90dvw] h-1/2">
+          <div className="mt-8 mx-4 w-full flex justify-center items-center">
+            <div className="relative rounded-lg shadow-lg max-w-screen-lg w-[100dvw] h-1/2">
               <Image
                 src={imageUrls.typhaniaMelith}
                 alt="Typhania Melith"
                 objectFit="cover"
-                className="rounded-lg shadow-lg max-w-screen-lg w-[90dvw] h-1/2"
+                className="rounded-lg shadow-lg max-w-screen-lg w-full mx-4 box-border h-1/2"
                 height={0}
                 width={0}
               />
