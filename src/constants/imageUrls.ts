@@ -40,6 +40,9 @@ const imageUrls = {
   elianaShoner:
     process.env.NEXT_PUBLIC_IMAGE_URL_ELIANA_SHONER ||
     "/stormhold-world/assets/characters/Shubore/eliana_shoner.webp",
+  feliciaShoner:
+    process.env.NEXT_PUBLIC_IMAGE_URL_FELICIA_SHONER ||
+    "/stormhold-world/assets/characters/Shubore/felicia_shoner.webp",
 };
 
 export default imageUrls;

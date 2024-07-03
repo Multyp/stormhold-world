@@ -25,6 +25,12 @@ const locations = [
     link: "/characters/shubore/eliana_shoner",
     tags: ["human", "shuborian", "soldier", "woman"],
   },
+  {
+    name: "Felicia SHONER",
+    imageSrc: imageUrls.feliciaShoner,
+    link: "/characters/shubore/felicia_shoner",
+    tags: ["human", "shuborian", "witch", "woman"],
+  },
 ];
 
 export default locations;
