@@ -37,55 +37,69 @@
             "larger political entity."
           ],
           "royal_family": {
+            "king": {
+              "name": "Elion Melith",
+              "title": "King of MIRLUN",
+              "background": [
+                "Elion Melith, the gentle and dignified king of MIRLUN, is renowned for his serene demeanor and unwavering dedication to his people. Despite his gentle nature, Elion places immense importance on physical appearance, a trait influenced by the elves' ageless genes. He frequently experiments with new fashions and grooming techniques, striving to embody the ideal of eternal youth and beauty."
+              ],
+              "upbringing": [
+                "Raised in the grandeur of the royal palace, Elion was instilled with a deep sense of duty and aesthetic appreciation from an early age. His education included not only the arts of governance and diplomacy but also extensive training in personal grooming and presentation."
+              ],
+              "physical_appearance": [
+                "King Elion is a striking figure, with long, flowing green hair and vibrant emerald eyes that mirror the lush forests of MIRLUN. His regal attire is meticulously crafted, adorned with intricate designs and natural elements that reflect his kingdom's close ties to nature. Elion's appearance is further enhanced by his elegant jewelry, including a necklace with a luminescent gemstone and a crown interwoven with magical runes."
+              ],
+              "personality": [
+                "Though he may appear vain, Elion's concern for his appearance is matched by his genuine care for his kingdom and its people. His gentle and compassionate nature endears him to his subjects, and he is always willing to listen to their concerns and address their needs."
+              ],
+              "role_in_mirlun": [
+                "As the king, Elion plays a vital role in the governance of MIRLUN. He oversees the kingdom's political affairs, represents MIRLUN in THE ELDER'S SENATE, and ensures the preservation of its cultural heritage. Elion's leadership is characterized by his emphasis on beauty, harmony, and the well-being of his people."
+              ],
+              "image": "elion_melith.jpg"
+            },
+            "queen": {
+              "name": "Aryndel Melith",
+              "title": "Queen of MIRLUN",
+              "background": [
+                "Queen Aryndel Melith is celebrated for her unwavering dedication to charity and her hands-on approach to aiding her people. Rarely seen within the confines of the royal castle, Aryndel spends most of her time among the citizens of MIRLUN, offering help and support wherever it is needed. While her benevolence is widely recognized, few are aware of her formidable skills as an enchantress, having secretly trained her daughter Typhania in the magical arts."
+              ],
+              "upbringing": [
+                "Aryndel was raised with a strong sense of compassion and a commitment to service. Her upbringing emphasized the importance of kindness and humility, traits that have defined her reign as queen."
+              ],
+              "physical_appearance": [
+                "Aryndel possesses an ethereal beauty, characterized by her flowing green hair adorned with delicate floral elements and vibrant emerald eyes that reflect her deep connection to nature. Her regal attire is a blend of elegance and simplicity, featuring intricate designs that symbolize her charitable endeavors. She wears enchanted jewelry that subtly enhances her magical abilities, including a crown interwoven with leaves and gemstones."
+              ],
+              "personality": [
+                "Known for her warm and approachable nature, Aryndel is beloved by her people. Her deep empathy and genuine desire to help others make her an inspirational figure in MIRLUN, often seen as the heart of the kingdom."
+              ],
+              "role_in_mirlun": [
+                "As queen, Aryndel's primary focus is on the welfare of MIRLUN's citizens. She leads numerous charitable initiatives and works closely with local communities to address their needs. In addition to her public role, Aryndel's hidden prowess in enchantment makes her a powerful ally and a protective force for the kingdom."
+              ],
+              "image": "aryndel_melith.jpg"
+            },
             "princess": {
               "name": "Typhania Melith",
               "title": "Princess of MIRLUN",
               "background": [
-                "Born into the royal family of MIRLUN, Typhania is the heir",
-                "to the elven throne.Her family has ruled MIRLUN for",
-                "centuries, known for their wisdom, magical prowess, and deep",
-                "connection to the ancient forests."
+                "Born into the royal family of MIRLUN, Typhania is the heir to the elven throne. Her family has ruled MIRLUN for centuries, known for their wisdom, magical prowess, and deep connection to the ancient forests."
               ],
               "upbringing": [
-                "Typhania's upbringing was steeped in the traditions of",
-                "MIRLUN. She received rigorous training in enchantment from",
-                "the kingdom's most esteemed magical scholars and practical",
-                "lessons from the ancient beings of the forest."
+                "Typhania's upbringing was steeped in the traditions of MIRLUN. She received rigorous training in enchantment from the kingdom's most esteemed magical scholars and practical lessons from the ancient beings of the forest."
               ],
               "physical_appearance": [
-                "Typhania has long, flowing green hair and vibrant emerald",
-                "eyes that reflect her deep connection with nature. Her",
-                "pointed ears and ethereal beauty mark her as a true elven",
-                "princess."
+                "Typhania has long, flowing green hair and vibrant emerald eyes that reflect her deep connection with nature. Her pointed ears and ethereal beauty mark her as a true elven princess."
               ],
               "attire": [
-                "She wears regal, flowing robes that signify her royal",
-                "status, often adorned with natural elements like leaves and",
-                "flowers. Her attire includes enchanted jewelry that enhances",
-                "her magical abilities, such as a necklace with a luminescent",
-                "gemstone and a crown interwoven with magical runes."
+                "She wears regal, flowing robes that signify her royal status, often adorned with natural elements like leaves and flowers. Her attire includes enchanted jewelry that enhances her magical abilities, such as a necklace with a luminescent gemstone and a crown interwoven with magical runes."
               ],
               "personality": [
-                "Typhania has an innate love and respect for nature.",
-                "She is known for her kind and empathetic nature, always",
-                "willing to help those in need. Her deep knowledge of magic",
-                "and nature makes her a wise and insightful leader."
+                "Typhania has an innate love and respect for nature. She is known for her kind and empathetic nature, always willing to help those in need. Her deep knowledge of magic and nature makes her a wise and insightful leader."
               ],
               "magical_abilities": [
-                "Typhania is a powerful enchantress, specializing in spells",
-                "that enhance, protect, and heal. Her connection to the",
-                "natural world allows her to manipulate plants, communicate",
-                "with animals, and heal the land. Despite her lack of",
-                "physical strength, Typhania can control elements such as",
-                "water and earth, making her a formidable opponent."
+                "Typhania is a powerful enchantress, specializing in spells that enhance, protect, and heal. Her connection to the natural world allows her to manipulate plants, communicate with animals, and heal the land. Despite her lack of physical strength, Typhania can control elements such as water and earth, making her a formidable opponent."
               ],
               "role_in_mirlun": [
-                "As the princess, Typhania plays a crucial role in the",
-                "governance of MIRLUN. She represents her people in",
-                "diplomatic matters and ensures the kingdom's traditions and",
-                "values are upheld. She is also the foremost guardian of",
-                "MIRLUN's ancient forests, using her magic to protect the",
-                "land from threats."
+                "As the princess, Typhania plays a crucial role in the governance of MIRLUN. She represents her people in diplomatic matters and ensures the kingdom's traditions and values are upheld. She is also the foremost guardian of MIRLUN's ancient forests, using her magic to protect the land from threats."
               ]
             }
           }
