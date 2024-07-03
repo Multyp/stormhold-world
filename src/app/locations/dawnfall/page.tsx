@@ -1,8 +1,17 @@
+/* Global imports */
 import Head from "next/head";
-import Image from "next/image";
+/* Scoped imports */
+/* Local imports */
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import imageUrls from "@/constants/imageUrls";
+import SectionTitle from "@/components/base/SectionTitle";
+import SectionSubtitle from "@/components/base/SectionSubtitle";
+import SectionContent from "@/components/base/SectionContent";
+import SectionContainer from "@/components/base/SectionContainer";
+import SectionImageContainer from "@/components/base/SectionImageContainer";
+import SectionImage from "@/components/base/SectionImage";
+import SectionHeadContainer from "@/components/base/SectionHeadContainer";
 
 const Dawnfall = () => {
   return (
@@ -53,7 +62,7 @@ const Dawnfall = () => {
                     href="#politics"
                     className="text-blue-600 hover:underline block p-2"
                   >
-                    Political Role
+                    Politics
                   </a>
                 </li>
                 <li className="w-full md:w-auto text-center">
@@ -61,7 +70,7 @@ const Dawnfall = () => {
                     href="#culture"
                     className="text-blue-600 hover:underline block p-2"
                   >
-                    Cultural Significance
+                    Culture
                   </a>
                 </li>
               </ul>
@@ -69,67 +78,48 @@ const Dawnfall = () => {
           </div>
         </nav>
         <section className="py-10 px-4 flex items-center justify-center flex-col">
-          <div
-            className="flex flex-col max-w-screen-lg"
-            id="welcome"
-          >
-            <h2 className="text-4xl font-bold my-5 text-left">
-              Welcome to Dawnfall
-            </h2>
-            <p className="text-lg text-gray-600 mt-4 text-left max-w-screen-lg">
+          <SectionHeadContainer id="welcome">
+            <SectionTitle title="Welcome to Dawnfall" />
+            <SectionContent>
               Dawnfall is a dwarven kingdom located in the northwest of
               STORMHOLD, built atop THE GREAT MINES, which are the primary
               source of stones and metals for the kingdom.
-            </p>
-          </div>
-          <div className="mt-8 mx-4 w-full flex justify-center items-center">
-            <div className="relative rounded-lg shadow-lg max-w-screen-lg w-[100dvw] h-1/2">
-              <Image
-                src={imageUrls.dawnfall}
-                alt="Dawnfall"
-                objectFit="cover"
-                className="rounded-lg shadow-lg max-w-screen-lg w-full box-border h-1/2"
-                height={0}
-                width={0}
-              />
-            </div>
-          </div>
-          <div
-            className="flex flex-col mt-8"
-            id="economy"
-          >
-            <h3 className="text-3xl font-bold my-5">Economy</h3>
-            <p className="text-lg text-gray-600 mt-4 text-left max-w-screen-lg">
+            </SectionContent>
+          </SectionHeadContainer>
+          <SectionImageContainer>
+            <SectionImage
+              alt="Aerial view of one of dawnfall's cities"
+              imageUrl={imageUrls.dawnfall}
+            />
+          </SectionImageContainer>
+          <SectionContainer id="economy">
+            <SectionSubtitle title="Economy" />
+            <SectionContent>
               Dawnfall contributes significantly to the economic structure of
               STORMHOLD by exporting ores such as iron, copper, and precious
               metals. In return, it imports processed food products like cheese
               and bread, along with medical supplies.
-            </p>
-          </div>
-          <div
-            className="flex flex-col mt-8"
-            id="politics"
-          >
-            <h3 className="text-3xl font-bold my-5">Political Role</h3>
-            <p className="text-lg text-gray-600 mt-4 text-left max-w-screen-lg">
+            </SectionContent>
+          </SectionContainer>
+
+          <SectionContainer id="politics">
+            <SectionSubtitle title="Politics" />
+            <SectionContent>
               Politically, Dawnfall is part of the alliance overseen by THE
               GREAT ELDERS, a governing body comprising three humans and three
               dwarfs. This alliance influences major decisions across STORMHOLD,
               particularly in the central city of GOLDENHALL.
-            </p>
-          </div>
-          <div
-            className="flex flex-col mt-8"
-            id="culture"
-          >
-            <h3 className="text-3xl font-bold my-5">Cultural Significance</h3>
-            <p className="text-lg text-gray-600 mt-4 text-left max-w-screen-lg">
+            </SectionContent>
+          </SectionContainer>
+          <SectionContainer id="culture">
+            <SectionSubtitle title="Culture" />
+            <SectionContent>
               Dawnfall{"'"}s culture is deeply rooted in its mining traditions
               and craftsmanship. The kingdom celebrates its heritage through
               festivals and stories that honor its historical contributions to
               STORMHOLD.
-            </p>
-          </div>
+            </SectionContent>
+          </SectionContainer>
         </section>
       </main>
       <Footer />

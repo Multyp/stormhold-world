@@ -1,8 +1,17 @@
+/* Global imports */
 import Head from "next/head";
-import Image from "next/image";
+/* Scoped imports */
+/* Local imports */
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import imageUrls from "@/constants/imageUrls";
+import SectionTitle from "@/components/base/SectionTitle";
+import SectionSubtitle from "@/components/base/SectionSubtitle";
+import SectionContent from "@/components/base/SectionContent";
+import SectionContainer from "@/components/base/SectionContainer";
+import SectionImageContainer from "@/components/base/SectionImageContainer";
+import SectionImage from "@/components/base/SectionImage";
+import SectionHeadContainer from "@/components/base/SectionHeadContainer";
 
 const Shubore = () => {
   return (
@@ -53,7 +62,15 @@ const Shubore = () => {
                     href="#politics"
                     className="text-blue-600 hover:underline block p-2"
                   >
-                    Political Governance
+                    Politics
+                  </a>
+                </li>
+                <li className="w-full md:w-auto text-center">
+                  <a
+                    href="#culture"
+                    className="text-blue-600 hover:underline block p-2"
+                  >
+                    Culture
                   </a>
                 </li>
               </ul>
@@ -61,56 +78,66 @@ const Shubore = () => {
           </div>
         </nav>
         <section className="py-10 px-4 flex items-center justify-center flex-col">
-          <div
-            className="flex flex-col max-w-screen-lg"
-            id="welcome"
-          >
-            <h2 className="text-4xl font-bold my-5 text-left">
-              Welcome to Shubore
-            </h2>
-            <p className="text-lg text-gray-600 mt-4 text-left max-w-screen-lg">
+          <SectionHeadContainer id="welcome">
+            <SectionTitle title="Welcome to Shubore" />
+            <SectionContent>
               Shubore is a snowy maritime kingdom located in the northeast of
               Stormhold, renowned for its mastery of icy waters and naval
               prowess. It is a crucial hub for maritime trade and defense,
               maintaining alliances with neighboring kingdoms.
-            </p>
-          </div>
-          <div className="mt-8 mx-4 w-full flex justify-center items-center">
-            <div className="relative rounded-lg shadow-lg max-w-screen-lg w-[100dvw] h-1/2">
-              <Image
-                src={imageUrls.shubore}
-                alt="Shubore"
-                objectFit="cover"
-                className="rounded-lg shadow-lg max-w-screen-lg w-full box-border h-1/2"
-                height={0}
-                width={0}
-              />
-            </div>
-          </div>
-          <div
-            className="flex flex-col mt-8"
-            id="economy"
-          >
-            <h3 className="text-3xl font-bold my-5">Economy</h3>
-            <p className="text-lg text-gray-600 mt-4 text-left max-w-screen-lg">
+            </SectionContent>
+          </SectionHeadContainer>
+          <SectionImageContainer>
+            <SectionImage
+              alt="Aerial view of Shubore"
+              imageUrl={imageUrls.shubore}
+            />
+          </SectionImageContainer>
+          <SectionContainer id="economy">
+            <SectionSubtitle title="Economy" />
+            <SectionContent>
               Shubore{"'"}s economy thrives on exporting rare seashells, pearls,
               fine shipbuilding timber, and exotic spices. In return, it imports
               luxury goods, tropical fruits, and specialized naval equipment,
               ensuring a robust economic interdependence within Stormhold.
-            </p>
-          </div>
-          <div
-            className="flex flex-col mt-8"
-            id="politics"
-          >
-            <h3 className="text-3xl font-bold my-5">Political Governance</h3>
-            <p className="text-lg text-gray-600 mt-4 text-left max-w-screen-lg">
+            </SectionContent>
+          </SectionContainer>
+
+          <SectionContainer id="politics">
+            <SectionSubtitle title="Politics" />
+            <SectionContent>
               Governed by a royal family and influential maritime guilds and
               brotherhoods, Shubore plays a pivotal role in the political
-              landscape of Stormhold. It adheres to the laws and maintains
-              diplomatic relations set by THE GREAT ELDERS.
-            </p>
-          </div>
+              landscape of Stormhold.
+              <br />
+              <br />
+              It adheres to the laws and maintains diplomatic relations set by
+              the alliance of THE ELDER {"'"}S SENATE, a governing body
+              consisting of representatives from LARIOM, DAWNFALL, MIRLUN, and
+              SHUBORE. The political hub of STORMHOLD is the central city of
+              GOLDENHALL, where major political decisions and alliances are
+              formed.
+            </SectionContent>
+
+            <SectionContainer id="culture">
+              <SectionSubtitle title="Culture" />
+              <SectionContent>
+                SHUBORE{"'"}s culture is deeply intertwined with its maritime
+                environment and harsh, icy climate. The people of SHUBORE, known
+                as Shuborians, are renowned for their resilience and physical
+                strength, traits honed by their unique genetic adaptations to
+                the cold. Their society values maritime prowess, with
+                influential guilds and brotherhoods playing a significant role
+                in governance alongside the royal family. Shuborian
+                craftsmanship in shipbuilding is unparalleled, and their economy
+                thrives on the export of rare seashells, pearls, and exotic
+                spices. Culturally, Shuborians maintain strong traditions of
+                seafaring and naval defense, celebrating their mastery over the
+                icy waters with festivals and rituals that honor the sea and
+                their ancestors.
+              </SectionContent>
+            </SectionContainer>
+          </SectionContainer>
         </section>
       </main>
       <Footer />

@@ -20,10 +20,22 @@ const locations = [
     tags: ["elf", "mirlunian", "royal", "woman"],
   },
   {
+    name: "Selwyn BLAUN",
+    imageSrc: imageUrls.selwynBlaun,
+    link: "/characters/mirlun/selwyn_blaun",
+    tags: ["elf", "mirlunian", "woman"],
+  },
+  {
     name: "Eliana SHONER",
     imageSrc: imageUrls.elianaShoner,
     link: "/characters/shubore/eliana_shoner",
     tags: ["human", "shuborian", "soldier", "woman"],
+  },
+  {
+    name: "Felicia SHONER",
+    imageSrc: imageUrls.feliciaShoner,
+    link: "/characters/shubore/felicia_shoner",
+    tags: ["human", "shuborian", "witch", "woman"],
   },
 ];
 
