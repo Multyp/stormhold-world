@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import imageUrls from "@/constants/imageUrls";
 import SectionTitle from "@/components/base/SectionTitle";
-import SectionSubtitle from "@/components/base/SectionsSubtitle";
+import SectionSubtitle from "@/components/base/SectionSubtitle";
 import SectionContent from "@/components/base/SectionContent";
 import SectionContainer from "@/components/base/SectionContainer";
 import SectionImageContainer from "@/components/base/SectionImageContainer";
