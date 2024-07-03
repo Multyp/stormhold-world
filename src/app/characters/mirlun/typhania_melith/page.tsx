@@ -29,49 +29,53 @@ const TyphaniaMelith = () => {
             </div>
           </div>
         </header>
-        <nav className="flex justify-center py-4 bg-gray-100">
-          <ul className="flex space-x-4">
-            <li>
-              <a
-                href="#about"
-                className="text-blue-600 hover:underline"
-              >
-                About Typhania Melith
-              </a>
-            </li>
-            <li>
-              <a
-                href="#appearance"
-                className="text-blue-600 hover:underline"
-              >
-                Physical Appearance
-              </a>
-            </li>
-            <li>
-              <a
-                href="#personality"
-                className="text-blue-600 hover:underline"
-              >
-                Personality
-              </a>
-            </li>
-            <li>
-              <a
-                href="#abilities"
-                className="text-blue-600 hover:underline"
-              >
-                Magical Abilities
-              </a>
-            </li>
-            <li>
-              <a
-                href="#role"
-                className="text-blue-600 hover:underline"
-              >
-                Role in MIRLUN
-              </a>
-            </li>
-          </ul>
+        <nav className="py-4 w-[100dvw] flex justify-center items-center">
+          <div className="container mx-auto px-4 max-w-screen-lg">
+            <div className="bg-gray-100 shadow-md rounded-lg p-4">
+              <ul className="flex flex-wrap justify-center space-y-2 md:space-y-0 md:space-x-4">
+                <li className="w-full md:w-auto text-center">
+                  <a
+                    href="#about"
+                    className="text-blue-600 hover:underline block p-2"
+                  >
+                    About Typhania Melith
+                  </a>
+                </li>
+                <li className="w-full md:w-auto text-center">
+                  <a
+                    href="#appearance"
+                    className="text-blue-600 hover:underline block p-2"
+                  >
+                    Physical Appearance
+                  </a>
+                </li>
+                <li className="w-full md:w-auto text-center">
+                  <a
+                    href="#personality"
+                    className="text-blue-600 hover:underline block p-2"
+                  >
+                    Personality
+                  </a>
+                </li>
+                <li className="w-full md:w-auto text-center">
+                  <a
+                    href="#abilities"
+                    className="text-blue-600 hover:underline block p-2"
+                  >
+                    Magical Abilities
+                  </a>
+                </li>
+                <li className="w-full md:w-auto text-center">
+                  <a
+                    href="#role"
+                    className="text-blue-600 hover:underline block p-2"
+                  >
+                    Role in MIRLUN
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
         <section className="py-10 px-4 flex items-center justify-center flex-col">
           <div
@@ -94,7 +98,7 @@ const TyphaniaMelith = () => {
                 src={imageUrls.typhaniaMelith}
                 alt="Typhania Melith"
                 objectFit="cover"
-                className="rounded-lg shadow-lg max-w-screen-lg w-full mx-4 box-border h-1/2"
+                className="rounded-lg shadow-lg max-w-screen-lg w-full box-border h-1/2"
                 height={0}
                 width={0}
               />
