@@ -37,6 +37,9 @@ const imageUrls = {
   aryndelMelith:
     process.env.NEXT_PUBLIC_IMAGE_URL_ARYNDEL_MELITH ||
     "/stormhold-world/assets/characters/Mirlun/aryndel_melith.webp",
+  selwynBlaun:
+    process.env.NEXT_PUBLIC_IMAGE_URL_SELWYN_BLAUN ||
+    "/stormhold-world/assets/characters/Mirlun/selwyn_blaun.webp",
   elianaShoner:
     process.env.NEXT_PUBLIC_IMAGE_URL_ELIANA_SHONER ||
     "/stormhold-world/assets/characters/Shubore/eliana_shoner.webp",
