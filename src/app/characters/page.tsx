@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LocationLink from "@/components/ImageLink";
 import characters from "@/app/characters/characters";
+import imageUrls from "@/constants/imageUrls";
 
 const Characters = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -57,7 +58,7 @@ const Characters = () => {
         <header
           className="relative bg-cover bg-center parallax"
           style={{
-            backgroundImage: `url(/assets/UNKNOWN.jpg)`,
+            backgroundImage: `url(${imageUrls.default})`,
             height: "65vh",
           }}
         ></header>
