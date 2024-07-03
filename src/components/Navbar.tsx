@@ -1,13 +1,34 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY.current) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      lastScrollY.current = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="bg-black bg-opacity-75 z-50 fixed w-full text-white shadow-lg">
+    <nav
+      className={`bg-black bg-opacity-75 z-50 fixed w-full text-white shadow-lg transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+    >
       <div className="container mx-auto p-4 flex justify-between items-center">
         <div className="flex items-center">
           <Link
@@ -31,10 +52,10 @@ const Navbar = () => {
             Politics
           </Link>
           <Link
-            href="/economics"
+            href="/history"
             className="hover:text-gray-400 transition-colors duration-300"
           >
-            Economics
+            History
           </Link>
           <Link
             href="/characters"
@@ -87,11 +108,11 @@ const Navbar = () => {
             Politics
           </Link>
           <Link
-            href="/economics"
+            href="/history"
             className="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-300"
             onClick={() => setIsMenuOpen(false)}
           >
-            Economics
+            History
           </Link>
           <Link
             href="/characters"

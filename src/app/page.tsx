@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
 import LocationLink from "@/components/ImageLink";
@@ -6,15 +6,16 @@ import worldData from "@/data/world_data.json";
 import Footer from "@/components/Footer";
 import imageUrls from "@/constants/imageUrls";
 
+export const metadata: Metadata = {
+  title: "Stormhold",
+};
+
 export default function Home() {
   const { world_name, geography, economics, politics } =
     worldData.world_building;
 
   return (
     <div>
-      <Head>
-        <title>Welcome to {world_name}</title>
-      </Head>
       <main className="min-h-screen">
         <Navbar />
         <Header />

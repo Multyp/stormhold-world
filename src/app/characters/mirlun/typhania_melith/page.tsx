@@ -29,8 +29,59 @@ const TyphaniaMelith = () => {
             </div>
           </div>
         </header>
-        <section className="py-10 px-4">
-          <div className="flex flex-col items-center justify-center">
+        <nav className="py-4 w-[100dvw] flex justify-center items-center">
+          <div className="container mx-auto px-4 max-w-screen-lg">
+            <div className="bg-gray-100 shadow-md rounded-lg p-4">
+              <ul className="flex flex-wrap justify-center space-y-2 md:space-y-0 md:space-x-4">
+                <li className="w-full md:w-auto text-center">
+                  <a
+                    href="#about"
+                    className="text-blue-600 hover:underline block p-2"
+                  >
+                    About Typhania Melith
+                  </a>
+                </li>
+                <li className="w-full md:w-auto text-center">
+                  <a
+                    href="#appearance"
+                    className="text-blue-600 hover:underline block p-2"
+                  >
+                    Physical Appearance
+                  </a>
+                </li>
+                <li className="w-full md:w-auto text-center">
+                  <a
+                    href="#personality"
+                    className="text-blue-600 hover:underline block p-2"
+                  >
+                    Personality
+                  </a>
+                </li>
+                <li className="w-full md:w-auto text-center">
+                  <a
+                    href="#abilities"
+                    className="text-blue-600 hover:underline block p-2"
+                  >
+                    Magical Abilities
+                  </a>
+                </li>
+                <li className="w-full md:w-auto text-center">
+                  <a
+                    href="#role"
+                    className="text-blue-600 hover:underline block p-2"
+                  >
+                    Role in MIRLUN
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <section className="py-10 px-4 flex items-center justify-center flex-col">
+          <div
+            className="flex flex-col max-w-screen-lg"
+            id="about"
+          >
             <h2 className="text-4xl font-bold my-5 text-left">
               About Typhania Melith
             </h2>
@@ -41,19 +92,22 @@ const TyphaniaMelith = () => {
               nature magic from a young age.
             </p>
           </div>
-          <div className="mt-8 flex justify-center">
-            <div className="relative rounded-lg shadow-lg max-w-screen-lg w-[90dvw] h-1/2">
+          <div className="mt-8 mx-4 w-full flex justify-center items-center">
+            <div className="relative rounded-lg shadow-lg max-w-screen-lg w-[100dvw] h-1/2">
               <Image
                 src={imageUrls.typhaniaMelith}
                 alt="Typhania Melith"
                 objectFit="cover"
-                className="rounded-lg shadow-lg max-w-screen-lg w-[90dvw] h-1/2"
+                className="rounded-lg shadow-lg max-w-screen-lg w-full box-border h-1/2"
                 height={0}
                 width={0}
               />
             </div>
           </div>
-          <div className="flex items-center justify-center flex-col mt-8">
+          <div
+            className="flex flex-col mt-8"
+            id="appearance"
+          >
             <h3 className="text-3xl font-bold my-5">Physical Appearance</h3>
             <p className="text-lg text-gray-600 mt-4 text-left max-w-screen-lg">
               Typhania has long, flowing green hair and vibrant emerald eyes
@@ -62,7 +116,12 @@ const TyphaniaMelith = () => {
               wears regal, flowing robes adorned with enchanted jewelry that
               enhances her magical abilities.
             </p>
-            <h3 className="text-3xl font-bold my-5">Personality</h3>
+          </div>
+          <div
+            className="flex flex-col mt-8"
+            id="personality"
+          >
+            <h3 className="text-3xl font-bold my-2">Personality</h3>
             <p className="text-lg text-gray-600 mt-4 text-left max-w-screen-lg">
               Known for her compassion and wisdom, Typhania is deeply loved by
               her people. She has an innate love for nature and spends much of
@@ -70,7 +129,12 @@ const TyphaniaMelith = () => {
               and fauna. Her deep knowledge of magic and nature makes her a wise
               and insightful leader.
             </p>
-            <h3 className="text-3xl font-bold my-5">Magical Abilities</h3>
+          </div>
+          <div
+            className="flex flex-col mt-8"
+            id="abilities"
+          >
+            <h3 className="text-3xl font-bold my-2">Magical Abilities</h3>
             <p className="text-lg text-gray-600 mt-4 text-left max-w-screen-lg">
               As a master enchantress, Typhania specializes in spells that
               enhance, protect, and heal. Her enchantments are intricate and
@@ -80,7 +144,12 @@ const TyphaniaMelith = () => {
               Despite her lack of physical strength, her control over elements
               such as water and earth makes her a formidable opponent.
             </p>
-            <h3 className="text-3xl font-bold my-5">Role in MIRLUN</h3>
+          </div>
+          <div
+            className="flex flex-col mt-8"
+            id="role"
+          >
+            <h3 className="text-3xl font-bold my-2">Role in MIRLUN</h3>
             <p className="text-lg text-gray-600 mt-4 text-left max-w-screen-lg">
               As the princess, Typhania plays a crucial role in the governance
               of MIRLUN. She represents her people in diplomatic matters and
