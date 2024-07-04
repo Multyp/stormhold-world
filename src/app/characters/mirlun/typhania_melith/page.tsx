@@ -14,6 +14,8 @@ import SectionImageContainer from "@/components/base/SectionImageContainer";
 import SectionImage from "@/components/base/SectionImage";
 import SectionHeadContainer from "@/components/base/SectionHeadContainer";
 import SectionHeader from "@/components/base/SectionHeader";
+import SectionNavContainer from "@/components/base/SectionNavContainer";
+import SectionNavLink from "@/components/base/SectionNavLink";
 
 const TyphaniaMelith = () => {
   return (
@@ -28,54 +30,28 @@ const TyphaniaMelith = () => {
           title="Typhania Melith"
           subtitle="Princess and Enchantress of MIRLUN"
         />
-        <nav className="py-4 w-[100dvw] flex justify-center items-center">
-          <div className="container mx-auto px-4 max-w-screen-lg">
-            <div className="bg-gray-100 shadow-md rounded-lg p-4">
-              <ul className="flex flex-wrap justify-center space-y-2 md:space-y-0 md:space-x-4">
-                <li className="w-full md:w-auto text-center">
-                  <Link
-                    href="#about"
-                    className="text-blue-600 hover:underline block p-2"
-                  >
-                    About Typhania Melith
-                  </Link>
-                </li>
-                <li className="w-full md:w-auto text-center">
-                  <Link
-                    href="#appearance"
-                    className="text-blue-600 hover:underline block p-2"
-                  >
-                    Physical Appearance
-                  </Link>
-                </li>
-                <li className="w-full md:w-auto text-center">
-                  <Link
-                    href="#personality"
-                    className="text-blue-600 hover:underline block p-2"
-                  >
-                    Personality
-                  </Link>
-                </li>
-                <li className="w-full md:w-auto text-center">
-                  <Link
-                    href="#abilities"
-                    className="text-blue-600 hover:underline block p-2"
-                  >
-                    Magical Abilities
-                  </Link>
-                </li>
-                <li className="w-full md:w-auto text-center">
-                  <Link
-                    href="#role"
-                    className="text-blue-600 hover:underline block p-2"
-                  >
-                    Role in MIRLUN
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+        <SectionNavContainer>
+          <SectionNavLink
+            href="#about"
+            title=" About Typhania Melith"
+          />
+          <SectionNavLink
+            href="#appearance"
+            title="Physical Appearance"
+          />
+          <SectionNavLink
+            href="#personality"
+            title="Personality"
+          />
+          <SectionNavLink
+            href="#abilities"
+            title="Magical Abilities"
+          />
+          <SectionNavLink
+            href="#role"
+            title="Role in MIRLUN"
+          />
+        </SectionNavContainer>
         <section className="py-10 px-4 flex items-center justify-center flex-col">
           <SectionHeadContainer id="about">
             <SectionTitle title="About Typhania Melith" />
