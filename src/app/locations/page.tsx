@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import LocationLink from "@/components/ImageLink";
 import locations from "./locations";
 import Header from "@/components/Header";
+import SectionHeader from "@/components/base/SectionHeader";
+import imageUrls from "@/constants/imageUrls";
 
 const Locations = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -55,13 +57,11 @@ const Locations = () => {
       </Head>
       <main className="min-h-screen">
         <Navbar />
-        <header
-          className="relative bg-cover bg-center parallax"
-          style={{
-            backgroundImage: `url(/assets/UNKNOWN.jpg)`,
-            height: "65vh",
-          }}
-        ></header>
+        <SectionHeader
+          title="Discover STORMHOLD"
+          subtitle="All about the continent"
+          imageUrl={imageUrls.default}
+        />
         <section className="bg-gray-100 py-12">
           <div className="container mx-auto px-4">
             <div className="flex flex-col sm:flex-row justify-between items-center mb-8 space-y-4 sm:space-y-0">
