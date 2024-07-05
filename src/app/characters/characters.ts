@@ -37,6 +37,18 @@ const locations = [
     link: "/characters/shubore/felicia_shoner",
     tags: ["human", "shuborian", "witch", "woman"],
   },
+  {
+    name: "Milin STERMLEY",
+    imageSrc: imageUrls.milinStermley,
+    link: "/characters/lariom/milin_stermley",
+    tags: ["human", "larionian", "royal", "man"],
+  },
+  {
+    name: "Elena STERMLEY",
+    imageSrc: imageUrls.elenaStermley,
+    link: "/characters/lariom/elena_stermley",
+    tags: ["human", "larionian", "royal", "woman"],
+  },
 ];
 
 export default locations;

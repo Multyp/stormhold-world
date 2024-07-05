@@ -1,5 +1,5 @@
 /* Global imports */
-import Head from "next/head";
+import { Metadata } from "next";
 /* Scoped imports */
 /* Local imports */
 import Navbar from "@/components/Navbar";
@@ -12,80 +12,46 @@ import SectionContainer from "@/components/base/SectionContainer";
 import SectionImageContainer from "@/components/base/SectionImageContainer";
 import SectionImage from "@/components/base/SectionImage";
 import SectionHeadContainer from "@/components/base/SectionHeadContainer";
+import SectionHeader from "@/components/base/SectionHeader";
+import SectionNavContainer from "@/components/base/SectionNavContainer";
+import SectionNavLink from "@/components/base/SectionNavLink";
+
+export const metadata: Metadata = {
+  title: "Typhania Melith - Princess of MIRLUN",
+};
 
 const TyphaniaMelith = () => {
   return (
     <div>
-      <Head>
-        <title>Typhania Melith - Princess of MIRLUN</title>
-      </Head>
       <main className="min-h-screen min-w-full">
         <Navbar />
-        <header
-          className="relative bg-cover bg-center parallax"
-          style={{
-            backgroundImage: `url(${imageUrls.typhaniaMelith})`,
-            height: "65vh",
-          }}
-        >
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
-            <div className="container">
-              <h1 className="text-4xl font-bold my-5 animate-fadeInUp">
-                Typhania Melith
-              </h1>
-              <p className="text-xl">Princess and Enchantress of MIRLUN</p>
-            </div>
-          </div>
-        </header>
-        <nav className="py-4 w-[100dvw] flex justify-center items-center">
-          <div className="container mx-auto px-4 max-w-screen-lg">
-            <div className="bg-gray-100 shadow-md rounded-lg p-4">
-              <ul className="flex flex-wrap justify-center space-y-2 md:space-y-0 md:space-x-4">
-                <li className="w-full md:w-auto text-center">
-                  <a
-                    href="#about"
-                    className="text-blue-600 hover:underline block p-2"
-                  >
-                    About Typhania Melith
-                  </a>
-                </li>
-                <li className="w-full md:w-auto text-center">
-                  <a
-                    href="#appearance"
-                    className="text-blue-600 hover:underline block p-2"
-                  >
-                    Physical Appearance
-                  </a>
-                </li>
-                <li className="w-full md:w-auto text-center">
-                  <a
-                    href="#personality"
-                    className="text-blue-600 hover:underline block p-2"
-                  >
-                    Personality
-                  </a>
-                </li>
-                <li className="w-full md:w-auto text-center">
-                  <a
-                    href="#abilities"
-                    className="text-blue-600 hover:underline block p-2"
-                  >
-                    Magical Abilities
-                  </a>
-                </li>
-                <li className="w-full md:w-auto text-center">
-                  <a
-                    href="#role"
-                    className="text-blue-600 hover:underline block p-2"
-                  >
-                    Role in MIRLUN
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+        <SectionHeader
+          imageUrl={imageUrls.typhaniaMelith}
+          title="Typhania Melith"
+          subtitle="Princess and Enchantress of MIRLUN"
+        />
+        <SectionNavContainer>
+          <SectionNavLink
+            href="#about"
+            title=" About Typhania Melith"
+          />
+          <SectionNavLink
+            href="#appearance"
+            title="Physical Appearance"
+          />
+          <SectionNavLink
+            href="#personality"
+            title="Personality"
+          />
+          <SectionNavLink
+            href="#abilities"
+            title="Magical Abilities"
+          />
+          <SectionNavLink
+            href="#role"
+            title="Role in MIRLUN"
+          />
+        </SectionNavContainer>
         <section className="py-10 px-4 flex items-center justify-center flex-col">
           <SectionHeadContainer id="about">
             <SectionTitle title="About Typhania Melith" />

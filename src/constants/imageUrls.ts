@@ -46,6 +46,21 @@ const imageUrls = {
   feliciaShoner:
     process.env.NEXT_PUBLIC_IMAGE_URL_FELICIA_SHONER ||
     "/stormhold-world/assets/characters/Shubore/felicia_shoner.webp",
+  feliciaShonerDungeon:
+    process.env.NEXT_PUBLIC_IMAGE_URL_FELICIA_SHONER_DUNGEON ||
+    "/stormhold-world/assets/characters/Shubore/felicia_shoner/felicia_shoner_dungeon.webp",
+  feliciaShonerBack:
+    process.env.NEXT_PUBLIC_IMAGE_URL_FELICIA_SHONER_BACK ||
+    "/stormhold-world/assets/characters/Shubore/felicia_shoner/felicia_shoner_back.webp",
+  feliciaShonerEveryday:
+    process.env.NEXT_PUBLIC_IMAGE_URL_FELICIA_SHONER_EVERYDAY ||
+    "/stormhold-world/assets/characters/Shubore/felicia_shoner/felicia_shoner_everyday.webp",
+  milinStermley:
+    process.env.NEXT_PUBLIC_IMAGE_URL_MILIN_STERMLEY ||
+    "/stormhold-world/assets/characters/Lariom/milin_stermley.webp",
+  elenaStermley:
+    process.env.NEXT_PUBLIC_IMAGE_URL_ELENA_STERMLEY ||
+    "/stormhold-world/assets/characters/Lariom/elena_stermley.webp",
 };
 
 export default imageUrls;

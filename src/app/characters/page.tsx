@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import LocationLink from "@/components/ImageLink";
 import characters from "@/app/characters/characters";
 import imageUrls from "@/constants/imageUrls";
+import SectionHeader from "@/components/base/SectionHeader";
 
 const Characters = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -55,13 +56,11 @@ const Characters = () => {
       </Head>
       <main className="min-h-screen">
         <Navbar />
-        <header
-          className="relative bg-cover bg-center parallax"
-          style={{
-            backgroundImage: `url(${imageUrls.default})`,
-            height: "65vh",
-          }}
-        ></header>
+        <SectionHeader
+          title="The people of STORMHOLD"
+          subtitle="A dense continent"
+          imageUrl={imageUrls.default}
+        />
         <section className="bg-gray-100 py-12">
           <div className="container mx-auto px-4">
             <div className="flex flex-col sm:flex-row justify-between items-center mb-8 space-y-4 sm:space-y-0">

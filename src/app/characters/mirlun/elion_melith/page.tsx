@@ -1,4 +1,7 @@
-import Head from "next/head";
+/* Global imports */
+import { Metadata } from "next";
+/* Scoped imports */
+/* Local imports */
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import imageUrls from "@/constants/imageUrls";
@@ -9,32 +12,22 @@ import SectionContainer from "@/components/base/SectionContainer";
 import SectionImageContainer from "@/components/base/SectionImageContainer";
 import SectionImage from "@/components/base/SectionImage";
 import SectionHeadContainer from "@/components/base/SectionHeadContainer";
+import SectionHeader from "@/components/base/SectionHeader";
+
+export const metadata: Metadata = {
+  title: "Elion Melith - King of MIRLUN",
+};
 
 const ElionMelith = () => {
   return (
     <div>
-      <Head>
-        <title>Elion Melith - King of MIRLUN</title>
-      </Head>
       <main className="min-h-screen min-w-full">
         <Navbar />
-        <header
-          className="relative bg-cover bg-center parallax"
-          style={{
-            backgroundImage: `url(${imageUrls.elionMelith})`,
-            height: "65vh",
-          }}
-        >
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
-            <div className="container">
-              <h1 className="text-4xl font-bold my-5 animate-fadeInUp">
-                Elion Melith
-              </h1>
-              <p className="text-xl">King of MIRLUN</p>
-            </div>
-          </div>
-        </header>
+        <SectionHeader
+          title="Elion Melith"
+          subtitle="King of MIRLUN"
+          imageUrl={imageUrls.elionMelith}
+        />
         <nav className="py-4 w-[100dvw] flex justify-center items-center">
           <div className="container mx-auto px-4 max-w-screen-lg">
             <div className="bg-gray-100 shadow-md rounded-lg p-4">

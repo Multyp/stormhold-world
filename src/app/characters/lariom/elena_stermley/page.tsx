@@ -12,37 +12,28 @@ import SectionContainer from "@/components/base/SectionContainer";
 import SectionImageContainer from "@/components/base/SectionImageContainer";
 import SectionImage from "@/components/base/SectionImage";
 import SectionHeadContainer from "@/components/base/SectionHeadContainer";
+import SectionHeader from "@/components/base/SectionHeader";
+import SectionNavContainer from "@/components/base/SectionNavContainer";
+import SectionNavLink from "@/components/base/SectionNavLink";
 
 export const metadata: Metadata = {
-  title: "Selwyn Blaun - Greenhouses headmistress",
+  title: "Elena STERMLEY - Queen of LARIOM",
 };
 
-const SelwynBlaun = () => {
+const ElenaStermley = () => {
   return (
     <div>
       <main className="min-h-screen min-w-full">
         <Navbar />
-        <header
-          className="relative bg-cover bg-center parallax"
-          style={{
-            backgroundImage: `url(${imageUrls.selwynBlaun})`,
-            height: "65vh",
-          }}
-        >
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center">
-            <div className="container">
-              <h1 className="text-4xl font-bold my-5 animate-fadeInUp">
-                Selwyn Blaun
-              </h1>
-              <p className="text-xl">Head of MIRLUN{"'"}s great greenhouses</p>
-            </div>
-          </div>
-        </header>
+        <SectionHeader
+          imageUrl={imageUrls.elenaStermley}
+          title="Elena STERMLEY"
+          subtitle="Tragic queen of LARIOM"
+        />
       </main>
       <Footer />
     </div>
   );
 };
 
-export default SelwynBlaun;
+export default ElenaStermley;
