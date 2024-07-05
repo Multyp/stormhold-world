@@ -122,18 +122,31 @@ const Shubore = () => {
             <SectionContainer id="culture">
               <SectionSubtitle title="Culture" />
               <SectionContent>
-                SHUBORE{"'"}s culture is deeply intertwined with its maritime
-                environment and harsh, icy climate. The people of SHUBORE, known
+                Shubore{"'"}s culture is deeply intertwined with its maritime
+                environment and harsh, icy climate. The people of Shubore, known
                 as Shuborians, are renowned for their resilience and physical
-                strength, traits honed by their unique genetic adaptations to
-                the cold. Their society values maritime prowess, with
-                influential guilds and brotherhoods playing a significant role
-                in governance alongside the royal family. Shuborian
-                craftsmanship in shipbuilding is unparalleled, and their economy
-                thrives on the export of rare seashells, pearls, and exotic
-                spices. Culturally, Shuborians maintain strong traditions of
-                seafaring and naval defense, celebrating their mastery over the
-                icy waters with festivals and rituals that honor the sea and
+                strength, traits honed by unique genetic adaptations to the
+                cold. Shuborians have a genetic predisposition for muscle
+                growth, making them naturally strong and well-suited for lifting
+                heavy materials and serving as formidable soldiers.
+                <br />
+                <br />
+                Following the War of Shadows, they collaborated with the dwarves
+                to enhance their craftsmanship, earning a reputation for
+                producing the finest goods in all of Stormhold.
+                <br />
+                <br />
+                Shuborian society places a high value on maritime prowess, with
+                influential guilds and brotherhoods playing significant roles in
+                governance alongside the royal family. Their partnership with
+                the dwarves has elevated Shuborian shipbuilding to unparalleled
+                levels of excellence. The economy thrives on the export of rare
+                seashells, pearls, and exotic spices.
+                <br />
+                <br />
+                Culturally, Shuborians maintain strong traditions of seafaring
+                and naval defense. They celebrate their mastery of the icy
+                waters through festivals and rituals that honor the sea and
                 their ancestors.
               </SectionContent>
             </SectionContainer>
