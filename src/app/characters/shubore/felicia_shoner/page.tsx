@@ -87,24 +87,37 @@ const FeliciaShoner = () => {
                     width={0}
                     height={0}
                   />
+                  <div className="absolute bottom-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-lg opacity-75">
+                    AI Generated
+                  </div>
                 </div>
                 <div className="grid grid-rows-2 gap-4">
-                  <Image
-                    src={imageUrls.feliciaShonerBack}
-                    alt="Felicia Shoner"
-                    className="w-full max-h-44 object-cover rounded-md"
-                    style={{ height: "auto" }}
-                    width={0}
-                    height={0}
-                  />
-                  <Image
-                    src={imageUrls.feliciaShonerEveryday}
-                    alt="Felicia Shoner"
-                    className="w-full max-h-44 object-cover rounded-md"
-                    style={{ height: "auto" }}
-                    width={0}
-                    height={0}
-                  />
+                  <div className="relative rounded-md overflow-hidden">
+                    <Image
+                      src={imageUrls.feliciaShonerBack}
+                      alt="Felicia Shoner"
+                      className="w-full max-h-44 object-cover rounded-md"
+                      style={{ height: "auto" }}
+                      width={0}
+                      height={0}
+                    />
+                    <div className="absolute bottom-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-lg opacity-75">
+                      AI Generated
+                    </div>
+                  </div>
+                  <div className="relative rounded-md overflow-hidden">
+                    <Image
+                      src={imageUrls.feliciaShonerEveryday}
+                      alt="Felicia Shoner"
+                      className="w-full max-h-44 object-cover rounded-md"
+                      style={{ height: "auto" }}
+                      width={0}
+                      height={0}
+                    />
+                    <div className="absolute bottom-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-lg opacity-75">
+                      AI Generated
+                    </div>
+                  </div>
                 </div>
               </div>
             </SectionContent>
