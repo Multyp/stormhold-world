@@ -1,6 +1,5 @@
 /* Global imports */
-import Head from "next/head";
-import Link from "next/link";
+import { Metadata } from "next";
 /* Scoped imports */
 /* Local imports */
 import Navbar from "@/components/Navbar";
@@ -17,12 +16,13 @@ import SectionHeader from "@/components/base/SectionHeader";
 import SectionNavContainer from "@/components/base/SectionNavContainer";
 import SectionNavLink from "@/components/base/SectionNavLink";
 
+export const metadata: Metadata = {
+  title: "Typhania Melith - Princess of MIRLUN",
+};
+
 const TyphaniaMelith = () => {
   return (
     <div>
-      <Head>
-        <title>Typhania Melith - Princess of MIRLUN</title>
-      </Head>
       <main className="min-h-screen min-w-full">
         <Navbar />
         <SectionHeader

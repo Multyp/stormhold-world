@@ -46,6 +46,12 @@ const imageUrls = {
   feliciaShoner:
     process.env.NEXT_PUBLIC_IMAGE_URL_FELICIA_SHONER ||
     "/stormhold-world/assets/characters/Shubore/felicia_shoner.webp",
+  milinStermley:
+    process.env.NEXT_PUBLIC_IMAGE_URL_MILIN_STERMLEY ||
+    "/stormhold-world/assets/characters/Lariom/milin_stermley.webp",
+  elenaStermley:
+    process.env.NEXT_PUBLIC_IMAGE_URL_ELENA_STERMLEY ||
+    "/stormhold-world/assets/characters/Lariom/elena_stermley.webp",
 };
 
 export default imageUrls;
