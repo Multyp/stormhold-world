@@ -5,6 +5,7 @@ import SectionHeader from "@/components/base/SectionHeader";
 import imageUrls from "@/constants/imageUrls";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 interface Event {
   title: string;
@@ -49,8 +50,8 @@ const HistoryEvents: React.FC<HistoryEventsProps> = ({ events }) => {
                 <p className="text-base font-normal text-gray-500 dark:text-gray-400">
                   {event.excerpt}
                 </p>
-                <button
-                  onClick={() => handleEventClick(event)}
+                <Link
+                  href={event.link.toLowerCase().replace(" ", "_")}
                   className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
                 >
                   Learn more
@@ -69,7 +70,7 @@ const HistoryEvents: React.FC<HistoryEventsProps> = ({ events }) => {
                       d="M1 5h12m0 0L9 1m4 4L9 9"
                     />
                   </svg>
-                </button>
+                </Link>
               </li>
             ))}
           </ol>
