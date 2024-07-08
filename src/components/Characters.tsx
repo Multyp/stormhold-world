@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LocationLink from "@/components/ImageLink";
@@ -18,6 +17,11 @@ const Characters = ({ characters }: CharactersProps) => {
   const [sortOrder, setSortOrder] = useState("asc");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
+  const getLastName = (title: string) => {
+    const names = title.split(" ");
+    return names[names.length - 1];
+  };
+
   const sortedCharacters = characters
     .filter(
       character =>
@@ -26,10 +30,13 @@ const Characters = ({ characters }: CharactersProps) => {
           selectedTags.every(tag => character.tags.includes(tag))),
     )
     .sort((a, b) => {
+      const aLastName = getLastName(a.title);
+      const bLastName = getLastName(b.title);
+
       if (sortOrder === "asc") {
-        return a.title.localeCompare(b.title);
+        return aLastName.localeCompare(bLastName);
       } else {
-        return b.title.localeCompare(a.title);
+        return bLastName.localeCompare(aLastName);
       }
     });
 
@@ -55,15 +62,12 @@ const Characters = ({ characters }: CharactersProps) => {
 
   return (
     <div>
-      <Head>
-        <title>Characters - Discover the People</title>
-      </Head>
       <main className="min-h-screen">
         <Navbar />
         <SectionHeader
           title="The people of STORMHOLD"
           subtitle="A dense continent"
-          imageUrl={imageUrls.default}
+          imageUrl={imageUrls.group}
         />
         <section className="bg-gray-100 py-12">
           <div className="container mx-auto px-4">

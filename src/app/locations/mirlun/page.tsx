@@ -135,17 +135,17 @@ const Mirlun = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 max-w-screen-lg w-full">
               <ImageLink
                 title="Elion MELITH"
-                href="/characters/mirlun/elion_melith"
+                href="/characters/elion_melith"
                 backgroundImage={imageUrls.elionMelith}
               />
               <ImageLink
                 title="Aryndel MELITH"
-                href="/characters/mirlun/aryndel_melith"
+                href="/characters/aryndel_melith"
                 backgroundImage={imageUrls.aryndelMelith}
               />
               <ImageLink
                 title="Typhania MELITH"
-                href="/characters/mirlun/typhania_melith"
+                href="/characters/typhania_melith"
                 backgroundImage={imageUrls.typhaniaMelith}
               />
             </div>

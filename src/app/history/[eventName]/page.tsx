@@ -1,10 +1,6 @@
-/* Global imports */
 import fs from "fs";
 import path from "path";
 import { Metadata } from "next";
-import React from "react";
-/* Scoped import */
-/* Local imports */
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionTitle from "@/components/base/SectionTitle";
@@ -19,55 +15,39 @@ import SectionNavContainer from "@/components/base/SectionNavContainer";
 import SectionNavLink from "@/components/base/SectionNavLink";
 import SectionGallery from "@/components/base/SectionGallery";
 import imageUrls from "@/constants/imageUrls";
+import React from "react";
 
-interface CharacterProps {
+interface EventProps {
   params: {
-    characterName: string;
+    eventName: string;
   };
 }
 
-interface characterData {
+interface EventData {
   title: string;
   subtitle: string;
-  imageUrl: string;
-  tags: string[];
+  excerpt: string;
   sections?: {
     id: string;
     title: string;
     content: string | string[];
     image?: string;
-    gallery?: [
-      {
-        url: string;
-        alt: string;
-      },
-      {
-        url: string;
-        alt: string;
-      },
-      {
-        url: string;
-        alt: string;
-      },
-    ];
+    gallery?: {
+      url: string;
+      alt: string;
+    }[];
   }[];
 }
 
-const CharacterPage = async ({ params }: CharacterProps) => {
-  const { characterName } = params;
-  const filePath = path.join(
-    process.cwd(),
-    "characters",
-    `${characterName}.json`,
-  );
+const EventPage = async ({ params }: EventProps) => {
+  const { eventName } = params;
+  const filePath = path.join(process.cwd(), "history", `${eventName}.json`);
 
   if (!fs.existsSync(filePath)) {
     return { notFound: true };
   }
 
-  const characterData: characterData = JSON.parse(
-    fs.readFileSync(filePath, "utf-8"),
-  );
+  const eventData: EventData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
 
   const renderContent = (content: string | string[]) => {
     if (Array.isArray(content)) {
@@ -91,14 +71,14 @@ const CharacterPage = async ({ params }: CharacterProps) => {
       <main className="min-h-screen min-w-full">
         <Navbar />
         <SectionHeader
-          imageUrl={imageUrls[characterData.imageUrl as keyof typeof imageUrls]}
-          title={characterData.title}
-          subtitle={characterData.subtitle}
+          imageUrl={imageUrls.default}
+          title={eventData.title}
+          subtitle={eventData.subtitle}
         />
-        {characterData.sections ? (
+        {eventData.sections ? (
           <>
             <SectionNavContainer>
-              {characterData.sections.map(section => (
+              {eventData.sections.map(section => (
                 <SectionNavLink
                   key={section.id}
                   href={`#${section.id}`}
@@ -107,9 +87,9 @@ const CharacterPage = async ({ params }: CharacterProps) => {
               ))}
             </SectionNavContainer>
             <section className="py-10 px-4 flex items-center justify-center flex-col">
-              {characterData.sections.map(section => (
-                <>
-                  {section.id === "about" ? (
+              {eventData.sections.map(section => (
+                <React.Fragment key={section.id}>
+                  {section.id === "intro" ? (
                     <>
                       <SectionHeadContainer id={section.id}>
                         <SectionTitle title={section.title} />
@@ -137,7 +117,7 @@ const CharacterPage = async ({ params }: CharacterProps) => {
                       )}
                     </SectionContainer>
                   )}
-                </>
+                </React.Fragment>
               ))}
             </section>
           </>
@@ -150,21 +130,21 @@ const CharacterPage = async ({ params }: CharacterProps) => {
   );
 };
 
-export default CharacterPage;
+export default EventPage;
 
 export async function generateStaticParams() {
-  const charactersDir = path.join(process.cwd(), "characters");
-  const files = fs.readdirSync(charactersDir);
+  const eventsDir = path.join(process.cwd(), "history");
+  const files = fs.readdirSync(eventsDir);
 
   return files.map(filename => ({
-    characterName: filename.replace(".json", ""),
+    eventName: filename.replace(".json", ""),
   }));
 }
 
 export async function generateMetadata({
   params,
-}: CharacterProps): Promise<Metadata> {
-  const id = params.characterName;
+}: EventProps): Promise<Metadata> {
+  const id = params.eventName;
 
   const transformedName = id
     .split("_")

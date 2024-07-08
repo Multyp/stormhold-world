@@ -15,6 +15,7 @@ const SectionImage: React.FC<SectionImageProps> = ({ alt, imageUrl }) => {
         layout="responsive"
         width={0}
         height={0}
+        draggable={false}
       />
       <div className="absolute bottom-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-lg opacity-75">
         AI Generated
