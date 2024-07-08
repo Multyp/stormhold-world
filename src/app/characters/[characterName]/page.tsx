@@ -15,6 +15,7 @@ import SectionNavContainer from "@/components/base/SectionNavContainer";
 import SectionNavLink from "@/components/base/SectionNavLink";
 import Image from "next/image";
 import imageUrls from "@/constants/imageUrls";
+import React from "react";
 
 interface CharacterProps {
   params: {
@@ -39,11 +40,15 @@ const CharacterPage = async ({ params }: CharacterProps) => {
   const renderContent = (content: string | string[]) => {
     if (Array.isArray(content)) {
       return content.map((paragraph, index) => (
-        <>
+        <React.Fragment key={index}>
           {paragraph}
-          <br />
-          <br />
-        </>
+          {index !== content.length - 1 && (
+            <>
+              <br />
+              <br />
+            </>
+          )}
+        </React.Fragment>
       ));
     }
     return content;
@@ -169,4 +174,21 @@ export async function generateStaticParams() {
   return files.map(filename => ({
     characterName: filename.replace(".json", ""),
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: CharacterProps): Promise<Metadata> {
+  // read route params
+  const id = params.characterName;
+
+  // fetch data
+  const transformedName = id
+    .split("_") // Split the string by underscore
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
+
+  return {
+    title: transformedName,
+  };
 }

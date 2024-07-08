@@ -61,6 +61,18 @@ const imageUrls = {
   elenaStermley:
     process.env.NEXT_PUBLIC_IMAGE_URL_ELENA_STERMLEY ||
     "/stormhold-world/assets/characters/Lariom/elena_stermley.webp",
+  evelynBellet:
+    process.env.NEXT_PUBLIC_IMAGE_URL_EVELYN_BELLET ||
+    "/stormhold-world/assets/characters/Lariom/evelyn_bellet.webp",
+  evelynBelletLibrary:
+    process.env.NEXT_PUBLIC_IMAGE_URL_EVELYN_BELLET_LIBRARY ||
+    "/stormhold-world/assets/characters/Lariom/evelyn_bellet_library.webp",
+  evelynBelletClassroom:
+    process.env.NEXT_PUBLIC_IMAGE_URL_EVELYN_BELLET_CLASSROOM ||
+    "/stormhold-world/assets/characters/Lariom/evelyn_bellet_classroom.webp",
+  evelynBelletCeremony:
+    process.env.NEXT_PUBLIC_IMAGE_URL_EVELYN_BELLET_CEREMONY ||
+    "/stormhold-world/assets/characters/Lariom/evelyn_bellet_ceremony.webp",
 };
 
 export default imageUrls;
