@@ -55,7 +55,11 @@ interface characterData {
 
 const CharacterPage = async ({ params }: CharacterProps) => {
   const { characterName } = params;
-  const filePath = path.join(process.cwd(), "history", `${characterName}.json`);
+  const filePath = path.join(
+    process.cwd(),
+    "characters",
+    `${characterName}.json`,
+  );
 
   if (!fs.existsSync(filePath)) {
     return { notFound: true };
@@ -149,7 +153,7 @@ const CharacterPage = async ({ params }: CharacterProps) => {
 export default CharacterPage;
 
 export async function generateStaticParams() {
-  const charactersDir = path.join(process.cwd(), "history");
+  const charactersDir = path.join(process.cwd(), "characters");
   const files = fs.readdirSync(charactersDir);
 
   return files.map(filename => ({
