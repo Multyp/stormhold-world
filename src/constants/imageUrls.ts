@@ -80,13 +80,13 @@ const imageUrls = {
     "/stormhold-world/assets/characters/Lariom/evelyn_bellet.webp",
   evelynBelletLibrary:
     process.env.NEXT_PUBLIC_IMAGE_URL_EVELYN_BELLET_LIBRARY ||
-    "/stormhold-world/assets/characters/Lariom/evelyn_bellet_library.webp",
+    "/stormhold-world/assets/characters/Lariom/evelyn_bellet/evelyn_bellet_library.webp",
   evelynBelletClassroom:
     process.env.NEXT_PUBLIC_IMAGE_URL_EVELYN_BELLET_CLASSROOM ||
-    "/stormhold-world/assets/characters/Lariom/evelyn_bellet_classroom.webp",
+    "/stormhold-world/assets/characters/Lariom/evelyn_bellet/evelyn_bellet_classroom.webp",
   evelynBelletCeremony:
     process.env.NEXT_PUBLIC_IMAGE_URL_EVELYN_BELLET_CEREMONY ||
-    "/stormhold-world/assets/characters/Lariom/evelyn_bellet_ceremony.webp",
+    "/stormhold-world/assets/characters/Lariom/evelyn_bellet/evelyn_bellet_ceremony.webp",
   arwinFleck:
     process.env.NEXT_PUBLIC_IMAGE_URL_ARWIN_FLECK ||
     "/stormhold-world/assets/characters/Lariom/arwin_fleck.webp",
