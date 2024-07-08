@@ -13,7 +13,7 @@ import SectionHeadContainer from "@/components/base/SectionHeadContainer";
 import SectionHeader from "@/components/base/SectionHeader";
 import SectionNavContainer from "@/components/base/SectionNavContainer";
 import SectionNavLink from "@/components/base/SectionNavLink";
-import Image from "next/image";
+import SectionGallery from "@/components/base/SectionGallery";
 import imageUrls from "@/constants/imageUrls";
 import React from "react";
 
@@ -101,54 +101,7 @@ const CharacterPage = async ({ params }: CharacterProps) => {
                         {renderContent(section.content)}
                       </SectionContent>
                       {section.gallery && (
-                        <div className="text-lg text-gray-600 mt-4 text-left max-w-screen-lg">
-                          <div className="grid grid-cols-2 gap-4 mt-4 max-h-96 h-full">
-                            <div className="relative col-span-1">
-                              <Image
-                                src={
-                                  imageUrls[
-                                    section.gallery[0]
-                                      .url as keyof typeof imageUrls
-                                  ]
-                                }
-                                alt={section.gallery[0].alt}
-                                className="w-full max-h-96 object-cover rounded-md"
-                                style={{ height: "100%" }}
-                                width={0}
-                                height={0}
-                              />
-                              <div className="absolute bottom-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-lg opacity-75">
-                                AI Generated
-                              </div>
-                            </div>
-                            <div className="grid grid-rows-2 gap-4">
-                              {section.gallery
-                                .slice(1)
-                                .map((image: any, index: number) => (
-                                  <div
-                                    key={index}
-                                    className="relative rounded-md overflow-hidden"
-                                  >
-                                    <Image
-                                      src={
-                                        imageUrls[
-                                          image.url as keyof typeof imageUrls
-                                        ]
-                                      }
-                                      alt={image.alt}
-                                      className="w-full max-h-44 object-cover rounded-md"
-                                      style={{ height: "auto" }}
-                                      width={0}
-                                      height={0}
-                                    />
-                                    <div className="absolute bottom-2 right-2 bg-black text-white text-sm px-2 py-1 rounded-lg opacity-75">
-                                      AI Generated
-                                    </div>
-                                  </div>
-                                ))}
-                            </div>{" "}
-                          </div>
-                        </div>
+                        <SectionGallery gallery={section.gallery} />
                       )}
                     </SectionContainer>
                   )}
@@ -179,12 +132,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: CharacterProps): Promise<Metadata> {
-  // read route params
   const id = params.characterName;
 
-  // fetch data
   const transformedName = id
-    .split("_") // Split the string by underscore
+    .split("_")
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
 
