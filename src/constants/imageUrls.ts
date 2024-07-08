@@ -38,6 +38,8 @@ const imageUrls = {
   group:
     process.env.NEXT_PUBLIC_IMAGE_URL_GROUP ||
     "/stormhold-world/assets/characters/group.webp",
+
+  // MIRLUN
   typhaniaMelith:
     process.env.NEXT_PUBLIC_IMAGE_URL_TYPHANIA_MELITH ||
     "/stormhold-world/assets/characters/Mirlun/typhania_melith.webp",
@@ -50,6 +52,7 @@ const imageUrls = {
   selwynBlaun:
     process.env.NEXT_PUBLIC_IMAGE_URL_SELWYN_BLAUN ||
     "/stormhold-world/assets/characters/Mirlun/selwyn_blaun.webp",
+  // SHUBORE
   elianaShoner:
     process.env.NEXT_PUBLIC_IMAGE_URL_ELIANA_SHONER ||
     "/stormhold-world/assets/characters/Shubore/eliana_shoner.webp",
@@ -65,6 +68,7 @@ const imageUrls = {
   feliciaShonerEveryday:
     process.env.NEXT_PUBLIC_IMAGE_URL_FELICIA_SHONER_EVERYDAY ||
     "/stormhold-world/assets/characters/Shubore/felicia_shoner/felicia_shoner_everyday.webp",
+  // LARIOM
   milinStermley:
     process.env.NEXT_PUBLIC_IMAGE_URL_MILIN_STERMLEY ||
     "/stormhold-world/assets/characters/Lariom/milin_stermley.webp",
@@ -83,6 +87,9 @@ const imageUrls = {
   evelynBelletCeremony:
     process.env.NEXT_PUBLIC_IMAGE_URL_EVELYN_BELLET_CEREMONY ||
     "/stormhold-world/assets/characters/Lariom/evelyn_bellet_ceremony.webp",
+  arwinFleck:
+    process.env.NEXT_PUBLIC_IMAGE_URL_ARWIN_FLECK ||
+    "/stormhold-world/assets/characters/Lariom/arwin_fleck.webp",
 };
 
 export default imageUrls;
