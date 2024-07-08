@@ -28,6 +28,9 @@ const imageUrls = {
   /*
     CHARACTERS
   */
+  group:
+    process.env.NEXT_PUBLIC_IMAGE_URL_GROUP ||
+    "/stormhold-world/assets/characters/group.webp",
   typhaniaMelith:
     process.env.NEXT_PUBLIC_IMAGE_URL_TYPHANIA_MELITH ||
     "/stormhold-world/assets/characters/Mirlun/typhania_melith.webp",

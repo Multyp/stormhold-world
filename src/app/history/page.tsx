@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,6 +10,7 @@ interface Event {
   name: string;
   description: string[];
   duration?: string;
+  link: string;
   end?: string[];
   members?: {
     [key: string]: {
@@ -39,42 +39,7 @@ const historyEvents: Event[] = [
     end: [
       "The signing of the Peace of Goldenhall marked the end of the War of Shadows and the beginning of Year 0 AR.",
     ],
-  },
-  {
-    name: "The High Council",
-    description: [
-      "To ensure that such a devastating conflict would never occur again, the four leaders established the High Council, a governing body representing the major kingdoms of STORMHOLD.",
-    ],
-    members: {
-      human_leader: {
-        name: "Lady Aveline Stormguard",
-        kingdom: "LARIOM",
-        description: [
-          "A wise and charismatic human leader who recognized the futility of prolonged conflict.",
-        ],
-      },
-      dwarven_leader: {
-        name: "King Thrain Stonehammer",
-        kingdom: "DAWNFALL",
-        description: [
-          "A steadfast and honorable dwarf king who sought to protect his people and their ancient mines.",
-        ],
-      },
-      elven_leader: {
-        name: "Elder Alaric Melith",
-        kingdom: "MIRLUN",
-        description: [
-          "A powerful elven enchantress with deep connections to the natural world and a desire for harmony. He is the ancestor of Princess Typhania Melith.",
-        ],
-      },
-      maritime_leader: {
-        name: "Admiral Isolde Frostwind",
-        kingdom: "SHUBORE",
-        description: [
-          "A skilled and strategic naval commander who understood the importance of unity for maritime prosperity.",
-        ],
-      },
-    },
+    link: "/history/war_of_shadows",
   },
   {
     name: "The Elder's Senate",
@@ -96,6 +61,7 @@ const historyEvents: Event[] = [
         "Three shuborians (two from SHUBORE, one from another kingdom",
       ],
     },
+    link: "",
     function: [
       "The Senate convenes in GOLDENHALL, where they deliberate on matters of governance, diplomacy, and law. Elections are held every five years, ensuring that each community has a voice in the decision-making process.",
     ],
@@ -103,10 +69,8 @@ const historyEvents: Event[] = [
 ];
 
 const HistoryPage: React.FC = () => {
-  const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
-
   const handleEventClick = (event: Event) => {
-    setSelectedEvent(event);
+    window.location.href = event.link;
   };
 
   return (
@@ -164,93 +128,6 @@ const HistoryPage: React.FC = () => {
                 </li>
               ))}
             </ol>
-            {/*selectedEvent && (
-              <div className="mt-8 p-6 bg-white rounded shadow">
-                <h3 className="text-2xl font-bold">{selectedEvent.name}</h3>
-                {selectedEvent.description.map((desc, idx) => (
-                  <p
-                    key={idx}
-                    className="mt-2"
-                  >
-                    {desc}
-                  </p>
-                ))}
-                {selectedEvent.duration && (
-                  <p className="mt-2 font-semibold">
-                    Duration: {selectedEvent.duration}
-                  </p>
-                )}
-                {selectedEvent.end && (
-                  <div className="mt-2">
-                    {selectedEvent.end.map((endDesc, idx) => (
-                      <p key={idx}>{endDesc}</p>
-                    ))}
-                  </div>
-                )}
-                {selectedEvent.members && (
-                  <div className="mt-2">
-                    <h4 className="text-xl font-semibold">Members:</h4>
-                    {Object.entries(selectedEvent.members).map(
-                      ([role, member], idx) => (
-                        <div
-                          key={idx}
-                          className="mt-2"
-                        >
-                          <p className="font-semibold">
-                            {role.replace(/_/g, " ")}:
-                          </p>
-                          <p>
-                            {member.name} ({member.kingdom})
-                          </p>
-                          {member.description.map((desc, idx2) => (
-                            <p
-                              key={idx2}
-                              className="ml-4"
-                            >
-                              {desc}
-                            </p>
-                          ))}
-                        </div>
-                      ),
-                    )}
-                  </div>
-                )}
-                {selectedEvent.composition && (
-                  <div className="mt-2">
-                    <h4 className="text-xl font-semibold">Composition:</h4>
-                    <p>
-                      Total Members: {selectedEvent.composition.total_members}
-                    </p>
-                    <p>Distribution:</p>
-                    <ul className="list-disc ml-4">
-                      {Object.entries(
-                        selectedEvent.composition.distribution,
-                      ).map(([group, count], idx) => (
-                        <li key={idx}>
-                          {group}: {count}
-                        </li>
-                      ))}
-                    </ul>
-                    <p>Members:</p>
-                    <ul className="list-disc ml-4">
-                      {selectedEvent.composition.members.map(
-                        (memberDesc, idx) => (
-                          <li key={idx}>{memberDesc}</li>
-                        ),
-                      )}
-                    </ul>
-                  </div>
-                )}
-                {selectedEvent.function && (
-                  <div className="mt-2">
-                    <h4 className="text-xl font-semibold">Function:</h4>
-                    {selectedEvent.function.map((funcDesc, idx) => (
-                      <p key={idx}>{funcDesc}</p>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )*/}
           </div>
         </section>
       </main>

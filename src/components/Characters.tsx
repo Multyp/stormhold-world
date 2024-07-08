@@ -63,7 +63,7 @@ const Characters = ({ characters }: CharactersProps) => {
         <SectionHeader
           title="The people of STORMHOLD"
           subtitle="A dense continent"
-          imageUrl={imageUrls.default}
+          imageUrl={imageUrls.group}
         />
         <section className="bg-gray-100 py-12">
           <div className="container mx-auto px-4">
