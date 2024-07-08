@@ -1,10 +1,6 @@
-/* Global imports */
 import fs from "fs";
 import path from "path";
 import { Metadata } from "next";
-import React from "react";
-/* Scoped import */
-/* Local imports */
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionTitle from "@/components/base/SectionTitle";
@@ -19,6 +15,7 @@ import SectionNavContainer from "@/components/base/SectionNavContainer";
 import SectionNavLink from "@/components/base/SectionNavLink";
 import SectionGallery from "@/components/base/SectionGallery";
 import imageUrls from "@/constants/imageUrls";
+import React from "react";
 
 interface CharacterProps {
   params: {
