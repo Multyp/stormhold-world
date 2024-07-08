@@ -27,7 +27,7 @@ const HistoryEvents: React.FC<HistoryEventsProps> = ({ events }) => {
       <SectionHeader
         title="The history of STORMHOLD"
         subtitle="A continent of change"
-        imageUrl={imageUrls.default}
+        imageUrl={imageUrls.book}
       />
       <section className="py-12">
         <div className="container mx-auto px-4">

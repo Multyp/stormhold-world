@@ -26,6 +26,13 @@ const imageUrls = {
     "/stormhold-world/assets/GOBLIN_FORESTS.webp",
 
   /*
+    HISTORY
+  */
+  book:
+    process.env.NEXT_PUBLIC_IMAGE_URL_BOOK ||
+    "/stormhold-world/assets/history/book.webp",
+
+  /*
     CHARACTERS
   */
   group:
