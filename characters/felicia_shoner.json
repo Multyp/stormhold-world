@@ -1,0 +1,57 @@
+{
+  "title": "Felicia Shoner",
+  "subtitle": "The Supreme Witch of SHUBORE",
+  "imageUrl": "feliciaShoner",
+  "tags": ["human", "shuborian", "witch", "woman"],
+  "sections": [
+    {
+      "id": "about",
+      "title": "About Felicia Shoner",
+      "content": "Felicia Shoner is the esteemed Supreme Witch of SHUBORE, a kingdom renowned for its maritime prowess and harsh, icy climate. Felicia's exceptional magical abilities and deep knowledge of enchantments have earned her a revered position in Shuborian society.",
+      "image": "feliciaShoner"
+    },
+    {
+      "id": "appearance",
+      "title": "Physical Appearance",
+      "content": "Felicia possesses a commanding presence with her striking features. Her long, blond hair and piercing blue eyes reflect the icy landscape of SHUBORE. She often dons flowing robes adorned with intricate magical symbols and focuses on ice magic.",
+      "gallery": [
+        {
+          "url": "feliciaShonerDungeon",
+          "alt": "Felicia Shoner in the dungeon"
+        },
+        {
+          "url": "feliciaShonerBack",
+          "alt": "Felicia Shoner from the back"
+        },
+        {
+          "url": "feliciaShonerEveryday",
+          "alt": "Felicia Shoner in everyday attire"
+        }
+      ]
+    },
+    {
+      "id": "personality",
+      "title": "Personality",
+      "content": [
+        "Known for her unwavering resolve and wisdom, Felicia is deeply respected by her peers and subjects. She has a fierce dedication to protecting SHUBORE and its people, often seen as both a guardian and a mentor. Despite her formidable power, she is compassionate and seeks to use her abilities for the greater good. Her presence commands both fear and reverence; if you see her on the battlefield, it is most likely the last sight you will ever behold.",
+        "Felicia's relationship with her younger sister, Eliana Shoner, is a cornerstone of her life. Eliana, quickly becoming a powerful soldier and now the head of SHUBORE's fleet, shares a bond with Felicia that goes beyond familial ties. Their mutual respect and shared experiences have forged an unbreakable bond. Eliana's rise to power has made Felicia even more determined to protect her people, as she sees in Eliana the future of SHUBORE's strength and resilience.",
+        "Felicia is a complex individual, balancing the weight of her responsibilities with a deep sense of personal reflection. In private moments, she is reflective and contemplative, often wandering by the fishermen's shores. The rhythmic sound of the waves and the solitude of the coast provide her a sanctuary where she can meditate and reconnect with her inner self. These solitary walks are crucial for her mental clarity and emotional balance, allowing her to reflect on the past and plan for the future.",
+        "Her wisdom is not just a result of her magical prowess but also a product of her keen observation and understanding of people. Felicia has an intuitive ability to read emotions and intentions, making her a skilled diplomat and a trusted advisor. Her empathy allows her to connect deeply with others, offering comfort and guidance when needed. However, this same empathy can be a source of pain, as she often feels the burdens and sorrows of those around her.",
+        "Felicia’s leadership style is characterized by her emphasis on unity and collective strength. She believes that the true power of SHUBORE lies in its people and their ability to work together. She encourages open communication and collaboration, fostering a community where every voice is heard and valued. Her strategic mind is always thinking several steps ahead, anticipating potential threats and preparing her people to face them.",
+        "Despite the immense pressure of her role, Felicia maintains a calm and composed exterior. This serenity is both a natural trait and a cultivated skill, developed through years of discipline and practice. She understands the importance of being a steady and reliable figure for her people, especially in times of crisis.",
+        "Felicia’s life is a delicate balance of duty and personal aspiration. Her love for SHUBORE is matched by her desire to see her sister thrive and her kingdom flourish. She dreams of a future where peace reigns and her people can live without fear. Until that day comes, Felicia remains ever vigilant, a beacon of hope and strength for all of SHUBORE.",
+        "In essence, Felicia Shoner is a blend of strength, wisdom, compassion, and introspection. Her multifaceted personality and unwavering dedication make her a revered and beloved figure in SHUBORE, a true embodiment of the kingdom's spirit and resilience."
+      ]
+    },
+    {
+      "id": "abilities",
+      "title": "Magical Abilities",
+      "content": "As the Supreme Witch, Felicia's magical prowess is unmatched. She specializes in ice and water magic, capable of controlling the elements to devastating effect. Her enchantments are known for their complexity and strength, and she possesses the unique ability to communicate with the spirits of the sea, seeking their guidance and aid."
+    },
+    {
+      "id": "role",
+      "title": "Role in SHUBORE",
+      "content": "In her role as Supreme Witch, Felicia plays a vital part in the governance and defense of SHUBORE. She advises the royal family and the maritime guilds, ensuring that their strategies are bolstered by her magical insights. Felicia also leads efforts to maintain the kingdom's ancient traditions and rituals, preserving the cultural heritage of SHUBORE."
+    }
+  ]
+}

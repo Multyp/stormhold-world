@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import imageUrls from "@/constants/imageUrls";
 
 interface ImageLinkProps {
   href: string;
@@ -16,7 +17,9 @@ const ImageLink: React.FC<ImageLinkProps> = ({
     <Link
       href={href}
       className="group relative bg-cover bg-center h-64"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      style={{
+        backgroundImage: `url(${backgroundImage.startsWith("/") ? backgroundImage : imageUrls[backgroundImage as keyof typeof imageUrls]})`,
+      }}
     >
       <div className="absolute inset-0 bg-black opacity-25 group-hover:opacity-75 transition-opacity"></div>
       <div className="relative z-10 flex items-center justify-center h-full text-white text-center">

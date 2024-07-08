@@ -1,0 +1,31 @@
+{
+  "title": "Elion Melith",
+  "subtitle": "King of MIRLUN",
+  "imageUrl": "elionMelith",
+  "tags": ["elf", "king", "MIRLUN", "nature"],
+  "sections": [
+    {
+      "id": "about",
+      "title": "About Elion Melith",
+      "content": "Elion Melith is the gentle and dignified king of MIRLUN, a realm known for its ancient forests and mystical heritage. Despite his serene demeanor, Elion places immense importance on physical appearance, striving to embody the ideal of eternal youth and beauty.",
+      "image": "elionMelith"
+    },
+    {
+      "id": "appearance",
+      "title": "Physical Appearance",
+      "content": "King Elion is a striking figure, with long, flowing green hair and vibrant emerald eyes that mirror the lush forests of MIRLUN. His regal attire is meticulously crafted, adorned with intricate designs and natural elements that reflect his kingdom's close ties to nature. Elion's appearance is further enhanced by his elegant jewelry, including a necklace with a luminescent gemstone and a crown interwoven with magical runes."
+    },
+    {
+      "id": "personality",
+      "title": "Personality",
+      "content": [
+        "Though he may appear vain, Elion's concern for his appearance is matched by his genuine care for his kingdom and its people. His gentle and compassionate nature endears him to his subjects, and he is always willing to listen to their concerns and address their needs."
+      ]
+    },
+    {
+      "id": "role",
+      "title": "Role in MIRLUN",
+      "content": "As the king, Elion plays a vital role in the governance of MIRLUN. He oversees the kingdom's political affairs, represents MIRLUN in THE ELDER'S SENATE, and ensures the preservation of its cultural heritage. Elion's leadership is characterized by his emphasis on beauty, harmony, and the well-being of his people."
+    }
+  ]
+}
