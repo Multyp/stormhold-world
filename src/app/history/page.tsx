@@ -6,6 +6,7 @@ import HistoryEvents from "@/components/app/HistoryEvents";
 interface Event {
   title: string;
   excerpt: string;
+  duration: string;
   link: string;
 }
 
@@ -23,6 +24,7 @@ const getAllHistoryEvents = (): Event[] => {
     return {
       title: event.title,
       excerpt: event.excerpt,
+      duration: event.duration,
       link: `/history/${filename.replace(".json", "")}`,
     };
   });
