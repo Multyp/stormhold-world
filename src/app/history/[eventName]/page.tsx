@@ -93,7 +93,9 @@ const EventPage = async ({ params }: EventProps) => {
                     <>
                       <SectionHeadContainer id={section.id}>
                         <SectionTitle title={section.title} />
-                        <SectionContent>{section.content}</SectionContent>
+                        <SectionContent>
+                          {renderContent(section.content)}
+                        </SectionContent>
                       </SectionHeadContainer>
                       {section.image && (
                         <SectionImageContainer>
