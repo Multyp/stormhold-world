@@ -90,6 +90,13 @@ const imageUrls = {
   arwinFleck:
     process.env.NEXT_PUBLIC_IMAGE_URL_ARWIN_FLECK ||
     "/stormhold-world/assets/characters/Lariom/arwin_fleck.webp",
+  // DAWNFALL
+  shakanLader:
+    process.env.NEXT_PUBLIC_IMAGE_URL_SHAKAN_LADER ||
+    "/stormhold-world/assets/characters/dawnfall/shakan_lader.webp",
+  varinLader:
+    process.env.NEXT_PUBLIC_IMAGE_URL_VARIN_LADER ||
+    "/stormhold-world/assets/characters/dawnfall/varin_lader.webp",
 };
 
 export default imageUrls;
