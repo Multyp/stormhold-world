@@ -1,8 +1,7 @@
 "use client";
 
 /* Global imports */
-import React from "react";
-import { useSpeechSynthesis } from "react-speech-kit";
+import React, { useState } from "react";
 /* Scoped imports */
 /* Local imports */
 
@@ -15,13 +14,17 @@ const PronunciationButton: React.FC<PronunciationButtonProps> = ({
   pronunciation,
   name,
 }) => {
-  const { speak, speaking } = useSpeechSynthesis();
+  const [speaking, setSpeaking] = useState(false);
 
   const handlePronunciation = () => {
-    if (!speaking) {
-      speak({ text: name });
-    } else {
+    if (speaking) {
       window.speechSynthesis.cancel();
+      setSpeaking(false);
+    } else {
+      const utterance = new SpeechSynthesisUtterance(name);
+      utterance.onstart = () => setSpeaking(true);
+      utterance.onend = () => setSpeaking(false);
+      window.speechSynthesis.speak(utterance);
     }
   };
 
