@@ -20,39 +20,12 @@ import SectionNavLink from "@/components/base/SectionNavLink";
 import SectionGallery from "@/components/base/SectionGallery";
 import imageUrls from "@/constants/imageUrls";
 import PronunciationButton from "@/components/app/PronunciationButton";
+import { characterData } from "@/types/character";
 
 interface CharacterProps {
   params: {
     characterName: string;
   };
-}
-
-interface characterData {
-  title: string;
-  subtitle: string;
-  imageUrl: string;
-  pronunciation?: string;
-  tags: string[];
-  sections?: {
-    id: string;
-    title: string;
-    content: string | string[];
-    image?: string;
-    gallery?: [
-      {
-        url: string;
-        alt: string;
-      },
-      {
-        url: string;
-        alt: string;
-      },
-      {
-        url: string;
-        alt: string;
-      },
-    ];
-  }[];
 }
 
 const CharacterPage = async ({ params }: CharacterProps) => {

@@ -1,3 +1,7 @@
+/* Global imports */
+/* Scoped imports */
+/* Local imports */
+
 interface SectionSubtitleProps {
   title: string;
 }

@@ -1,5 +1,8 @@
+/* Global imports */
 import Image from "next/image";
 import React from "react";
+/* Scoped imports */
+/* Local imports */
 
 interface ImageModalProps {
   imageUrl: string;

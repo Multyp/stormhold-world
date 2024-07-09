@@ -1,3 +1,7 @@
+/* Global imports */
+/* Scoped imports */
+/* Local imports */
+
 const Footer = () => {
   return (
     <footer className="py-4 bg-gray-900 text-center">

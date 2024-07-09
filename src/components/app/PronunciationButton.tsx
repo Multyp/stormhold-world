@@ -1,7 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+/* Global imports */
+import React from "react";
 import { useSpeechSynthesis } from "react-speech-kit";
+/* Scoped imports */
+/* Local imports */
 
 interface PronunciationButtonProps {
   pronunciation: string;

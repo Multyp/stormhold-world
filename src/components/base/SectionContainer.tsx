@@ -1,4 +1,7 @@
+/* Global imports */
 import React from "react";
+/* Scoped imports */
+/* Local imports */
 
 interface SectionContentProps {
   id: string;

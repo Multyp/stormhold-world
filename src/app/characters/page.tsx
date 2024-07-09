@@ -1,7 +1,10 @@
+/* Global imports */
 import fs from "fs";
 import path from "path";
 import { Metadata } from "next";
-import Characters from "@/components/Characters"; // Import the client component
+/* Scoped imports */
+/* Local imports */
+import Characters from "@/components/Characters";
 import { Character } from "@/types/character";
 
 export const metadata: Metadata = {

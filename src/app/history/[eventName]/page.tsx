@@ -1,6 +1,10 @@
+/* Global imports */
 import fs from "fs";
 import path from "path";
 import { Metadata } from "next";
+import React from "react";
+/* Scoped imports */
+/* Local imports */
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionTitle from "@/components/base/SectionTitle";
@@ -15,28 +19,12 @@ import SectionNavContainer from "@/components/base/SectionNavContainer";
 import SectionNavLink from "@/components/base/SectionNavLink";
 import SectionGallery from "@/components/base/SectionGallery";
 import imageUrls from "@/constants/imageUrls";
-import React from "react";
+import { EventData } from "@/types/history";
 
 interface EventProps {
   params: {
     eventName: string;
   };
-}
-
-interface EventData {
-  title: string;
-  subtitle: string;
-  excerpt: string;
-  sections?: {
-    id: string;
-    title: string;
-    content: string | string[];
-    image?: string;
-    gallery?: {
-      url: string;
-      alt: string;
-    }[];
-  }[];
 }
 
 const EventPage = async ({ params }: EventProps) => {
