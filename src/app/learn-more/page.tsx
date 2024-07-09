@@ -1,6 +1,6 @@
 /* Global imports */
-import Head from "next/head";
 import Link from "next/link";
+import { Metadata } from "next";
 /* Scoped imports */
 /* Local imports */
 import Navbar from "@/components/Navbar";
@@ -11,12 +11,13 @@ import SectionContent from "@/components/base/SectionContent";
 import SectionContainer from "@/components/base/SectionContainer";
 import SectionHeader from "@/components/base/SectionHeader";
 
+export const metadata: Metadata = {
+  title: "About Stormhold",
+};
+
 const LearnMore = () => {
   return (
     <div>
-      <Head>
-        <title>About Stormhold</title>
-      </Head>
       <main className="min-h-screen min-w-full">
         <Navbar />
         <SectionHeader

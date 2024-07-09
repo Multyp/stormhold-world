@@ -2,7 +2,7 @@
 
 /* Global imports */
 import { useState } from "react";
-import Head from "next/head";
+import { Metadata } from "next";
 /* Scoped imports */
 /* Local imports */
 import Navbar from "@/components/Navbar";
@@ -12,6 +12,10 @@ import locations from "./locations";
 import Header from "@/components/Header";
 import SectionHeader from "@/components/base/SectionHeader";
 import imageUrls from "@/constants/imageUrls";
+
+export const metadata: Metadata = {
+  title: "Locations - Discover the World",
+};
 
 const Locations = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -55,9 +59,6 @@ const Locations = () => {
 
   return (
     <div>
-      <Head>
-        <title>Locations - Discover the World</title>
-      </Head>
       <main className="min-h-screen">
         <Navbar />
         <SectionHeader
