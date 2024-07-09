@@ -12,7 +12,6 @@ const SectionImage: React.FC<SectionImageProps> = ({ alt, imageUrl }) => {
       <Image
         src={imageUrl}
         alt={alt}
-        layout="responsive"
         width={0}
         height={0}
         draggable={false}

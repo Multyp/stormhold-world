@@ -19,6 +19,7 @@ import SectionNavContainer from "@/components/base/SectionNavContainer";
 import SectionNavLink from "@/components/base/SectionNavLink";
 import SectionGallery from "@/components/base/SectionGallery";
 import imageUrls from "@/constants/imageUrls";
+import PronunciationButton from "@/components/app/PronunciationButton";
 
 interface CharacterProps {
   params: {
@@ -30,6 +31,7 @@ interface characterData {
   title: string;
   subtitle: string;
   imageUrl: string;
+  pronunciation?: string;
   tags: string[];
   sections?: {
     id: string;
@@ -113,6 +115,12 @@ const CharacterPage = async ({ params }: CharacterProps) => {
                     <>
                       <SectionHeadContainer id={section.id}>
                         <SectionTitle title={section.title} />
+                        {characterData.pronunciation && (
+                          <PronunciationButton
+                            pronunciation={characterData.pronunciation}
+                            name={characterData.title}
+                          />
+                        )}
                         <SectionContent>{section.content}</SectionContent>
                       </SectionHeadContainer>
                       {section.image && (
