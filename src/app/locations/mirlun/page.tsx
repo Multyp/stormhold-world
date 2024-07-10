@@ -1,5 +1,5 @@
 /* Global imports */
-import Head from "next/head";
+import { Metadata } from "next";
 /* Scoped imports */
 /* Local imports */
 import Navbar from "@/components/Navbar";
@@ -14,12 +14,13 @@ import SectionImage from "@/components/base/SectionImage";
 import SectionHeadContainer from "@/components/base/SectionHeadContainer";
 import ImageLink from "@/components/ImageLink";
 
+export const metadata: Metadata = {
+  title: "Mirlun - Stormhold",
+};
+
 const Mirlun = () => {
   return (
     <div>
-      <Head>
-        <title>Mirlun - Stormhold</title>
-      </Head>
       <main className="min-h-screen min-w-full">
         <Navbar />
         <header

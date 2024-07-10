@@ -1,7 +1,10 @@
 "use client";
 
+/* Global imports */
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+/* Scoped imports */
+/* Local imports */
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

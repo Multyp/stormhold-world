@@ -1,9 +1,12 @@
 "use client";
 
+/* Global imports */
 import Image from "next/image";
-import imageUrls from "@/constants/imageUrls";
 import React, { useState } from "react";
+/* Scoped imports */
+/* Local imports */
 import ImageModal from "@/components/base/ImageModal";
+import imageUrls from "@/constants/imageUrls";
 
 interface GalleryImage {
   url: string;

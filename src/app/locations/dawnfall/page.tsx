@@ -1,5 +1,5 @@
 /* Global imports */
-import Head from "next/head";
+import { Metadata } from "next";
 /* Scoped imports */
 /* Local imports */
 import Navbar from "@/components/Navbar";
@@ -13,12 +13,13 @@ import SectionImageContainer from "@/components/base/SectionImageContainer";
 import SectionImage from "@/components/base/SectionImage";
 import SectionHeadContainer from "@/components/base/SectionHeadContainer";
 
+export const metadata: Metadata = {
+  title: "Dawnfall - Stormhold",
+};
+
 const Dawnfall = () => {
   return (
     <div>
-      <Head>
-        <title>Dawnfall - Stormhold</title>
-      </Head>
       <main className="min-h-screen min-w-full">
         <Navbar />
         <header

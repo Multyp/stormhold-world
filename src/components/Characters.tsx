@@ -1,6 +1,10 @@
 "use client";
 
+/* Global imports */
+
 import { useState } from "react";
+/* Scoped imports */
+/* Local imports */
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LocationLink from "@/components/ImageLink";

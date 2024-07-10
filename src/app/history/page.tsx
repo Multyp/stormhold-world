@@ -1,6 +1,9 @@
+/* Global imports */
 import fs from "fs";
 import path from "path";
 import { Metadata } from "next";
+/* Scoped imports */
+/* Local imports */
 import HistoryEvents from "@/components/app/HistoryEvents";
 
 interface Event {

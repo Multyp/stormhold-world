@@ -1,4 +1,7 @@
+/* Global imports */
 import { Metadata } from "next";
+/* Scoped imports */
+/* Local imports */
 import Navbar from "@/components/Navbar";
 import Header from "@/components/Header";
 import LocationLink from "@/components/ImageLink";

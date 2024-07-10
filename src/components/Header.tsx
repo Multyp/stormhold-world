@@ -1,3 +1,6 @@
+/* Global imports */
+/* Scoped imports */
+/* Local imports */
 import imageUrls from "@/constants/imageUrls";
 
 const Header = () => {

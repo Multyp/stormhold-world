@@ -1,11 +1,14 @@
 "use client";
 
+/* Global imports */
 import React from "react";
+import Link from "next/link";
+/* Scoped imports */
+/* Local imports */
 import SectionHeader from "@/components/base/SectionHeader";
 import imageUrls from "@/constants/imageUrls";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Link from "next/link";
 
 interface Event {
   title: string;
