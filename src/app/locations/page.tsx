@@ -2,7 +2,6 @@
 
 /* Global imports */
 import { useState } from "react";
-import { Metadata } from "next";
 /* Scoped imports */
 /* Local imports */
 import Navbar from "@/components/Navbar";
@@ -12,10 +11,6 @@ import locations from "./locations";
 import Header from "@/components/Header";
 import SectionHeader from "@/components/base/SectionHeader";
 import imageUrls from "@/constants/imageUrls";
-
-export const metadata: Metadata = {
-  title: "Locations - Discover the World",
-};
 
 const Locations = () => {
   const [searchTerm, setSearchTerm] = useState("");
