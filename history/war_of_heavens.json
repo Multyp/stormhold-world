@@ -1,0 +1,33 @@
+{
+  "title": "The War of the Heavens",
+  "subtitle": "The Divine Schism",
+  "duration": "From Year 0 to Year 300 of the First Age",
+  "date_id": "0000-01-01",
+  "excerpt": "The War of the Heavens was a cataclysmic conflict between the primordial gods and their children, the Lesser Gods. This divine war shattered the early peace of Stormhold, reshaping the land and forcing the gods to retreat from the mortal world.",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Introduction",
+      "content": [
+        "The War of the Heavens was the first great conflict in Stormhold's history, beginning shortly after the creation of the world. The schism among the gods was sparked by a disagreement over the fate of mortals.",
+        "Lothas and Rethane believed that mortals should be free to shape their own destinies. However, Mirrel, Goddess of Magic, and Karthar, God of War, sought to control them, believing that mortals were too flawed to govern themselves. This disagreement escalated into a full-scale war among the gods."
+      ]
+    },
+    {
+      "id": "major-battles",
+      "title": "Major Battles",
+      "content": [
+        "The War of the Heavens saw several key battles that reshaped the land. The most significant of these was the Battle of Elothir's Root, where the armies of Lothas and Rethane clashed with the forces of Mirrel and Karthar. The World Tree was scarred in this battle, leading to the creation of the Blighted Lands.",
+        "Another pivotal battle was the Siege of Ashenhelm, where the Nords of Shubore and the humans of Lariom defended the city against Karthar's forces. This battle became a symbol of mortal resilience against divine oppression."
+      ]
+    },
+    {
+      "id": "consequences",
+      "title": "Consequences",
+      "content": [
+        "The War of the Heavens ended with the gods' retreat from the mortal world. Lothas and Rethane were victorious, but the divine energies unleashed during the war had caused irreparable damage to Stormhold. The Great Rift, a massive chasm that split the continent, was created during the final battle.",
+        "With the gods no longer directly guiding mortals, the races of Stormhold were left to rebuild and establish their own kingdoms, marking the beginning of the Second Age."
+      ]
+    }
+  ]
+}

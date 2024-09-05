@@ -11,6 +11,7 @@ interface Event {
   excerpt: string;
   duration: string;
   link: string;
+  date_id: string; // Adding date_id to the Event interface
 }
 
 export const metadata: Metadata = {
@@ -29,8 +30,11 @@ const getAllHistoryEvents = (): Event[] => {
       excerpt: event.excerpt,
       duration: event.duration,
       link: `/history/${filename.replace(".json", "")}`,
+      date_id: event.date_id,
     };
   });
+  events.sort((a, b) => (a.date_id > b.date_id ? 1 : -1));
+
   return events;
 };
 
