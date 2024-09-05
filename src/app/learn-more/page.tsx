@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const LearnMore = () => {
   return (
     <div>
-      <main className="min-h-screen min-w-full">
+      <main className="min-h-screen min-w-full bg-gray-100 text-black">
         <Navbar />
         <SectionHeader
           imageUrl={imageUrls.default}

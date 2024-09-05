@@ -63,7 +63,7 @@ const CharacterPage = async ({ params }: CharacterProps) => {
 
   return (
     <div>
-      <main className="min-h-screen min-w-full">
+      <main className="min-h-screen min-w-full  bg-gray-100 text-black">
         <Navbar />
         <SectionHeader
           imageUrl={imageUrls[characterData.imageUrl as keyof typeof imageUrls]}

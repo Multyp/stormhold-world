@@ -54,7 +54,7 @@ const Locations = () => {
 
   return (
     <div>
-      <main className="min-h-screen">
+      <main className="min-h-screen  bg-gray-100 text-black">
         <Navbar />
         <SectionHeader
           title="Discover STORMHOLD"
