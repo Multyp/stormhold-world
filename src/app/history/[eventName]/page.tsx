@@ -20,6 +20,8 @@ import SectionNavLink from "@/components/base/SectionNavLink";
 import SectionGallery from "@/components/base/SectionGallery";
 import imageUrls from "@/constants/imageUrls";
 import { EventData } from "@/types/history";
+import keywordDictionary from "@/constants/keywordsDict";
+import Link from "next/link";
 
 interface EventProps {
   params: {
@@ -37,11 +39,50 @@ const EventPage = async ({ params }: EventProps) => {
 
   const eventData: EventData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
 
+  const replaceKeywordsWithLinks = (text: string) => {
+    const parts = [];
+    let lastIndex = 0;
+
+    // Use a regex to find keywords, including those followed by punctuation
+    const keywordRegex = new RegExp(
+      `\\b(${Object.keys(keywordDictionary).join("|")})\\b(?![\\w-])`,
+      "gi",
+    );
+
+    let match;
+
+    while ((match = keywordRegex.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(text.substring(lastIndex, match.index));
+      }
+
+      const keyword = match[0];
+      const url = keywordDictionary[keyword as keyof typeof keywordDictionary];
+
+      parts.push(
+        <Link
+          key={match.index}
+          href={url}
+          className="text-blue-600 hover:underline"
+        >
+          {keyword}
+        </Link>,
+      );
+      lastIndex = keywordRegex.lastIndex;
+    }
+
+    if (lastIndex < text.length) {
+      parts.push(text.substring(lastIndex));
+    }
+
+    return parts;
+  };
+
   const renderContent = (content: string | string[]) => {
     if (Array.isArray(content)) {
       return content.map((paragraph, index) => (
         <React.Fragment key={index}>
-          {paragraph}
+          {renderParagraph(paragraph)}
           {index !== content.length - 1 && (
             <>
               <br />
@@ -51,7 +92,12 @@ const EventPage = async ({ params }: EventProps) => {
         </React.Fragment>
       ));
     }
-    return content;
+    return renderParagraph(content);
+  };
+
+  // Function to handle rendering of each paragraph
+  const renderParagraph = (paragraph: string) => {
+    return <>{replaceKeywordsWithLinks(paragraph)}</>;
   };
 
   return (
