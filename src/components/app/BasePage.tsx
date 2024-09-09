@@ -38,7 +38,6 @@ const replaceKeywordsWithLinks = (text: string) => {
     }
 
     const keyword = match[0];
-    console.log(keyword);
     const url =
       keywordDictionary[
         keyword.toLowerCase() as keyof typeof keywordDictionary
