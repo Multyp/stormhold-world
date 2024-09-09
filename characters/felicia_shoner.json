@@ -34,14 +34,51 @@
       "id": "personality",
       "title": "Personality",
       "content": [
-        "Felicia is a figure of contradictions. On the surface, she is calm, composed, and deeply respected, but beneath that veneer lies a woman who is constantly at war with herself. Her dedication to SHUBORE and her people is unwavering, but this has come at great personal cost. Felicia has made difficult decisions that weigh heavily on her conscience—sacrifices that were necessary for the kingdom's survival but left deep scars on her soul.",
-        "One of Felicia's greatest internal struggles is her relationship with power. While she uses her magic to protect her people, there is a part of her that fears what she might become if she ever lost control. The immense magical power she wields is both a blessing and a curse, and she is acutely aware of the fine line between protection and destruction.",
-        "Her relationship with her younger sister, Eliana Shoner, is complex. While Felicia loves and admires her sister, there is a deep-rooted fear that Eliana will be pulled into the darker aspects of leadership and power. Felicia's protective instincts sometimes clash with Eliana's growing independence and ambition, leading to tensions between them. Felicia sees in Eliana a reflection of her younger self—idealistic and driven—but she also knows how that idealism can be eroded by the harsh realities of leadership.",
-        "Felicia's empathy, while one of her greatest strengths, is also a source of vulnerability. She deeply feels the suffering of her people, and this emotional connection drives her to do whatever it takes to keep SHUBORE safe. However, this empathy can also lead to moments of doubt and hesitation, as she struggles with the moral implications of her actions. Her ability to read others' emotions and intentions makes her a skilled diplomat, but it also means she is constantly burdened by the weight of others' expectations and fears.",
-        "Felicia is not without her flaws. Her intense dedication to SHUBORE sometimes blinds her to the needs of individuals, leading her to make decisions that prioritize the kingdom over personal relationships. She can be cold and distant, particularly when faced with difficult choices. In her heart, she believes that sacrifice is necessary for the greater good, but this belief isolates her from those she cares about.",
-        "Despite her outward strength, Felicia is haunted by a profound loneliness. The burdens of leadership and power have distanced her from the very people she seeks to protect. She often finds solace in solitude, wandering the desolate shores of SHUBORE, where the sound of the waves offers a temporary reprieve from her responsibilities. These moments of quiet reflection are crucial for her mental and emotional balance, allowing her to process her inner turmoil away from the gaze of others.",
-        "Felicia’s leadership style is strategic and calculated. She is always thinking several steps ahead, anticipating threats and challenges before they arise. This foresight has earned her respect and fear in equal measure, as her decisions can be ruthless when necessary. However, her meticulous planning also stems from a deep-seated fear of failure—she knows that one wrong move could spell disaster for SHUBORE and its people.",
-        "In summary, Felicia Shoner is a leader forged in the crucible of responsibility, power, and sacrifice. She is a protector of SHUBORE, but she is also a woman wrestling with the consequences of her actions and the cost of her power. Her story is one of resilience, but also of the quiet desperation that comes with carrying the weight of an entire kingdom on her shoulders."
+        "Felicia is a figure of contradictions. On the surface, she is calm, composed, and deeply respected, but beneath that veneer lies a woman who is constantly at war with herself. Her dedication to SHUBORE and her people is unwavering, but this has come at great personal cost. Felicia has made difficult decisions that weigh heavily on her conscience—sacrifices that were necessary for the kingdom's survival but left deep scars on her soul."
+      ],
+      "subsections": [
+        {
+          "id": "relationship-with-power",
+          "title": "Relationship with Power",
+          "content": [
+            "One of Felicia's greatest internal struggles is her relationship with power. While she uses her magic to protect her people, there is a part of her that fears what she might become if she ever lost control. The immense magical power she wields is both a blessing and a curse, and she is acutely aware of the fine line between protection and destruction."
+          ]
+        },
+        {
+          "id": "relationship-with-eliana",
+          "title": "Relationship with Eliana",
+          "content": [
+            "Her relationship with her younger sister, Eliana Shoner, is complex. While Felicia loves and admires her sister, there is a deep-rooted fear that Eliana will be pulled into the darker aspects of leadership and power. Felicia's protective instincts sometimes clash with Eliana's growing independence and ambition, leading to tensions between them. Felicia sees in Eliana a reflection of her younger self—idealistic and driven—but she also knows how that idealism can be eroded by the harsh realities of leadership."
+          ]
+        },
+        {
+          "id": "empathy-and-vulnerability",
+          "title": "Empathy and Vulnerability",
+          "content": [
+            "Felicia's empathy, while one of her greatest strengths, is also a source of vulnerability. She deeply feels the suffering of her people, and this emotional connection drives her to do whatever it takes to keep SHUBORE safe. However, this empathy can also lead to moments of doubt and hesitation, as she struggles with the moral implications of her actions. Her ability to read others' emotions and intentions makes her a skilled diplomat, but it also means she is constantly burdened by the weight of others' expectations and fears."
+          ]
+        },
+        {
+          "id": "flaws-and-sacrifices",
+          "title": "Flaws and Sacrifices",
+          "content": [
+            "Felicia is not without her flaws. Her intense dedication to SHUBORE sometimes blinds her to the needs of individuals, leading her to make decisions that prioritize the kingdom over personal relationships. She can be cold and distant, particularly when faced with difficult choices. In her heart, she believes that sacrifice is necessary for the greater good, but this belief isolates her from those she cares about."
+          ]
+        },
+        {
+          "id": "loneliness-and-solitude",
+          "title": "Loneliness and Solitude",
+          "content": [
+            "Despite her outward strength, Felicia is haunted by a profound loneliness. The burdens of leadership and power have distanced her from the very people she seeks to protect. She often finds solace in solitude, wandering the desolate shores of SHUBORE, where the sound of the waves offers a temporary reprieve from her responsibilities. These moments of quiet reflection are crucial for her mental and emotional balance, allowing her to process her inner turmoil away from the gaze of others."
+          ]
+        },
+        {
+          "id": "leadership-style",
+          "title": "Leadership Style",
+          "content": [
+            "Felicia’s leadership style is strategic and calculated. She is always thinking several steps ahead, anticipating threats and challenges before they arise. This foresight has earned her respect and fear in equal measure, as her decisions can be ruthless when necessary. However, her meticulous planning also stems from a deep-seated fear of failure—she knows that one wrong move could spell disaster for SHUBORE and its people."
+          ]
+        }
       ]
     },
     {

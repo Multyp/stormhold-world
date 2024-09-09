@@ -80,6 +80,59 @@ const renderContent = (content: string | string[]) => {
   return replaceKeywordsWithLinks(content);
 };
 
+const renderSections = (data: any, sections: any[], depth = 0) => {
+  return sections.map((section: any) => (
+    <React.Fragment key={section.id}>
+      {section.id === "intro" || section.id === "about" ? (
+        <>
+          <SectionHeadContainer id={section.id}>
+            <SectionTitle title={section.title} />
+            {data.pronunciation && (
+              <PronunciationButton
+                pronunciation={data.pronunciation}
+                name={data.title}
+              />
+            )}
+            <SectionContent>{renderContent(section.content)}</SectionContent>
+          </SectionHeadContainer>
+          {section.image && (
+            <SectionImageContainer>
+              <SectionImage
+                alt={section.title}
+                imageUrl={imageUrls[section.image as keyof typeof imageUrls]}
+              />
+            </SectionImageContainer>
+          )}
+        </>
+      ) : (
+        <SectionContainer
+          id={section.id}
+          title={section.title}
+          depth={depth}
+        >
+          {depth === 0 ? (
+            <SectionTitle title={section.title} />
+          ) : (
+            <SectionSubtitle title={section.title} />
+          )}
+          <SectionContent>{renderContent(section.content)}</SectionContent>
+          {section.image && (
+            <SectionImageContainer>
+              <SectionImage
+                alt={section.title}
+                imageUrl={imageUrls[section.image as keyof typeof imageUrls]}
+              />
+            </SectionImageContainer>
+          )}
+          {section.subsections &&
+            renderSections(data, section.subsections, depth + 1)}
+          {section.gallery && <SectionGallery gallery={section.gallery} />}
+        </SectionContainer>
+      )}
+    </React.Fragment>
+  ));
+};
+
 const BasePage: React.FC<BasePageProps> = ({ data, renderHead }) => {
   return (
     <div>
@@ -98,46 +151,7 @@ const BasePage: React.FC<BasePageProps> = ({ data, renderHead }) => {
               ))}
             </SectionNavContainer>
             <section className="py-10 px-4 flex items-center justify-center flex-col">
-              {data.sections.map((section: any) => (
-                <React.Fragment key={section.id}>
-                  {section.id === "intro" || section.id === "about" ? (
-                    <>
-                      <SectionHeadContainer id={section.id}>
-                        <SectionTitle title={section.title} />
-                        {data.pronunciation && (
-                          <PronunciationButton
-                            pronunciation={data.pronunciation}
-                            name={data.title}
-                          />
-                        )}
-                        <SectionContent>
-                          {renderContent(section.content)}
-                        </SectionContent>
-                      </SectionHeadContainer>
-                      {section.image && (
-                        <SectionImageContainer>
-                          <SectionImage
-                            alt={section.title}
-                            imageUrl={
-                              imageUrls[section.image as keyof typeof imageUrls]
-                            }
-                          />
-                        </SectionImageContainer>
-                      )}
-                    </>
-                  ) : (
-                    <SectionContainer id={section.id}>
-                      <SectionSubtitle title={section.title} />
-                      <SectionContent>
-                        {renderContent(section.content)}
-                      </SectionContent>
-                      {section.gallery && (
-                        <SectionGallery gallery={section.gallery} />
-                      )}
-                    </SectionContainer>
-                  )}
-                </React.Fragment>
-              ))}
+              {renderSections(data, data.sections)}
             </section>
           </>
         ) : (
