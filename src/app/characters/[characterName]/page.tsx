@@ -30,23 +30,6 @@ const CharacterPage = async ({ params }: CharacterProps) => {
     fs.readFileSync(filePath, "utf-8"),
   );
 
-  const renderContent = (content: string | string[]) => {
-    if (Array.isArray(content)) {
-      return content.map((paragraph, index) => (
-        <React.Fragment key={index}>
-          {paragraph}
-          {index !== content.length - 1 && (
-            <>
-              <br />
-              <br />
-            </>
-          )}
-        </React.Fragment>
-      ));
-    }
-    return content;
-  };
-
   const renderHead = () => (
     <SectionHeader
       imageUrl={imageUrls[characterData.imageUrl as keyof typeof imageUrls]}
@@ -58,7 +41,6 @@ const CharacterPage = async ({ params }: CharacterProps) => {
   return (
     <BasePage
       data={characterData}
-      renderContent={renderContent}
       renderHead={renderHead}
     />
   );

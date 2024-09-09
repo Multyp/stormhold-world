@@ -13,18 +13,74 @@ import SectionNavLink from "@/components/base/SectionNavLink";
 import SectionGallery from "@/components/base/SectionGallery";
 import imageUrls from "@/constants/imageUrls";
 import PronunciationButton from "@/components/app/PronunciationButton";
+import keywordDictionary from "@/constants/keywordsDict";
+import Link from "next/link";
 
 interface BasePageProps {
   data: any;
-  renderContent: (content: string | string[]) => React.ReactNode;
   renderHead: () => React.ReactNode;
 }
 
-const BasePage: React.FC<BasePageProps> = ({
-  data,
-  renderContent,
-  renderHead,
-}) => {
+const replaceKeywordsWithLinks = (text: string) => {
+  const parts = [];
+  let lastIndex = 0;
+
+  const keywordRegex = new RegExp(
+    `\\b(${Object.keys(keywordDictionary).join("|")})\\b(?![\\w-])`,
+    "gi",
+  );
+
+  let match;
+
+  while ((match = keywordRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+
+    const keyword = match[0];
+    console.log(keyword);
+    const url =
+      keywordDictionary[
+        keyword.toLowerCase() as keyof typeof keywordDictionary
+      ];
+
+    parts.push(
+      <Link
+        key={match.index}
+        href={url}
+        className="text-blue-600 hover:underline"
+      >
+        {keyword}
+      </Link>,
+    );
+    lastIndex = keywordRegex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts;
+};
+
+const renderContent = (content: string | string[]) => {
+  if (Array.isArray(content)) {
+    return content.map((paragraph, index) => (
+      <React.Fragment key={index}>
+        {replaceKeywordsWithLinks(paragraph)}
+        {index !== content.length - 1 && (
+          <>
+            <br />
+            <br />
+          </>
+        )}
+      </React.Fragment>
+    ));
+  }
+  return replaceKeywordsWithLinks(content);
+};
+
+const BasePage: React.FC<BasePageProps> = ({ data, renderHead }) => {
   return (
     <div>
       <main className="min-h-screen min-w-full bg-gray-100 text-black">

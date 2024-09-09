@@ -3,8 +3,6 @@ import path from "path";
 import { Metadata } from "next";
 import BasePage from "@/components/app/BasePage";
 import { EventData } from "@/types/history";
-import keywordDictionary from "@/constants/keywordsDict";
-import Link from "next/link";
 import React from "react";
 import SectionHeader from "@/components/base/SectionHeader";
 import imageUrls from "@/constants/imageUrls";
@@ -25,61 +23,6 @@ const EventPage = async ({ params }: EventProps) => {
 
   const eventData: EventData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
 
-  const replaceKeywordsWithLinks = (text: string) => {
-    const parts = [];
-    let lastIndex = 0;
-
-    const keywordRegex = new RegExp(
-      `\\b(${Object.keys(keywordDictionary).join("|")})\\b(?![\\w-])`,
-      "gi",
-    );
-
-    let match;
-
-    while ((match = keywordRegex.exec(text)) !== null) {
-      if (match.index > lastIndex) {
-        parts.push(text.substring(lastIndex, match.index));
-      }
-
-      const keyword = match[0];
-      const url = keywordDictionary[keyword as keyof typeof keywordDictionary];
-
-      parts.push(
-        <Link
-          key={match.index}
-          href={url}
-          className="text-blue-600 hover:underline"
-        >
-          {keyword}
-        </Link>,
-      );
-      lastIndex = keywordRegex.lastIndex;
-    }
-
-    if (lastIndex < text.length) {
-      parts.push(text.substring(lastIndex));
-    }
-
-    return parts;
-  };
-
-  const renderContent = (content: string | string[]) => {
-    if (Array.isArray(content)) {
-      return content.map((paragraph, index) => (
-        <React.Fragment key={index}>
-          {replaceKeywordsWithLinks(paragraph)}
-          {index !== content.length - 1 && (
-            <>
-              <br />
-              <br />
-            </>
-          )}
-        </React.Fragment>
-      ));
-    }
-    return replaceKeywordsWithLinks(content);
-  };
-
   const renderHead = () => (
     <SectionHeader
       imageUrl={imageUrls.default}
@@ -91,7 +34,6 @@ const EventPage = async ({ params }: EventProps) => {
   return (
     <BasePage
       data={eventData}
-      renderContent={renderContent}
       renderHead={renderHead}
     />
   );

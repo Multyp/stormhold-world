@@ -1,7 +1,7 @@
 const keywordDictionary = {
-  Lariom: "/locations/lariom",
-  Mirlun: "/locations/mirlun",
-  Shubore: "/locations/shubore",
+  lariom: "/locations/lariom",
+  mirlun: "/locations/mirlun",
+  shubore: "/locations/shubore",
 };
 
 export default keywordDictionary;

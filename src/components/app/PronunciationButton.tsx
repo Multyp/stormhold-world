@@ -30,7 +30,7 @@ const PronunciationButton: React.FC<PronunciationButtonProps> = ({
 
   return (
     <div className="flex flex-col">
-      <div className="max-w-screen-lg w-[100dvw]">
+      <div className="max-w-screen-lg">
         <button
           onClick={handlePronunciation}
           className="pronunciation-button self-start flex items-center rounded-lg border border-blue-500 text-blue-500 px-3 py-2 hover:bg-blue-50 transition-colors duration-300"
