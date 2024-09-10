@@ -15,9 +15,10 @@ import imageUrls from "@/constants/imageUrls";
 import PronunciationButton from "@/components/app/PronunciationButton";
 import keywordDictionary from "@/constants/keywordsDict";
 import Link from "next/link";
+import { PageData, Section } from "@/types/pageData";
 
 interface BasePageProps {
-  data: any;
+  data: PageData;
   renderHead: () => React.ReactNode;
 }
 
@@ -79,8 +80,8 @@ const renderContent = (content: string | string[]) => {
   return replaceKeywordsWithLinks(content);
 };
 
-const renderSections = (data: any, sections: any[], depth = 0) => {
-  return sections.map((section: any) => (
+const renderSections = (data: PageData, sections: Section[], depth = 0) => {
+  return sections.map((section: Section) => (
     <React.Fragment key={section.id}>
       {section.id === "intro" || section.id === "about" ? (
         <>
@@ -141,7 +142,7 @@ const BasePage: React.FC<BasePageProps> = ({ data, renderHead }) => {
         {data.sections ? (
           <>
             <SectionNavContainer>
-              {data.sections.map((section: any) => (
+              {data.sections.map((section: Section) => (
                 <SectionNavLink
                   key={section.id}
                   href={`#${section.id}`}
@@ -153,9 +154,7 @@ const BasePage: React.FC<BasePageProps> = ({ data, renderHead }) => {
               {renderSections(data, data.sections)}
             </section>
           </>
-        ) : (
-          ""
-        )}
+        ) : null}
       </main>
       <Footer />
     </div>
