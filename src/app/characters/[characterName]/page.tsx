@@ -5,8 +5,6 @@ import { Metadata } from "next";
 import BasePage from "@/components/app/BasePage";
 import { CharacterData } from "@/types/pageData";
 import React from "react";
-import SectionHeader from "@/components/base/SectionHeader";
-import imageUrls from "@/constants/imageUrls";
 
 interface CharacterProps {
   params: {
@@ -30,20 +28,7 @@ const CharacterPage = async ({ params }: CharacterProps) => {
     fs.readFileSync(filePath, "utf-8"),
   );
 
-  const renderHead = () => (
-    <SectionHeader
-      imageUrl={imageUrls[characterData.imageUrl as keyof typeof imageUrls]}
-      title={characterData.title}
-      subtitle={characterData.subtitle}
-    />
-  );
-
-  return (
-    <BasePage
-      data={characterData}
-      renderHead={renderHead}
-    />
-  );
+  return <BasePage data={characterData} />;
 };
 
 export default CharacterPage;

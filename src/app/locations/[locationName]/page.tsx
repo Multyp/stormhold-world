@@ -2,10 +2,8 @@ import fs from "fs";
 import path from "path";
 import { Metadata } from "next";
 import BasePage from "@/components/app/BasePage";
-import { characterData } from "@/types/character";
+import { CharacterData } from "@/types/pageData";
 import React from "react";
-import SectionHeader from "@/components/base/SectionHeader";
-import imageUrls from "@/constants/imageUrls";
 
 interface LocationProps {
   params: {
@@ -25,24 +23,11 @@ const LocationPage = async ({ params }: LocationProps) => {
     return { notFound: true };
   }
 
-  const locationsData: characterData = JSON.parse(
+  const locationsData: CharacterData = JSON.parse(
     fs.readFileSync(filePath, "utf-8"),
   );
 
-  const renderHead = () => (
-    <SectionHeader
-      imageUrl={imageUrls[locationsData.imageUrl as keyof typeof imageUrls]}
-      title={locationsData.title}
-      subtitle={locationsData.subtitle}
-    />
-  );
-
-  return (
-    <BasePage
-      data={locationsData}
-      renderHead={renderHead}
-    />
-  );
+  return <BasePage data={locationsData} />;
 };
 
 export default LocationPage;

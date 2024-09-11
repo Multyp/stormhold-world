@@ -4,8 +4,6 @@ import { Metadata } from "next";
 import BasePage from "@/components/app/BasePage";
 import { EventData } from "@/types/pageData";
 import React from "react";
-import SectionHeader from "@/components/base/SectionHeader";
-import imageUrls from "@/constants/imageUrls";
 
 interface EventProps {
   params: {
@@ -23,20 +21,7 @@ const EventPage = async ({ params }: EventProps) => {
 
   const eventData: EventData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
 
-  const renderHead = () => (
-    <SectionHeader
-      imageUrl={imageUrls.default}
-      title={eventData.title}
-      subtitle={eventData.subtitle}
-    />
-  );
-
-  return (
-    <BasePage
-      data={eventData}
-      renderHead={renderHead}
-    />
-  );
+  return <BasePage data={eventData} />;
 };
 
 export default EventPage;

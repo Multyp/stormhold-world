@@ -22,6 +22,8 @@ export interface Section {
 
 export interface PageData {
   title: string;
+  subtitle: string;
+  imageUrl?: string;
   sections?: Section[];
 }
 

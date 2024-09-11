@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionTitle from "@/components/base/SectionTitle";
@@ -16,10 +16,10 @@ import Link from "next/link";
 import { PageData, Section } from "@/types/pageData";
 import BasePageIntro from "./BasePage/PageIntro";
 import BasePageIntroImage from "./BasePage/PageIntroImage";
+import SectionHeader from "../base/SectionHeader";
 
 interface BasePageProps {
   data: PageData;
-  renderHead: () => React.ReactNode;
 }
 
 const replaceKeywordsWithLinks = (text: string) => {
@@ -126,12 +126,24 @@ const renderSections = (data: PageData, sections: Section[], depth = 0) => {
   ));
 };
 
-const BasePage: React.FC<BasePageProps> = ({ data, renderHead }) => {
+const renderHead = (
+  title: string,
+  subtitle: string,
+  imageUrl: string = "default",
+) => (
+  <SectionHeader
+    imageUrl={imageUrls[imageUrl as keyof typeof imageUrls]}
+    title={title}
+    subtitle={subtitle}
+  />
+);
+
+const BasePage: React.FC<BasePageProps> = ({ data }) => {
   return (
     <div>
       <main className="min-h-screen min-w-full bg-gray-100 text-black">
         <Navbar />
-        {renderHead()}
+        {renderHead(data.title, data.subtitle, data.imageUrl)}
         {data.sections ? (
           <>
             <SectionNavContainer>
@@ -156,7 +168,7 @@ const BasePage: React.FC<BasePageProps> = ({ data, renderHead }) => {
               ))}
             </SectionNavContainer>
             <section className="py-10 px-4 flex items-center justify-center flex-col">
-              {renderSections(data, data.sections)}
+              {renderSections(data, data.sections, 0)}
             </section>
           </>
         ) : null}
