@@ -16,6 +16,7 @@ import PronunciationButton from "@/components/app/PronunciationButton";
 import keywordDictionary from "@/constants/keywordsDict";
 import Link from "next/link";
 import { PageData, Section } from "@/types/pageData";
+import BasePageIntro from "./BasePage/PageIntro";
 
 interface BasePageProps {
   data: PageData;
@@ -85,16 +86,11 @@ const renderSections = (data: PageData, sections: Section[], depth = 0) => {
     <React.Fragment key={section.id}>
       {section.id === "intro" || section.id === "about" ? (
         <>
-          <SectionHeadContainer id={section.id}>
-            <SectionTitle title={section.title} />
-            {data.pronunciation && (
-              <PronunciationButton
-                pronunciation={data.pronunciation}
-                name={data.title}
-              />
-            )}
-            <SectionContent>{renderContent(section.content)}</SectionContent>
-          </SectionHeadContainer>
+          <BasePageIntro
+            section={section}
+            data={data}
+            renderContent={renderContent}
+          />
           {section.image && (
             <SectionImageContainer>
               <SectionImage

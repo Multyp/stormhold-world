@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import { Metadata } from "next";
 import BasePage from "@/components/app/BasePage";
-import { characterData } from "@/types/character";
+import { CharacterData } from "@/types/pageData";
 import React from "react";
 import SectionHeader from "@/components/base/SectionHeader";
 import imageUrls from "@/constants/imageUrls";
@@ -26,7 +26,7 @@ const CharacterPage = async ({ params }: CharacterProps) => {
     return { notFound: true };
   }
 
-  const characterData: characterData = JSON.parse(
+  const characterData: CharacterData = JSON.parse(
     fs.readFileSync(filePath, "utf-8"),
   );
 

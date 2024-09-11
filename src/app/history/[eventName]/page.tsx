@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { Metadata } from "next";
 import BasePage from "@/components/app/BasePage";
-import { EventData } from "@/types/history";
+import { EventData } from "@/types/pageData";
 import React from "react";
 import SectionHeader from "@/components/base/SectionHeader";
 import imageUrls from "@/constants/imageUrls";
