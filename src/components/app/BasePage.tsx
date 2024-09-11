@@ -17,6 +17,7 @@ import keywordDictionary from "@/constants/keywordsDict";
 import Link from "next/link";
 import { PageData, Section } from "@/types/pageData";
 import BasePageIntro from "./BasePage/PageIntro";
+import BasePageIntroImage from "./BasePage/PageIntroImage";
 
 interface BasePageProps {
   data: PageData;
@@ -92,12 +93,10 @@ const renderSections = (data: PageData, sections: Section[], depth = 0) => {
             renderContent={renderContent}
           />
           {section.image && (
-            <SectionImageContainer>
-              <SectionImage
-                alt={section.title}
-                imageUrl={imageUrls[section.image as keyof typeof imageUrls]}
-              />
-            </SectionImageContainer>
+            <BasePageIntroImage
+              title={section.title}
+              image={section.image}
+            />
           )}
         </>
       ) : (
