@@ -7,12 +7,10 @@ import SectionContent from "@/components/base/SectionContent";
 import SectionContainer from "@/components/base/SectionContainer";
 import SectionImageContainer from "@/components/base/SectionImageContainer";
 import SectionImage from "@/components/base/SectionImage";
-import SectionHeadContainer from "@/components/base/SectionHeadContainer";
 import SectionNavContainer from "@/components/base/SectionNavContainer";
 import SectionNavLink from "@/components/base/SectionNavLink";
 import SectionGallery from "@/components/base/SectionGallery";
 import imageUrls from "@/constants/imageUrls";
-import PronunciationButton from "@/components/app/PronunciationButton";
 import keywordDictionary from "@/constants/keywordsDict";
 import Link from "next/link";
 import { PageData, Section } from "@/types/pageData";
@@ -138,11 +136,23 @@ const BasePage: React.FC<BasePageProps> = ({ data, renderHead }) => {
           <>
             <SectionNavContainer>
               {data.sections.map((section: Section) => (
-                <SectionNavLink
-                  key={section.id}
-                  href={`#${section.id}`}
-                  title={section.title}
-                />
+                <React.Fragment key={section.id}>
+                  <SectionNavLink
+                    href={`#${section.id}`}
+                    title={section.title}
+                  />
+                  {section.subsections && section.subsections.length > 0 && (
+                    <div className="pl-4">
+                      {section.subsections.map(subsection => (
+                        <SectionNavLink
+                          key={subsection.id}
+                          href={`#${subsection.id}`}
+                          title={subsection.title}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </React.Fragment>
               ))}
             </SectionNavContainer>
             <section className="py-10 px-4 flex items-center justify-center flex-col">
