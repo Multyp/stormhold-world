@@ -1,17 +1,23 @@
-// pages/characters/[characterName].tsx
+// External Modules
 import fs from "fs";
 import path from "path";
 import { Metadata } from "next";
-import BasePage from "@/components/app/BasePage";
-import { CharacterData } from "@/types/pageData";
 import React from "react";
 
+// Components
+import BasePage from "@/components/app/BasePage";
+
+// Types
+import type { CharacterData } from "@/types/pageData";
+
+// TypeScript Interface
 interface CharacterProps {
   params: {
     characterName: string;
   };
 }
 
+// Main Component
 const CharacterPage = async ({ params }: CharacterProps) => {
   const { characterName } = params;
   const filePath = path.join(
@@ -33,6 +39,7 @@ const CharacterPage = async ({ params }: CharacterProps) => {
 
 export default CharacterPage;
 
+// Helper Functions
 export async function generateStaticParams() {
   const charactersDir = path.join(process.cwd(), "characters");
   const files = fs.readdirSync(charactersDir);
