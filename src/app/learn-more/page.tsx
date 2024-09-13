@@ -23,7 +23,10 @@ const LearnMore = () => {
           subtitle="Learn More"
         />
         <section className="py-10 px-4 flex items-center justify-center flex-col">
-          <SectionContainer id="about">
+          <SectionContainer
+            title="About Stormhold"
+            id="about"
+          >
             <SectionSubtitle title="About Stormhold" />
             <SectionContent>
               Welcome to Stormhold, a personal project where I{"'"}m building a
@@ -33,7 +36,10 @@ const LearnMore = () => {
             </SectionContent>
           </SectionContainer>
 
-          <SectionContainer id="ai-images">
+          <SectionContainer
+            title="About the Use of AI-Generated Images"
+            id="ai-images"
+          >
             <SectionSubtitle title="About the Use of AI-Generated Images" />
             <SectionContent>
               AI-generated images have played a significant role in visualizing
@@ -53,7 +59,10 @@ const LearnMore = () => {
             </SectionContent>
           </SectionContainer>
 
-          <SectionContainer id="intentions">
+          <SectionContainer
+            title="Creative Intentions"
+            id="intentions"
+          >
             <SectionSubtitle title="Creative Intentions" />
             <SectionContent>
               My primary intention with this project is to visualize my creative
@@ -66,7 +75,10 @@ const LearnMore = () => {
             </SectionContent>
           </SectionContainer>
 
-          <SectionContainer id="future-plans">
+          <SectionContainer
+            title="Future Plans"
+            id="future-plans"
+          >
             <SectionSubtitle title="Future Plans" />
             <SectionContent>
               In the future, I plan to replace all AI-generated images with my

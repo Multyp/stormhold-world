@@ -18,14 +18,12 @@ export const metadata: Metadata = {
   title: "History of STORMHOLD",
 };
 
-const blocklist = ["README.md"];
-
 const getAllHistoryEvents = (): Event[] => {
   const eventsDir = path.join(process.cwd(), "history");
   const filenames = fs.readdirSync(eventsDir);
 
-  const filteredFilenames = filenames.filter(
-    filename => filename.endsWith(".json") && !blocklist.includes(filename),
+  const filteredFilenames = filenames.filter(filename =>
+    filename.endsWith(".json"),
   );
 
   const events = filteredFilenames.map(filename => {
