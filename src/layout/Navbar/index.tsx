@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react";
 /* Scoped imports */
 import { navLinks } from "@/constants/navLinks";
 /* Local imports */
+import Drawer from "@/layout/Navbar/Drawer";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -94,20 +95,10 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-        {isMenuOpen && (
-          <div className="md:hidden bg-transparent animate-fade-in-down z-10">
-            {navLinks.map((item, index) => (
-              <Link
-                key={index}
-                href={item.url}
-                className="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.title}
-              </Link>
-            ))}
-          </div>
-        )}
+        <Drawer
+          isMenuOpen={isMenuOpen}
+          setIsMenuOpen={setIsMenuOpen}
+        />
       </nav>
     </>
   );
