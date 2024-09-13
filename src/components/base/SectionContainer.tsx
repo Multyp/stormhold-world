@@ -10,6 +10,7 @@ interface SectionContainerProps {
   title: string;
   children: React.ReactNode;
   depth?: number;
+  collapsable?: boolean;
 }
 
 const SectionContainer: React.FC<SectionContainerProps> = ({
@@ -17,12 +18,27 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
   title,
   children,
   depth = 0,
+  collapsable = false,
 }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
+
+  if (!collapsable) {
+    // Non-collapsable version
+    return (
+      <div
+        className={`flex flex-col mt-8 max-w-screen-lg ${
+          depth > 0 ? "ml-6 border-l-2 border-gray-300 pl-4 box-border" : ""
+        }`}
+        id={id}
+      >
+        {children}
+      </div>
+    );
+  }
 
   return (
     <div
@@ -33,14 +49,18 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
     >
       <button
         type="button"
-        className={`py-3 px-4 inline-flex items-center gap-x-2 text-lg font-medium rounded-lg border border-transparent bg-blue-600 ${isCollapsed ? "bg-opacity-70" : ""} text-white hover:bg-blue-700 transition duration-300 ease-in-out`}
+        className={`py-3 px-4 inline-flex items-center gap-x-2 text-lg font-medium rounded-lg border border-transparent bg-blue-600 ${
+          isCollapsed ? "bg-opacity-70" : ""
+        } text-white hover:bg-blue-700 transition duration-300 ease-in-out`}
         onClick={toggleCollapse}
         aria-expanded={!isCollapsed}
         aria-controls={`${id}-content`}
       >
         {title}
         <svg
-          className={`transition-transform duration-300 ease-in-out ${!isCollapsed ? "rotate-180" : ""}`}
+          className={`transition-transform duration-300 ease-in-out ${
+            !isCollapsed ? "rotate-180" : ""
+          }`}
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
