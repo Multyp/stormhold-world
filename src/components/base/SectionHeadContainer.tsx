@@ -14,7 +14,7 @@ const SectionHeadContainer: React.FC<SectionHeadContainerProps> = ({
 }) => {
   return (
     <div
-      className="flex flex-col max-w-screen-lg"
+      className="flex flex-col"
       id={id}
     >
       {children}

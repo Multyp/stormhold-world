@@ -1,0 +1,60 @@
+{
+  "id": "mirlun",
+  "title": "Mirlun",
+  "imageUrl": "mirlun",
+  "tags": ["elven", "kingdom", "forest"],
+  "sections": [
+    {
+      "id": "welcome",
+      "title": "Welcome to Mirlun",
+      "content": [
+        "Mirlun is an independent elven kingdom known for its ancient forests and mystical heritage. It operates under its own local governance but respects the laws set by THE GREAT ELDERS as a member state in the broader political entity of STORMHOLD."
+      ]
+    },
+    {
+      "id": "economy",
+      "title": "Economy",
+      "content": [
+        "Mirlun's economy thrives on exports such as clothes, elven crafts, and non-processed herbal medicines. In return, it imports technological goods and processed foods from other kingdoms, ensuring a balanced economic interdependence within STORMHOLD."
+      ]
+    },
+    {
+      "id": "politics",
+      "title": "Politics",
+      "content": [
+        "Politically, Mirlun maintains autonomy in local matters like justice while adhering to the broader laws set by THE GREAT ELDERS. Its unique governance structure preserves its cultural identity while contributing to the stability of STORMHOLD."
+      ]
+    },
+    {
+      "id": "culture",
+      "title": "Culture",
+      "content": [
+        "Visitors to Mirlun can immerse themselves in its mystical heritage, explore ancient forests, and participate in traditional elven ceremonies and festivals. The kingdom's commitment to preserving its natural beauty and historical legacy makes it a captivating destination within STORMHOLD."
+      ]
+    },
+    {
+      "id": "royal-family",
+      "title": "The Royal Family",
+      "content": [
+        "The royal family of Mirlun is deeply respected for their wisdom, magical prowess, and dedication to the well-being of the kingdom. Learn more about the members of the royal family:"
+      ],
+      "links": [
+        {
+          "title": "Elion MELITH",
+          "href": "/characters/elion_melith",
+          "backgroundImage": "imageUrls.elionMelith"
+        },
+        {
+          "title": "Aryndel MELITH",
+          "href": "/characters/aryndel_melith",
+          "backgroundImage": "imageUrls.aryndelMelith"
+        },
+        {
+          "title": "Typhania MELITH",
+          "href": "/characters/typhania_melith",
+          "backgroundImage": "imageUrls.typhaniaMelith"
+        }
+      ]
+    }
+  ]
+}
