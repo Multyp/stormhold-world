@@ -2,7 +2,7 @@
 
 /* Global imports */
 
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 /* Scoped imports */
 /* Local imports */
 import LocationLink from "@/components/base/ImageLink";
@@ -43,7 +43,7 @@ const Characters = ({ characters }: CharactersProps) => {
       }
     });
 
-  const handleSearchChange = (event: any) => {
+  const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };
 
