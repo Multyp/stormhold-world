@@ -1,14 +1,17 @@
+// Components
 import SectionHeadContainer from "@/components/base/SectionHeadContainer";
 import SectionTitle from "@/components/base/SectionTitle";
-import PronunciationButton from "../PronunciationButton";
 import SectionContent from "@/components/base/SectionContent";
+import PronunciationButton from "../PronunciationButton";
 
+// Types
 import type {
   CharacterData,
   EventData,
   PageData,
   Section,
 } from "@/types/pageData";
+import PageSectionsContent from "./PageSectionsContent";
 
 function isCharacterData(
   data: PageData | EventData | CharacterData,
@@ -19,11 +22,9 @@ function isCharacterData(
 export default function BasePageIntro({
   section,
   data,
-  renderContent,
 }: {
   section: Section;
   data: PageData | EventData | CharacterData;
-  renderContent: (a: string | string[]) => React.ReactNode;
 }) {
   return (
     <SectionHeadContainer id={section.id}>
@@ -34,7 +35,9 @@ export default function BasePageIntro({
           name={data.title}
         />
       )}
-      <SectionContent>{renderContent(section.content)}</SectionContent>
+      <SectionContent>
+        <PageSectionsContent content={section.content} />
+      </SectionContent>
     </SectionHeadContainer>
   );
 }

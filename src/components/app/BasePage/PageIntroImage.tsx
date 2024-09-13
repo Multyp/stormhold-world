@@ -1,4 +1,7 @@
+// Constants
 import imageUrls from "@/constants/imageUrls";
+
+// Components
 import SectionImage from "@/components/base/SectionImage";
 import SectionImageContainer from "@/components/base/SectionImageContainer";
 
