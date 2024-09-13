@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const getAllCharacters = (): Character[] => {
-  const charactersDir = path.join(process.cwd(), "characters");
+  const charactersDir = path.join(process.cwd(), "src/data/characters");
   const filenames = fs.readdirSync(charactersDir);
   const characters = filenames.map(filename => {
     const filePath = path.join(charactersDir, filename);

@@ -15,7 +15,7 @@ const LocationPage = async ({ params }: LocationProps) => {
   const { locationName } = params;
   const filePath = path.join(
     process.cwd(),
-    "locations",
+    "src/data/locations",
     `${locationName}.json`,
   );
 
@@ -33,7 +33,7 @@ const LocationPage = async ({ params }: LocationProps) => {
 export default LocationPage;
 
 export async function generateStaticParams() {
-  const locationsDir = path.join(process.cwd(), "locations");
+  const locationsDir = path.join(process.cwd(), "src/data/locations");
   const files = fs.readdirSync(locationsDir);
 
   return files.map(filename => ({

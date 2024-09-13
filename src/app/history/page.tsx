@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 const getAllHistoryEvents = (): Event[] => {
-  const eventsDir = path.join(process.cwd(), "history");
+  const eventsDir = path.join(process.cwd(), "src/data/history");
   const filenames = fs.readdirSync(eventsDir);
 
   const filteredFilenames = filenames.filter(filename =>

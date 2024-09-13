@@ -22,7 +22,7 @@ const CharacterPage = async ({ params }: CharacterProps) => {
   const { characterName } = params;
   const filePath = path.join(
     process.cwd(),
-    "characters",
+    "src/data/characters",
     `${characterName}.json`,
   );
 
@@ -41,7 +41,7 @@ export default CharacterPage;
 
 // Helper Functions
 export async function generateStaticParams() {
-  const charactersDir = path.join(process.cwd(), "characters");
+  const charactersDir = path.join(process.cwd(), "src/data/characters");
   const files = fs.readdirSync(charactersDir);
 
   return files.map(filename => ({
