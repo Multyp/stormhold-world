@@ -2,16 +2,14 @@
 import { Metadata } from "next";
 /* Scoped imports */
 /* Local imports */
-import Header from "@/components/Header";
-import LocationLink from "@/components/ImageLink";
+import Header from "@/components/app/HomeHeader";
+import LocationLink from "@/components/base/ImageLink";
 import imageUrls from "@/constants/imageUrls";
 import Layout from "@/layout";
 
 export const metadata: Metadata = {
   title: "Stormhold",
 };
-
-const world_name = "Stormhold";
 
 export default function Home() {
   return (

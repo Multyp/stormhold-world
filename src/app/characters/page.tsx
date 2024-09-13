@@ -4,7 +4,7 @@ import path from "path";
 import { Metadata } from "next";
 /* Scoped imports */
 /* Local imports */
-import Characters from "@/components/Characters";
+import Characters from "@/components/pages/Characters";
 import { Character } from "@/types/character";
 import dataUrls from "@/constants/dataUrls";
 

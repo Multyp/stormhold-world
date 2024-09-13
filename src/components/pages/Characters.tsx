@@ -5,7 +5,7 @@
 import { useState } from "react";
 /* Scoped imports */
 /* Local imports */
-import LocationLink from "@/components/ImageLink";
+import LocationLink from "@/components/base/ImageLink";
 import imageUrls from "@/constants/imageUrls";
 import SectionHeader from "@/components/base/SectionHeader";
 import { Character } from "@/types/character";
@@ -15,7 +15,7 @@ interface CharactersProps {
   characters: Character[];
 }
 
-const Locations = ({ characters }: CharactersProps) => {
+const Characters = ({ characters }: CharactersProps) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -66,14 +66,14 @@ const Locations = ({ characters }: CharactersProps) => {
   return (
     <Layout>
       <SectionHeader
-        title="The lands of STORMHOLD"
-        subtitle="A beautiful continent"
-        imageUrl={imageUrls.default}
+        title="The people of STORMHOLD"
+        subtitle="A dense continent"
+        imageUrl={imageUrls.group}
       />
       <section className="bg-gray-100 py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-8 space-y-4 sm:space-y-0">
-            <h2 className="text-3xl font-bold">Explore the World</h2>
+            <h2 className="text-3xl font-bold">Explore the Characters</h2>
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto">
               <input
                 type="text"
@@ -110,7 +110,8 @@ const Locations = ({ characters }: CharactersProps) => {
               <LocationLink
                 key={index}
                 href={
-                  "locations/" + character.title.toLowerCase().replace(" ", "_")
+                  "characters/" +
+                  character.title.toLowerCase().replace(" ", "_")
                 }
                 backgroundImage={character.imageUrl}
                 title={character.title}
@@ -123,4 +124,4 @@ const Locations = ({ characters }: CharactersProps) => {
   );
 };
 
-export default Locations;
+export default Characters;

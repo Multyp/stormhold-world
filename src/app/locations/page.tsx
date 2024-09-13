@@ -5,7 +5,7 @@ import { Metadata } from "next";
 /* Scoped imports */
 /* Local imports */
 import { Character } from "@/types/character";
-import Locations from "@/components/Locations";
+import Locations from "@/components/pages/Locations";
 import dataUrls from "@/constants/dataUrls";
 
 export const metadata: Metadata = {
