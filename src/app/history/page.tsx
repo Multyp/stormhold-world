@@ -5,6 +5,7 @@ import { Metadata } from "next";
 /* Scoped imports */
 /* Local imports */
 import HistoryEvents from "@/components/app/HistoryEvents";
+import dataUrls from "@/constants/dataUrls";
 
 interface Event {
   title: string;
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 const getAllHistoryEvents = (): Event[] => {
-  const eventsDir = path.join(process.cwd(), "src/data/history");
+  const eventsDir = path.join(process.cwd(), dataUrls.history);
   const filenames = fs.readdirSync(eventsDir);
 
   const filteredFilenames = filenames.filter(filename =>

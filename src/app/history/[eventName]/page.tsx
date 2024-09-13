@@ -9,6 +9,7 @@ import BasePage from "@/components/app/BasePage";
 
 // Types
 import type { EventData } from "@/types/pageData";
+import dataUrls from "@/constants/dataUrls";
 
 // TypeScript Interface
 interface EventProps {
@@ -22,7 +23,7 @@ const EventPage = async ({ params }: EventProps) => {
   const { eventName } = params;
   const filePath = path.join(
     process.cwd(),
-    "src/data/history",
+    dataUrls.history,
     `${eventName}.json`,
   );
 
@@ -39,7 +40,7 @@ export default EventPage;
 
 // Helper Functions
 export async function generateStaticParams() {
-  const eventsDir = path.join(process.cwd(), "src/data/history");
+  const eventsDir = path.join(process.cwd(), dataUrls.history);
   const files = fs.readdirSync(eventsDir);
 
   return files.map(filename => ({

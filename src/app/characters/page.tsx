@@ -6,13 +6,14 @@ import { Metadata } from "next";
 /* Local imports */
 import Characters from "@/components/Characters";
 import { Character } from "@/types/character";
+import dataUrls from "@/constants/dataUrls";
 
 export const metadata: Metadata = {
   title: "Characters - Discover the People",
 };
 
 const getAllCharacters = (): Character[] => {
-  const charactersDir = path.join(process.cwd(), "src/data/characters");
+  const charactersDir = path.join(process.cwd(), dataUrls.characters);
   const filenames = fs.readdirSync(charactersDir);
   const characters = filenames.map(filename => {
     const filePath = path.join(charactersDir, filename);

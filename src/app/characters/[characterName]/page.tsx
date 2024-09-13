@@ -9,6 +9,7 @@ import BasePage from "@/components/app/BasePage";
 
 // Types
 import type { CharacterData } from "@/types/pageData";
+import dataUrls from "@/constants/dataUrls";
 
 // TypeScript Interface
 interface CharacterProps {
@@ -41,7 +42,7 @@ export default CharacterPage;
 
 // Helper Functions
 export async function generateStaticParams() {
-  const charactersDir = path.join(process.cwd(), "src/data/characters");
+  const charactersDir = path.join(process.cwd(), dataUrls.characters);
   const files = fs.readdirSync(charactersDir);
 
   return files.map(filename => ({

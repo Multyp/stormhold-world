@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import BasePage from "@/components/app/BasePage";
 import { CharacterData } from "@/types/pageData";
 import React from "react";
+import dataUrls from "@/constants/dataUrls";
 
 interface LocationProps {
   params: {
@@ -15,7 +16,7 @@ const LocationPage = async ({ params }: LocationProps) => {
   const { locationName } = params;
   const filePath = path.join(
     process.cwd(),
-    "src/data/locations",
+    dataUrls.locations,
     `${locationName}.json`,
   );
 
@@ -33,7 +34,7 @@ const LocationPage = async ({ params }: LocationProps) => {
 export default LocationPage;
 
 export async function generateStaticParams() {
-  const locationsDir = path.join(process.cwd(), "src/data/locations");
+  const locationsDir = path.join(process.cwd(), dataUrls.locations);
   const files = fs.readdirSync(locationsDir);
 
   return files.map(filename => ({
