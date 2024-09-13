@@ -5,9 +5,11 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SectionNavContainer from "@/components/base/SectionNavContainer";
-import SectionNavLink from "@/components/base/SectionNavLink";
 import SectionHeader from "@/components/base/SectionHeader";
+
+// BasePage Components
 import PageSections from "@/components/app/BasePage/PageSections";
+import PageSectionNavLinks from "@/components/app/BasePage/PageSectionsNav";
 
 // Constants
 import imageUrls from "@/constants/imageUrls";
@@ -41,23 +43,10 @@ const BasePage: React.FC<BasePageProps> = ({ data }) => {
           <>
             <SectionNavContainer>
               {data.sections.map((section: Section) => (
-                <React.Fragment key={section.id}>
-                  <SectionNavLink
-                    href={`#${section.id}`}
-                    title={section.title}
-                  />
-                  {section.subsections && section.subsections.length > 0 && (
-                    <div className="pl-4">
-                      {section.subsections.map(subsection => (
-                        <SectionNavLink
-                          key={subsection.id}
-                          href={`#${subsection.id}`}
-                          title={subsection.title}
-                        />
-                      ))}
-                    </div>
-                  )}
-                </React.Fragment>
+                <PageSectionNavLinks
+                  key={section.id}
+                  section={section}
+                />
               ))}
             </SectionNavContainer>
             <section className="py-10 px-4 flex items-center justify-center flex-col">
