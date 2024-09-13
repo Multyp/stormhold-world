@@ -1,8 +1,5 @@
-/* Global imports */
 import Link from "next/link";
 import { Metadata } from "next";
-/* Scoped imports */
-/* Local imports */
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import imageUrls from "@/constants/imageUrls";
@@ -18,7 +15,7 @@ export const metadata: Metadata = {
 const LearnMore = () => {
   return (
     <div>
-      <main className="min-h-screen min-w-full">
+      <main className="min-h-screen min-w-full bg-gray-100 text-black">
         <Navbar />
         <SectionHeader
           imageUrl={imageUrls.default}
@@ -27,40 +24,65 @@ const LearnMore = () => {
         />
         <section className="py-10 px-4 flex items-center justify-center flex-col">
           <SectionContainer id="about">
+            <SectionSubtitle title="About Stormhold" />
+            <SectionContent>
+              Welcome to Stormhold, a personal project where I{"'"}m building a
+              complete fantasy world. This world is full of unique places,
+              characters, history, and lore. It blends medieval fantasy with
+              dark fantasy elements and draws inspiration from anime aesthetics.
+            </SectionContent>
+          </SectionContainer>
+
+          <SectionContainer id="ai-images">
             <SectionSubtitle title="About the Use of AI-Generated Images" />
             <SectionContent>
-              In creating this project, AI-generated images have been utilized
-              through services like DALL-E 3 with CHatGPT and Microsoft
-              Designer. It{"'"}s important to note that I do not support the use
+              AI-generated images have played a significant role in visualizing
+              this world. I{"'"}ve used AI tools, such as DALL-E 3 and Microsoft
+              Designer, to generate images that reflect how I imagine various
+              locations and characters. These images have helped me bring my
+              ideas to life and communicate the visual aspects of Stormhold.
+              However, it{"'"}s important to note that I do not endorse the use
               of AI-generated images for commercial purposes.
               <br />
               <br />
-              This project serves as a personal exploration and does not aim for
-              profit. Future iterations will feature original artwork created by
-              myself, replacing AI-generated images. All AI-generated images
-              used are clearly marked as such.
+              This project remains non-commercial and serves as a creative
+              exploration. Moving forward, I am committed to replacing all
+              AI-generated images with my own original artwork. These AI images
+              are marked clearly, and future iterations of the project will
+              focus on maintaining creative integrity through handmade art.
             </SectionContent>
           </SectionContainer>
+
           <SectionContainer id="intentions">
-            <SectionSubtitle title="Intentions" />
+            <SectionSubtitle title="Creative Intentions" />
             <SectionContent>
-              My intention with this project is to visualize my creative ideas
-              and showcase my thoughts through visual representation. I am
-              committed to transitioning to entirely original artwork in future
-              updates.
+              My primary intention with this project is to visualize my creative
+              ideas and share them with my friends and anyone else who might be
+              interested. Although this is a personal project, it remains open
+              to the public via GitHub Pages. I want to be transparent about my
+              creative process, especially concerning the use of AI in the
+              initial stages. Eventually, as I transition to original artwork,
+              the project will fully embody my own artistic vision.
             </SectionContent>
           </SectionContainer>
-          <SectionContainer id="future">
+
+          <SectionContainer id="future-plans">
             <SectionSubtitle title="Future Plans" />
             <SectionContent>
-              I plan to replace all AI-generated images with my own drawings to
-              maintain creative integrity and authenticity.
+              In the future, I plan to replace all AI-generated images with my
+              own drawings to ensure creative authenticity. Beyond that, I aim
+              to continue expanding the world of Stormhold, gradually adding new
+              places, characters, and stories to the universe. Although my main
+              focus is on building this world, I might consider turning these
+              ideas into a more structured narrative, possibly an e-book, as the
+              world grows and evolves.
             </SectionContent>
           </SectionContainer>
-          <div className="mt-8">
+
+          <div className="mt-12 mb-4">
             <Link
               href="/"
-              className="text-blue-600 hover:underline"
+              className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
             >
               Return to Homepage
             </Link>

@@ -11,16 +11,24 @@ interface Event {
   excerpt: string;
   duration: string;
   link: string;
+  date_id: string;
 }
 
 export const metadata: Metadata = {
   title: "History of STORMHOLD",
 };
 
+const blocklist = ["README.md"];
+
 const getAllHistoryEvents = (): Event[] => {
   const eventsDir = path.join(process.cwd(), "history");
   const filenames = fs.readdirSync(eventsDir);
-  const events = filenames.map(filename => {
+
+  const filteredFilenames = filenames.filter(
+    filename => filename.endsWith(".json") && !blocklist.includes(filename),
+  );
+
+  const events = filteredFilenames.map(filename => {
     const filePath = path.join(eventsDir, filename);
     const fileContents = fs.readFileSync(filePath, "utf-8");
     const event = JSON.parse(fileContents);
@@ -29,8 +37,12 @@ const getAllHistoryEvents = (): Event[] => {
       excerpt: event.excerpt,
       duration: event.duration,
       link: `/history/${filename.replace(".json", "")}`,
+      date_id: event.date_id,
     };
   });
+
+  events.sort((a, b) => (a.date_id > b.date_id ? 1 : -1));
+
   return events;
 };
 

@@ -1,0 +1,36 @@
+{
+  "id": "dawnfall",
+  "title": "Dawnfall",
+  "imageUrl": "dawnfall",
+  "tags": ["dwarven", "kingdom"],
+  "sections": [
+    {
+      "id": "welcome",
+      "title": "Welcome to Dawnfall",
+      "content": [
+        "Dawnfall is a dwarven kingdom located in the northwest of STORMHOLD, built atop THE GREAT MINES, which are the primary source of stones and metals for the kingdom."
+      ]
+    },
+    {
+      "id": "economy",
+      "title": "Economy",
+      "content": [
+        "Dawnfall contributes significantly to the economic structure of STORMHOLD by exporting ores such as iron, copper, and precious metals. In return, it imports processed food products like cheese and bread, along with medical supplies."
+      ]
+    },
+    {
+      "id": "politics",
+      "title": "Politics",
+      "content": [
+        "Politically, Dawnfall is part of the alliance overseen by THE GREAT ELDERS, a governing body comprising three humans and three dwarfs. This alliance influences major decisions across STORMHOLD, particularly in the central city of GOLDENHALL."
+      ]
+    },
+    {
+      "id": "culture",
+      "title": "Culture",
+      "content": [
+        "Dawnfall's culture is deeply rooted in its mining traditions and craftsmanship. The kingdom celebrates its heritage through festivals and stories that honor its historical contributions to STORMHOLD."
+      ]
+    }
+  ]
+}

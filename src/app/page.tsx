@@ -17,7 +17,7 @@ const world_name = "Stormhold";
 export default function Home() {
   return (
     <div>
-      <main className="min-h-screen">
+      <main className="min-h-screen bg-gray-100 text-black">
         <Navbar />
         <Header />
         {/* Locations Grid */}

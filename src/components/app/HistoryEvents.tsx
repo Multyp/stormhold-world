@@ -34,28 +34,28 @@ const HistoryEvents: React.FC<HistoryEventsProps> = ({ events }) => {
         subtitle="A continent of change"
         imageUrl={imageUrls.book}
       />
-      <section className="py-12">
+      <section className="py-12  bg-gray-100 text-black">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">History of STORMHOLD</h2>
-          <ol className="relative border-l border-gray-200 dark:border-gray-700">
+          <ol className="relative border-l border-gray-200">
             {events.map((event, index) => (
               <li
                 key={index}
                 className="mb-10 ml-4"
               >
-                <div className="absolute w-3 h-3 bg-emerald-500 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                <time className="mb-1 text-sm font-normal leading-none text-gray-500 dark:text-gray-500">
+                <div className="absolute w-3 h-3 bg-emerald-500 rounded-full mt-1.5 -left-1.5 border border-white"></div>
+                <time className="mb-1 text-sm font-normal leading-none text-gray-500">
                   {event.duration}
                 </time>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                <h3 className="text-lg font-semibold text-gray-900">
                   {event.title}
                 </h3>
-                <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+                <p className="text-base font-normal text-gray-500">
                   {event.excerpt}
                 </p>
                 <Link
                   href={event.link.toLowerCase().replace(" ", "_")}
-                  className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                  className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700"
                 >
                   Learn more
                   <svg

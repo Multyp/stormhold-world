@@ -11,10 +11,10 @@ interface SectionNavLinkProps {
 
 const SectionNavLink: React.FC<SectionNavLinkProps> = ({ href, title }) => {
   return (
-    <li className="w-full md:w-auto text-center">
+    <li className="w-full">
       <Link
         href={href}
-        className="text-blue-600 hover:underline block p-2"
+        className="block w-full text-left text-blue-600 hover:text-blue-700 hover:bg-gray-200 transition-colors duration-300 p-2 rounded-lg"
       >
         {title}
       </Link>
