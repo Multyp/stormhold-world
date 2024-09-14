@@ -70,7 +70,7 @@ const Characters = ({ characters }: CharactersProps) => {
         subtitle="A dense continent"
         imageUrl={imageUrls.group}
       />
-      <section className="bg-gray-100 py-12">
+      <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-8 space-y-4 sm:space-y-0">
             <h2 className="text-3xl font-bold">Explore the Characters</h2>
