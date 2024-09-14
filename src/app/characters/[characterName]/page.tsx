@@ -9,6 +9,7 @@ import BasePage from "@/components/app/BasePage";
 
 // Types
 import type { CharacterData } from "@/types/pageData";
+import dataUrls from "@/constants/dataUrls";
 
 // TypeScript Interface
 interface CharacterProps {
@@ -22,7 +23,7 @@ const CharacterPage = async ({ params }: CharacterProps) => {
   const { characterName } = params;
   const filePath = path.join(
     process.cwd(),
-    "characters",
+    "src/data/characters",
     `${characterName}.json`,
   );
 
@@ -41,7 +42,7 @@ export default CharacterPage;
 
 // Helper Functions
 export async function generateStaticParams() {
-  const charactersDir = path.join(process.cwd(), "characters");
+  const charactersDir = path.join(process.cwd(), dataUrls.characters);
   const files = fs.readdirSync(charactersDir);
 
   return files.map(filename => ({

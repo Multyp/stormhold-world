@@ -4,7 +4,9 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 /* Scoped imports */
+import { navLinks } from "@/constants/navLinks";
 /* Local imports */
+import Drawer from "@/layout/Navbar/Drawer";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,30 +56,15 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="hidden md:flex space-x-4">
-            <Link
-              href="/locations"
-              className="hover:text-gray-400 transition-colors duration-300"
-            >
-              Locations
-            </Link>
-            <Link
-              href="/politics"
-              className="hover:text-gray-400 transition-colors duration-300"
-            >
-              Politics
-            </Link>
-            <Link
-              href="/history"
-              className="hover:text-gray-400 transition-colors duration-300"
-            >
-              History
-            </Link>
-            <Link
-              href="/characters"
-              className="hover:text-gray-400 transition-colors duration-300"
-            >
-              Characters
-            </Link>
+            {navLinks.map((item, index) => (
+              <Link
+                key={index}
+                href={item.url}
+                className="hover:text-gray-400 transition-colors duration-300"
+              >
+                {item.title}
+              </Link>
+            ))}
           </div>
           <div className="md:hidden">
             <button
@@ -108,38 +95,10 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-        {isMenuOpen && (
-          <div className="md:hidden bg-transparent animate-fade-in-down z-10">
-            <Link
-              href="/locations"
-              className="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Locations
-            </Link>
-            <Link
-              href="/politics"
-              className="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Politics
-            </Link>
-            <Link
-              href="/history"
-              className="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              History
-            </Link>
-            <Link
-              href="/characters"
-              className="block px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-300"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Characters
-            </Link>
-          </div>
-        )}
+        <Drawer
+          isMenuOpen={isMenuOpen}
+          setIsMenuOpen={setIsMenuOpen}
+        />
       </nav>
     </>
   );

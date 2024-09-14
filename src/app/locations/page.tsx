@@ -5,14 +5,15 @@ import { Metadata } from "next";
 /* Scoped imports */
 /* Local imports */
 import { Character } from "@/types/character";
-import Locations from "@/components/Locations";
+import Locations from "@/components/pages/Locations";
+import dataUrls from "@/constants/dataUrls";
 
 export const metadata: Metadata = {
   title: "Locations - Discover the People",
 };
 
 const getAllLocations = (): Character[] => {
-  const locationsDir = path.join(process.cwd(), "locations");
+  const locationsDir = path.join(process.cwd(), dataUrls.locations);
   const filenames = fs.readdirSync(locationsDir);
   const locations = filenames.map(filename => {
     const filePath = path.join(locationsDir, filename);
