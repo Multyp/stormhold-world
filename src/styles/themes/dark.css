@@ -1,0 +1,5 @@
+/* Dark Mode */
+.dark {
+  --bg-primary: #1c1c1c;
+  --text-title: #f5f4f4;
+}

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 /* Scoped imports */
 /* Local imports */
-import "./globals.css";
+import "@/styles/globals.css";
 
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
