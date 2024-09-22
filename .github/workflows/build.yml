@@ -19,8 +19,8 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Build the project  ${{ secrets.NEXT_PUBLIC_API_KEY }}
-        run: yarn run build
+      - name: Build the project
+        run: echo ${{ secrets.NEXT_PUBLIC_API_KEY }} && yarn run build
         env:
           NEXT_PUBLIC_API_KEY: ${{ secrets.NEXT_PUBLIC_API_KEY }}
 
