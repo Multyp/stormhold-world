@@ -7,8 +7,7 @@ import Link from "next/link";
 /* Local imports */
 import SectionHeader from "@/components/base/SectionHeader";
 import imageUrls from "@/constants/imageUrls";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Layout from "@/layout";
 
 interface Event {
   title: string;
@@ -27,8 +26,7 @@ const HistoryEvents: React.FC<HistoryEventsProps> = ({ events }) => {
   };
 
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <SectionHeader
         title="The history of STORMHOLD"
         subtitle="A continent of change"
@@ -79,8 +77,7 @@ const HistoryEvents: React.FC<HistoryEventsProps> = ({ events }) => {
           </ol>
         </div>
       </section>
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 

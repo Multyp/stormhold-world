@@ -1,14 +1,13 @@
 // External Modules
-import fs from "fs";
-import path from "path";
-import { Metadata } from "next";
 import React from "react";
+import { Metadata } from "next";
 
 // Components
 import BasePage from "@/components/app/BasePage";
 
 // Types
 import type { CharacterData } from "@/types/pageData";
+import dataUrls from "@/constants/dataUrls";
 
 // TypeScript Interface
 interface CharacterProps {
@@ -20,19 +19,22 @@ interface CharacterProps {
 // Main Component
 const CharacterPage = async ({ params }: CharacterProps) => {
   const { characterName } = params;
-  const filePath = path.join(
-    process.cwd(),
-    "characters",
-    `${characterName}.json`,
-  );
+  const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
-  if (!fs.existsSync(filePath)) {
+  // Fetch character data from API
+  const response = await fetch(`${dataUrls.characters}/${characterName}`, {
+    headers: {
+      "X-API-Key": process.env.NEXT_PUBLIC_API_KEY
+        ? process.env.NEXT_PUBLIC_API_KEY
+        : "",
+    },
+  });
+
+  if (!response.ok) {
     return { notFound: true };
   }
 
-  const characterData: CharacterData = JSON.parse(
-    fs.readFileSync(filePath, "utf-8"),
-  );
+  const characterData: CharacterData = await response.json();
 
   return <BasePage data={characterData} />;
 };
@@ -41,11 +43,22 @@ export default CharacterPage;
 
 // Helper Functions
 export async function generateStaticParams() {
-  const charactersDir = path.join(process.cwd(), "characters");
-  const files = fs.readdirSync(charactersDir);
+  const response = await fetch(`${dataUrls.characters}`, {
+    headers: {
+      "X-API-Key": process.env.NEXT_PUBLIC_API_KEY
+        ? process.env.NEXT_PUBLIC_API_KEY
+        : "",
+    },
+  });
 
-  return files.map(filename => ({
-    characterName: filename.replace(".json", ""),
+  if (!response.ok) {
+    throw new Error("Failed to fetch character list");
+  }
+
+  const characters: CharacterData[] = await response.json();
+
+  return characters.map(character => ({
+    characterName: character.title.toLowerCase().replace(" ", "_"), // Adjust as necessary based on your API structure
   }));
 }
 
