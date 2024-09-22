@@ -23,6 +23,7 @@ jobs:
         run: yarn run build
         env:
           NEXT_PUBLIC_API_KEY: ${{ secrets.NEXT_PUBLIC_API_KEY }}
+          NEXT_PUBLIC_API_LINK: ${{ secrets.NEXT_PUBLIC_API_LINK }}
 
       - name: Check if build is successful
         run: echo "Build was successful."
