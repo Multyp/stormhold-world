@@ -16,6 +16,16 @@ const config: Config = {
       textColor: {
         primary: "var(--text-title)",
       },
+      keyframes: {
+        stroke: {
+          to: {
+            strokeDashoffset: "0px",
+          },
+        },
+      },
+      animation: {
+        stroke: "stroke 2s linear infinite",
+      },
     },
   },
   plugins: [],
