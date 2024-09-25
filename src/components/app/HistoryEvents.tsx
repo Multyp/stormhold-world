@@ -9,7 +9,7 @@ import SectionHeader from "@/components/base/SectionHeader";
 import imageUrls from "@/constants/imageUrls";
 import Layout from "@/layout";
 
-interface Event {
+export interface Event {
   title: string;
   excerpt: string;
   duration: string;
@@ -52,7 +52,13 @@ const HistoryEvents: React.FC<HistoryEventsProps> = ({ events }) => {
                   {event.excerpt}
                 </p>
                 <Link
-                  href={event.link.toLowerCase().replace(" ", "_")}
+                  href={
+                    "/history/" +
+                    event.title
+                      .toLowerCase() // Convert to lowercase
+                      .split(" ") // Split by spaces
+                      .join("_") // Join the rest with underscores
+                  }
                   className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700"
                 >
                   Learn more
