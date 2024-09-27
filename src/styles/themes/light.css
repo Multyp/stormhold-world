@@ -1,5 +1,10 @@
 /* Light Mode */
 :root {
+  /* Background colors */
   --bg-primary: #f5f4f4;
+
+  /* Text colors */
   --text-title: #1c1c1c;
+  --text-content: #4b5563;
+  --text-link: #2563eb;
 }

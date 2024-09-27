@@ -30,20 +30,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <Navbar />
-      {/*<select
-        value={theme}
-        onChange={handleThemeChange}
-        className="fixed top-4 right-4 p-2 bg-gray-800 text-white rounded"
-      >
-        {themesList.map(themeOption => (
-          <option
-            key={themeOption}
-            value={themeOption}
-          >
-            {themeOption.charAt(0).toUpperCase() + themeOption.slice(1)}
-          </option>
-        ))}
-      </select>*/}
+      {
+        <select
+          value={theme}
+          onChange={handleThemeChange}
+          className="fixed top-4 right-4 p-2 bg-gray-800 text-white rounded"
+        >
+          {themesList.map(themeOption => (
+            <option
+              key={themeOption}
+              value={themeOption}
+            >
+              {themeOption.charAt(0).toUpperCase() + themeOption.slice(1)}
+            </option>
+          ))}
+        </select>
+      }
       <main className="min-h-screen min-w-full bg-primary text-primary">
         {children}
       </main>
