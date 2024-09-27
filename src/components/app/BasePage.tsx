@@ -38,14 +38,7 @@ const BasePage: React.FC<BasePageProps> = ({ data }) => {
       {renderHead(data.title, data.subtitle, data.imageUrl)}
       {data.sections ? (
         <>
-          <SectionNavContainer>
-            {data.sections.map((section: Section) => (
-              <PageSectionNavLinks
-                key={section.id}
-                section={section}
-              />
-            ))}
-          </SectionNavContainer>
+          <PageSectionNavLinks sections={data.sections} />
           <section className="py-10 px-4 flex items-center justify-center flex-col">
             <PageSections
               data={data}
