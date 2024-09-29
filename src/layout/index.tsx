@@ -4,15 +4,22 @@ import { useState, useEffect } from "react";
 import Footer from "@/layout/Footer";
 import Navbar from "@/layout/Navbar";
 import { themesList, type Theme } from "@/constants/themesList";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>(
+    localStorage.getItem("theme") as Theme,
+  );
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") as Theme;
     if (themesList.includes(savedTheme)) {
       setTheme(savedTheme);
       document.documentElement.classList.add(savedTheme);
+    } else {
+      setTheme("light");
+      document.documentElement.classList.add("light");
     }
   }, []);
 
@@ -20,32 +27,28 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedTheme = event.target.value as Theme;
-    setTheme(selectedTheme);
+  const handleThemeChange = () => {
+    const currentIndex = themesList.indexOf(theme);
+    const nextIndex = (currentIndex + 1) % themesList.length;
+    const newTheme = themesList[nextIndex];
+    setTheme(newTheme);
     document.documentElement.classList.remove(...themesList);
-    document.documentElement.classList.add(selectedTheme);
+    document.documentElement.classList.add(newTheme);
   };
 
   return (
     <div>
       <Navbar />
-      {
-        <select
-          value={theme}
-          onChange={handleThemeChange}
-          className="fixed top-4 right-4 p-2 bg-gray-800 text-white rounded"
-        >
-          {themesList.map(themeOption => (
-            <option
-              key={themeOption}
-              value={themeOption}
-            >
-              {themeOption.charAt(0).toUpperCase() + themeOption.slice(1)}
-            </option>
-          ))}
-        </select>
-      }
+      <button
+        onClick={handleThemeChange}
+        className={`fixed bottom-4 left-4 z-50 p-2 rounded-full bg-primary text-primary border ${theme === "light" ? "border-gray-900 " : "border-primary"} shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary`}
+        aria-label="Toggle theme"
+      >
+        <FontAwesomeIcon
+          icon={theme === "light" ? faMoon : faSun}
+          className="rounded w-6"
+        />
+      </button>
       <main className="min-h-screen min-w-full bg-primary text-primary">
         {children}
       </main>
