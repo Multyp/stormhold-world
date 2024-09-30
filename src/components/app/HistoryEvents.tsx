@@ -9,7 +9,7 @@ import SectionHeader from "@/components/base/SectionHeader";
 import imageUrls from "@/constants/imageUrls";
 import Layout from "@/layout";
 
-interface Event {
+export interface Event {
   title: string;
   excerpt: string;
   duration: string;
@@ -32,7 +32,7 @@ const HistoryEvents: React.FC<HistoryEventsProps> = ({ events }) => {
         subtitle="A continent of change"
         imageUrl={imageUrls.book}
       />
-      <section className="py-12  bg-gray-100 text-black">
+      <section className="py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">History of STORMHOLD</h2>
           <ol className="relative border-l border-gray-200">
@@ -45,14 +45,18 @@ const HistoryEvents: React.FC<HistoryEventsProps> = ({ events }) => {
                 <time className="mb-1 text-sm font-normal leading-none text-gray-500">
                   {event.duration}
                 </time>
-                <h3 className="text-lg font-semibold text-gray-900">
-                  {event.title}
-                </h3>
-                <p className="text-base font-normal text-gray-500">
+                <h3 className="text-lg font-semibold">{event.title}</h3>
+                <p className="text-base font-normal text-secondary">
                   {event.excerpt}
                 </p>
                 <Link
-                  href={event.link.toLowerCase().replace(" ", "_")}
+                  href={
+                    "/history/" +
+                    event.title
+                      .toLowerCase() // Convert to lowercase
+                      .split(" ") // Split by spaces
+                      .join("_") // Join the rest with underscores
+                  }
                   className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700"
                 >
                   Learn more

@@ -15,6 +15,8 @@ const config: Config = {
       },
       textColor: {
         primary: "var(--text-title)",
+        secondary: "var(--text-content)",
+        link: "var(--text-link)",
       },
       keyframes: {
         stroke: {

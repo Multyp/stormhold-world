@@ -1,37 +1,45 @@
-// External Modules
-import fs from "fs";
-import path from "path";
-import { Metadata } from "next";
+/* Global imports */
 import React from "react";
 
-// Components
+/* Local imports */
 import BasePage from "@/components/app/BasePage";
-
-// Types
-import type { EventData } from "@/types/pageData";
+import { EventData } from "@/types/pageData";
 import dataUrls from "@/constants/dataUrls";
+import LoadingError from "@/components/app/LoadingError";
+import { Metadata } from "next";
 
-// TypeScript Interface
+/* TypeScript Interface */
 interface EventProps {
   params: {
     eventName: string;
   };
 }
 
-// Main Component
+/**
+ * EventPage component fetches and displays event data based on the event name.
+ *
+ * @returns {JSX.Element} The rendered EventPage component.
+ */
 const EventPage = async ({ params }: EventProps) => {
   const { eventName } = params;
-  const filePath = path.join(
-    process.cwd(),
-    dataUrls.history,
-    `${eventName}.json`,
-  );
 
-  if (!fs.existsSync(filePath)) {
-    return { notFound: true };
+  // Fetch event data from API
+  const response = await fetch(`${dataUrls.history}/${eventName}`, {
+    headers: {
+      "X-API-Key": process.env.NEXT_PUBLIC_API_KEY ?? "",
+    },
+  });
+
+  if (!response.ok) {
+    return (
+      <LoadingError
+        error="Failed to load event data"
+        loading={false}
+      />
+    );
   }
 
-  const eventData: EventData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  const eventData: EventData = await response.json();
 
   return <BasePage data={eventData} />;
 };
@@ -40,14 +48,36 @@ export default EventPage;
 
 // Helper Functions
 export async function generateStaticParams() {
-  const eventsDir = path.join(process.cwd(), dataUrls.history);
-  const files = fs.readdirSync(eventsDir);
+  const response = await fetch(`${dataUrls.history}`, {
+    headers: {
+      "X-API-Key": process.env.NEXT_PUBLIC_API_KEY
+        ? process.env.NEXT_PUBLIC_API_KEY
+        : "",
+    },
+  });
 
-  return files.map(filename => ({
-    eventName: filename.replace(".json", ""),
+  if (!response.ok) {
+    throw new Error("Failed to fetch character list");
+  }
+
+  const characters: EventData[] = await response.json();
+
+  console.log(
+    characters.map(event => ({
+      characterName: event.title
+        .toLowerCase() // Convert to lowercase
+        .split(" ") // Split by spaces
+        .join("_"), // Join the rest with underscores // Adjust as necessary based on your API structure
+    })),
+  );
+
+  return characters.map(event => ({
+    eventName: event.title
+      .toLowerCase() // Convert to lowercase
+      .split(" ") // Split by spaces
+      .join("_"), // Join the rest with underscores // Adjust as necessary based on your API structure, // Adjust as necessary based on your API structure
   }));
 }
-
 export async function generateMetadata({
   params,
 }: EventProps): Promise<Metadata> {

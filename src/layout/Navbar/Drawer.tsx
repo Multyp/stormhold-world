@@ -6,6 +6,14 @@ import Link from "next/link";
 import { navLinks } from "@/constants/navLinks";
 import { Dispatch, SetStateAction } from "react";
 
+/**
+ * Drawer component for mobile navigation.
+ * It displays a list of navigation links when the mobile menu is open.
+ *
+ * @param {Object} props - The component props
+ * @param {boolean} props.isMenuOpen - State indicating whether the mobile menu is open
+ * @param {Dispatch<SetStateAction<boolean>>} props.setIsMenuOpen - Function to update the isMenuOpen state
+ */
 const Drawer = ({
   isMenuOpen,
   setIsMenuOpen,
