@@ -32,7 +32,7 @@ const HistoryEvents: React.FC<HistoryEventsProps> = ({ events }) => {
         subtitle="A continent of change"
         imageUrl={imageUrls.book}
       />
-      <section className="py-12  bg-gray-100 text-black">
+      <section className="py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">History of STORMHOLD</h2>
           <ol className="relative border-l border-gray-200">
@@ -45,10 +45,8 @@ const HistoryEvents: React.FC<HistoryEventsProps> = ({ events }) => {
                 <time className="mb-1 text-sm font-normal leading-none text-gray-500">
                   {event.duration}
                 </time>
-                <h3 className="text-lg font-semibold text-gray-900">
-                  {event.title}
-                </h3>
-                <p className="text-base font-normal text-gray-500">
+                <h3 className="text-lg font-semibold">{event.title}</h3>
+                <p className="text-base font-normal text-secondary">
                   {event.excerpt}
                 </p>
                 <Link

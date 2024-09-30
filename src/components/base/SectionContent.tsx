@@ -9,7 +9,7 @@ interface SectionContentProps {
 
 const SectionContent: React.FC<SectionContentProps> = ({ children }) => {
   return (
-    <p className="text-lg text-gray-600 mt-4 text-left max-w-screen-lg">
+    <p className="text-lg text-secondary mt-4 text-left max-w-screen-lg">
       {children}
     </p>
   );

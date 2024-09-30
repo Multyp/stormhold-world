@@ -1,25 +1,26 @@
+/**
+ * Represents an image in a gallery.
+ */
+interface GalleryImage {
+  url: string;
+  alt: string;
+}
+
+/**
+ * Represents a section of content on a page.
+ */
 export interface Section {
   id: string;
   title: string;
   content: string | string[];
   image?: string;
-  gallery?: [
-    {
-      url: string;
-      alt: string;
-    },
-    {
-      url: string;
-      alt: string;
-    },
-    {
-      url: string;
-      alt: string;
-    },
-  ];
+  gallery?: [GalleryImage, GalleryImage, GalleryImage];
   subsections?: Section[];
 }
 
+/**
+ * Base interface for page data.
+ */
 export interface PageData {
   title: string;
   subtitle: string;
@@ -27,41 +28,22 @@ export interface PageData {
   sections?: Section[];
 }
 
+/**
+ * Represents data for an event page.
+ * Extends PageData with an excerpt and simplified sections.
+ */
 export interface EventData extends PageData {
-  title: string;
-  subtitle: string;
   excerpt: string;
-  sections?: {
-    id: string;
-    title: string;
-    content: string | string[];
-  }[];
+  sections?: Section[];
 }
 
+/**
+ * Represents data for a character page.
+ * Extends PageData with character-specific fields.
+ */
 export interface CharacterData extends PageData {
-  title: string;
-  subtitle: string;
-  imageUrl: string;
+  imageUrl: string; // Making imageUrl required for CharacterData
   pronunciation?: string;
   tags: string[];
-  sections?: {
-    id: string;
-    title: string;
-    content: string | string[];
-    image?: string;
-    gallery?: [
-      {
-        url: string;
-        alt: string;
-      },
-      {
-        url: string;
-        alt: string;
-      },
-      {
-        url: string;
-        alt: string;
-      },
-    ];
-  }[];
+  sections?: Section[];
 }

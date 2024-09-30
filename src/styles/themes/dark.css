@@ -1,5 +1,10 @@
 /* Dark Mode */
 .dark {
+  /* Background colors */
   --bg-primary: #1c1c1c;
+
+  /* Text colors */
   --text-title: #f5f4f4;
+  --text-content: #d1d5db;
+  --text-link: #3b82f6;
 }

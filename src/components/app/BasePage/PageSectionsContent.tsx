@@ -31,7 +31,7 @@ const replaceKeywordsWithLinks = (text: string) => {
       <Link
         key={match.index}
         href={url}
-        className="text-blue-600 hover:underline"
+        className="text-link hover:underline"
       >
         {keyword}
       </Link>,
