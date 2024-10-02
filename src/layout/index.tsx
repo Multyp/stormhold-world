@@ -6,6 +6,7 @@ import Navbar from "@/layout/Navbar";
 import { themesList, type Theme } from "@/constants/themesList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { CssProvider } from "@/contexts/CssProvider";
 
 /**
  * Layout component that wraps the entire application.
@@ -55,26 +56,28 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <div>
-      <Navbar />
-      {/* Theme toggle button */}
-      <button
-        onClick={handleThemeChange}
-        className={`fixed bottom-4 left-4 z-50 p-2 rounded-full bg-primary text-primary border ${
-          theme === "light" ? "border-gray-900 " : "border-primary"
-        } shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary`}
-        aria-label="Toggle theme"
-      >
-        <FontAwesomeIcon
-          icon={theme === "light" ? faMoon : faSun}
-          className="rounded w-6"
-        />
-      </button>
-      {/* Main content area */}
-      <main className="min-h-screen min-w-full bg-primary text-primary">
-        {children}
-      </main>
-      <Footer />
-    </div>
+    <CssProvider>
+      <div>
+        <Navbar />
+        {/* Theme toggle button */}
+        <button
+          onClick={handleThemeChange}
+          className={`fixed bottom-4 left-4 z-50 p-2 rounded-full bg-primary text-primary border ${
+            theme === "light" ? "border-gray-900 " : "border-primary"
+          } shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary`}
+          aria-label="Toggle theme"
+        >
+          <FontAwesomeIcon
+            icon={theme === "light" ? faMoon : faSun}
+            className="rounded w-6"
+          />
+        </button>
+        {/* Main content area */}
+        <main className="min-h-screen min-w-full bg-primary text-primary">
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </CssProvider>
   );
 }
