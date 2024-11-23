@@ -100,14 +100,3 @@ export async function generateStaticParams() {
 
   return staticParams;
 }
-
-/**
- * Generates metadata for an entity.
- * @param name The URL slug (e.g., "event_name").
- * @returns Metadata object.
- */
-export function generateMetadata(data: string) {
-  const transformedName = data;
-
-  return { title: transformedName };
-}
