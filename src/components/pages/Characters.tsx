@@ -13,9 +13,10 @@ import Layout from "@/layout";
 
 interface CharactersProps {
   characters: Character[];
+  endpoint: string;
 }
 
-const Characters = ({ characters }: CharactersProps) => {
+const Characters = ({ characters, endpoint }: CharactersProps) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -110,7 +111,7 @@ const Characters = ({ characters }: CharactersProps) => {
               <LocationLink
                 key={index}
                 href={
-                  "characters/" +
+                  `${endpoint}/` +
                   character.title.toLowerCase().replace(" ", "_")
                 }
                 backgroundImage={character.imageUrl}
