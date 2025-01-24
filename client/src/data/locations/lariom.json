@@ -1,0 +1,36 @@
+{
+  "id": "lariom",
+  "title": "Lariom",
+  "imageUrl": "lariom",
+  "tags": ["human", "kingdom"],
+  "sections": [
+    {
+      "id": "welcome",
+      "title": "Welcome to Lariom",
+      "content": [
+        "Lariom is a place of wonder and mystery. Explore the rich history, vibrant culture, and breathtaking landscapes that make Lariom a unique destination."
+      ]
+    },
+    {
+      "id": "economy",
+      "title": "Economy",
+      "content": [
+        "Lariom is known for exporting processed agricultural products and medicinal goods, which are highly valued across the continent. In return, it imports various ores essential for tool and weapon manufacturing, primarily sourced from the dwarven kingdom of DAWNFALL."
+      ]
+    },
+    {
+      "id": "politics",
+      "title": "Politics",
+      "content": [
+        "Politically, Lariom is part of the alliance overseen by THE ELDER'S SENATE, a governing body consisting of representatives from LARIOM, DAWNFALL, MIRLUN, and SHUBORE. The political hub of STORMHOLD is the central city of GOLDENHALL, where major political decisions and alliances are formed."
+      ]
+    },
+    {
+      "id": "culture",
+      "title": "Culture",
+      "content": [
+        "The cultural heritage of Lariom is rich and diverse. The kingdom is renowned for its military traditions and historical significance. Visitors can explore ancient fortresses, participate in traditional festivals, and learn about the storied past of this vibrant kingdom."
+      ]
+    }
+  ]
+}

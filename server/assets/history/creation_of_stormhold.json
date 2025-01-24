@@ -1,14 +1,5 @@
-# Stormhold History Documentation
-
-This folder contains JSON files representing various historical events in the fantasy world of Stormhold. Each event file is used to generate pages on a website, showcasing different historical periods and details about the world.
-
-## JSON Format
-
-Each historical event is represented by a JSON file with the following structure:
-
-```json
 {
-  "title": "The Creation of Stormhold",
+  "title": "Creation of Stormhold",
   "subtitle": "The birth of the world and its races",
   "duration": "From the Dawn of Time to Year 0 of the First Age",
   "date_id": "-1000-01-01",
@@ -41,16 +32,3 @@ Each historical event is represented by a JSON file with the following structure
     }
   ]
 }
-```
-
-Fields
-
-- title: The title of the historical event.
-- subtitle: A subtitle providing additional context.
-- duration: The time period covered by the event.
-- date_id: A unique identifier for the date of the event, formatted as YYYY-MM-DD.
-- excerpt: A brief summary of the event.
-- sections: An array of sections describing different parts of the event.
-  - id: A unique identifier for the section.
-  - title: The title of the section.
-  - content: An array of strings representing the content of the section. Can include plain text or formatted paragraphs, each string in the array representing a paragraph.

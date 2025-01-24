@@ -1,0 +1,11 @@
+{
+    "characters": {
+        "type": "img-cards-list"
+    },
+    "history": {
+        "type": "timeline"
+    },
+    "locations": {
+        "type": "img-cards-list"
+    }
+}

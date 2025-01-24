@@ -1,0 +1,40 @@
+{
+  "id": "shubore",
+  "title": "Shubore",
+  "imageUrl": "shubore",
+  "tags": ["coastal", "kingdom"],
+  "sections": [
+    {
+      "id": "welcome",
+      "title": "Welcome to Shubore",
+      "content": [
+        "Shubore is a snowy maritime kingdom located in the northeast of Stormhold, renowned for its mastery of icy waters and naval prowess. It is a crucial hub for maritime trade and defense, maintaining alliances with neighboring kingdoms."
+      ]
+    },
+    {
+      "id": "economy",
+      "title": "Economy",
+      "content": [
+        "Shubore's economy thrives on exporting rare seashells, pearls, fine shipbuilding timber, and exotic spices. In return, it imports luxury goods, tropical fruits, and specialized naval equipment, ensuring a robust economic interdependence within Stormhold."
+      ]
+    },
+    {
+      "id": "politics",
+      "title": "Politics",
+      "content": [
+        "Governed by a royal family and influential maritime guilds and brotherhoods, Shubore plays a pivotal role in the political landscape of Stormhold.",
+        "It adheres to the laws and maintains diplomatic relations set by the alliance of THE ELDER'S SENATE, a governing body consisting of representatives from LARIOM, DAWNFALL, MIRLUN, and SHUBORE. The political hub of STORMHOLD is the central city of GOLDENHALL, where major political decisions and alliances are formed."
+      ]
+    },
+    {
+      "id": "culture",
+      "title": "Culture",
+      "content": [
+        "Shubore's culture is deeply intertwined with its maritime environment and harsh, icy climate. The people of Shubore, known as Shuborians, are renowned for their resilience and physical strength, traits honed by unique genetic adaptations to the cold. Shuborians have a genetic predisposition for muscle growth, making them naturally strong and well-suited for lifting heavy materials and serving as formidable soldiers.",
+        "Following the War of Shadows, they collaborated with the dwarves to enhance their craftsmanship, earning a reputation for producing the finest goods in all of Stormhold.",
+        "Shuborian society places a high value on maritime prowess, with influential guilds and brotherhoods playing significant roles in governance alongside the royal family. Their partnership with the dwarves has elevated Shuborian shipbuilding to unparalleled levels of excellence. The economy thrives on the export of rare seashells, pearls, and exotic spices.",
+        "Culturally, Shuborians maintain strong traditions of seafaring and naval defense. They celebrate their mastery of the icy waters through festivals and rituals that honor the sea and their ancestors."
+      ]
+    }
+  ]
+}
